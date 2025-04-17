@@ -17,7 +17,8 @@ public class DataCleaner {
     private static final Integer[] BRETAGNE_DEPTS = {29, 22, 56, 35, 44};
     /** Codes des régions de Bretagne. */
     private static final Integer[] BRETAGNE_REG   = {53};
-
+    /** Années à conserver. */
+    private static final Integer[] ANNEES = {2017, 2022, 2024};
     /**
      * Filtre sur la colonne "Code département" si elle existe,
      * sinon sur "Code région", et recaste la colonne en string.
@@ -44,6 +45,24 @@ public class DataCleaner {
         // aucune des deux colonnes : on ne filtre pas
         else {
             System.out.println("[DataCleaner] Ni 'Code département' ni 'Code région' présents, aucun filtrage appliqué.");
+            return ds;
+        }
+    }
+    
+    /**
+     * Filtre sur la colonne "annee" si présente,
+     * en conservant uniquement les années spécifiées dans ANNEES.
+     *
+     * @param ds Dataset initial
+     * @return Dataset filtré
+     */
+    public static Dataset<Row> filterByYears(Dataset<Row> ds) {
+        if (Arrays.asList(ds.columns()).contains("annee")) {
+            return ds
+                .withColumn("annee", col("annee").cast("int"))
+                .filter(col("annee").isin((Object[]) ANNEES));
+        } else {
+            System.out.println("[DataCleaner] Colonne 'annee' introuvable, aucun filtrage sur les années appliqué.");
             return ds;
         }
     }
