@@ -76,6 +76,31 @@ public class Main {
         	    "src/main/resources/outputs/UniteUrbaine"
         	);
 
+     // --- Traitement des données de pauvreté par commune  ---
+        String povertyInput = "src/main/resources/inputs/Pauvrete/2017/niveau-pauvrete-par-commune.xlsx";
+        File povertyFile = new File(povertyInput);
+        if (povertyFile.exists()) {
+            // 1) lecture
+            Dataset<Row> povertyRaw = DataIngestionUtils.loadAsDataset(spark, povertyFile);
+
+            // 2)  on s'assure d'avoir Code département, Code de la commune et CODGEO
+            Dataset<Row> povertyGeo = DataAggregator.ensureGeoColumns(povertyRaw);
+            povertyGeo = DataCleaner.filterByBretagne(povertyGeo);
+            
+            // 3) agrégation des taux de pauvreté
+            Dataset<Row> povertyAgg = DataAggregator.averagePovertyByCommune(povertyGeo);
+
+            // 4) export CSV
+            String povertyOutDir = "src/main/resources/outputs/Pauvrete/2017";
+            new File(povertyOutDir).mkdirs();
+            String povertyCsv = "niveau-pauvrete-par-commune.csv";
+            CSVUtils.saveAsSingleCSV(povertyAgg, povertyOutDir, povertyCsv);
+            CSVUtils.previewCsv(povertyOutDir + "/" + povertyCsv);
+
+        } else {
+            System.out.println("[Main] Fichier pauvreté introuvable : " + povertyInput);
+        }
+
      // --- Traitement des données démographiques (niveau d'étude) ---
         String eduInput = "src/main/resources/inputs/Demographie-NiveauEtude/2022/population-selon-niveau-etude-par-commune.xlsx";
         File eduFile = new File(eduInput);
@@ -149,39 +174,62 @@ public class Main {
             System.out.println("[Main] Aucun dossier ReadyForDataBase trouvé en " + readyIn);
         }
         
-        //Gestion des communes niveau BDD
+     // Gestion des communes niveau BDD
         File geoFile = new File("src/main/resources/inputs/FichierReferenceCommunesDepartement/communes-france.csv");
         MySQLConverter.loadAndWriteCommunesDepartement(spark, writer, geoFile);
-	     // 2) Déclaration des clés primaires et étrangères
-	     // → Clé primaire sur Departement.code_dep et Commune.code_com
-	     writer.addPrimaryKey("Departement", "code_dep");
-	     writer.addPrimaryKey("Commune",     "code_com");
-	
-	     // → Clé étrangère Commune.code_dep → Departement.code_dep
-	     writer.addForeignKey(
-	         "Commune", "fk_commune_dept",
-	         "code_dep",
-	         "Departement", "code_dep",
-	         "RESTRICT", "CASCADE"
-	     );
-	        MySQLConverter.processOutputCSVs(spark, writer, "src/main/resources/outputs");
-	        MySQLConverter.processDepartementsCSVsOnCommunes(spark, writer, "src/main/resources/outputs");
-	        MySQLConverter.processRegionsCSVsOnCommunes(spark, writer, "src/main/resources/outputs");
-	     // → Clé étrangère Donnees_commune.CODGEO → Commune.code_com
-	     writer.addForeignKey(
-	         "Donnees_commune", "fk_data_commune",
-	         "CODGEO",
-	         "Commune", "code_com",
-	         "RESTRICT", null
-	     );
-	
-	     // → (Optionnel) Donnees_commune.`Code département` → Departement.code_dep
-	     writer.addForeignKey(
-	         "Donnees_commune", "fk_data_dept",
-	         "Code département",
-	         "Departement", "code_dep",
-	         null, null
-	     );
+
+        // — 1) On force ‘code_com’ en VARCHAR(5) pour pouvoir y mettre une PK
+        writer.modifyColumnType(
+            "Commune",
+            "code_com",
+            "VARCHAR(5) NOT NULL"
+        );
+
+        // — 2) Clés primaires et étrangères dimensionnelles
+        writer.addPrimaryKey("Departement", "code_dep");
+        writer.addPrimaryKey("Commune",     "code_com");
+        writer.addForeignKey(
+            "Commune", "fk_commune_dept",
+            "code_dep",
+            "Departement", "code_dep",
+            "RESTRICT", "CASCADE"
+        );
+
+        // — 3) Chargement des faits (créera la table Donnees_commune)
+        MySQLConverter.processOutputCSVs(spark, writer, "src/main/resources/outputs");
+        MySQLConverter.processDepartementsCSVsOnCommunes(spark, writer, "src/main/resources/outputs");
+        MySQLConverter.processRegionsCSVsOnCommunes(spark, writer, "src/main/resources/outputs");
+
+        // — 4) Avant d’ajouter les FK sur Donnees_commune, on corrige les types
+        writer.modifyColumnType(
+            "Donnees_commune",
+            "CODGEO",
+            "VARCHAR(5) NOT NULL"
+        );
+        writer.modifyColumnType(
+            "Donnees_commune",
+            "Code département",
+            "INT NOT NULL"
+        );
+
+        // — 4b) On s’assure du bon moteur et on crée les index nécessaires
+        writer.execSql("ALTER TABLE `Donnees_commune` ENGINE = InnoDB");
+        writer.addIndex("Donnees_commune", "idx_codgeo", "CODGEO");
+        writer.addIndex("Donnees_commune", "idx_coddept", "Code département");
+
+        // — 5) Maintenant on peut mettre les clés étrangères sur la table de faits
+        writer.addForeignKey(
+            "Donnees_commune", "fk_data_commune",
+            "CODGEO",
+            "Commune", "code_com",
+            "RESTRICT", null
+        );
+        writer.addForeignKey(
+            "Donnees_commune", "fk_data_dept",
+            "Code département",
+            "Departement", "code_dep",
+            null, null
+        );
 
 
         //  Dump de la base MySQL

@@ -56,26 +56,37 @@ public class MySqlWriter {
     }
 
     
-    /** Vide la base en droppant toutes les tables existantes */
+    /** Vide la base en droppant toutes les tables existantes, même si des FK pointent dessus */
     public void dropAllTables() {
         try (Connection conn = DriverManager.getConnection(jdbcUrl, connectionProps);
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SHOW TABLES")) {
+             Statement stmt = conn.createStatement()) {
 
-            // 1) On collecte d'abord tous les noms de tables
+            // 1) Désactivation des contraintes FK AVANT la requête SHOW TABLES
+            stmt.execute("SET FOREIGN_KEY_CHECKS = 0");
+
+            // 2) Récupération des tables dans un ResultSet à part
             List<String> tables = new ArrayList<>();
-            while (rs.next()) {
-                tables.add(rs.getString(1));
+            try (ResultSet rs = stmt.executeQuery("SHOW TABLES")) {
+                while (rs.next()) {
+                    tables.add(rs.getString(1));
+                }
             }
-            // 2) Puis on les droppe une à une
+
+            // 3) Drop de chaque table
             for (String table : tables) {
                 stmt.executeUpdate("DROP TABLE IF EXISTS `" + table + "`");
                 System.out.println("→ Table MySQL supprimée : " + table);
             }
+
+            // 4) Réactivation des contraintes FK
+            stmt.execute("SET FOREIGN_KEY_CHECKS = 1");
+
         } catch (SQLException e) {
             throw new RuntimeException("Erreur en vidant la base MySQL", e);
         }
     }
+
+
     public String getJdbcUrl() {
         return jdbcUrl;
     }
@@ -92,7 +103,7 @@ public class MySqlWriter {
 		return connectionProps;
 	}
 	
-	private void execSql(String sql) {
+	public void execSql(String sql) {
 	    try (Connection conn = DriverManager.getConnection(jdbcUrl, connectionProps);
 	         Statement stmt = conn.createStatement()) {
 	        stmt.executeUpdate(sql);
@@ -166,5 +177,26 @@ public class MySqlWriter {
 	        null, null
 	    );
 	}
+	/**
+	 * Modifie le type SQL d'une colonne existante.
+	 */
+	public void modifyColumnType(String table, String column, String sqlType) {
+	    String ddl = String.format(
+	      "ALTER TABLE `%s` MODIFY `%s` %s",
+	      table, column, sqlType
+	    );
+	    execSql(ddl);
+	}
+	/**
+	 * Ajoute un index non-unique sur une colonne.
+	 */
+	public void addIndex(String table, String indexName, String column) {
+	    String ddl = String.format(
+	        "ALTER TABLE `%s` ADD INDEX `%s` (`%s`)",
+	        table, indexName, column
+	    );
+	    execSql(ddl);
+	}
+
 
 }

@@ -331,5 +331,15 @@ public class DataAggregator {
           col("taux_bac_ou_moins_25_ans_et_plus")
       );
  }
+  public static Dataset<Row> averagePovertyByCommune(Dataset<Row> df) {
+	    return df
+	      .groupBy(col("CODGEO"), col("LIBGEO"))
+	      .agg(
+	        format_number(
+	          avg(col("Taux de bas revenus déclarés au seuil de 60 %")),
+	          2
+	        ).alias("taux_pauvrete_commune")
+	      );
+	}
 }
 
