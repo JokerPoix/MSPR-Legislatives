@@ -30,7 +30,8 @@ import java.util.stream.Collectors;
  * Charge et écrit en base MySQL les tables de référence Communes et Départements
  */
 public class MySQLConverter {
-
+	
+	// TODO Refacto en une fonction pour faire 3 fonctions une pour les communes dans l'ensemble une autre pour les données niveau département etc
     /**
      * Charge le fichier CSV des communes et départements et écrit deux tables MySQL:
      * - Departement(code_dep INT, nom_dep VARCHAR)
@@ -193,6 +194,118 @@ public class MySQLConverter {
         }
         
     }
+    public static void processRegionsCSVsOnCommunes(
+            SparkSession spark,
+            MySqlWriter writer,
+            String outputsDir) {
+        File base = new File(outputsDir);
+        Deque<File> stack = new ArrayDeque<>();
+        stack.push(base);
+
+        while (!stack.isEmpty()) {
+            File dir = stack.pop();
+            File[] files = dir.listFiles();
+            if (files == null) continue;
+
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    stack.push(file);
+                    continue;
+                }
+                if (!file.getName().toLowerCase().endsWith("par-region.csv")) {
+                    continue;
+                }
+
+                // 1) Lecture brute du CSV
+                Dataset<Row> df = DataIngestionUtils.loadAsDataset(spark, file);
+
+                // 2) Détection des colonnes métriques
+                List<String> metricCols = Arrays.stream(df.columns())
+                    .filter(c -> c.contains("%") || c.toLowerCase().contains("pour mille"))
+                    .collect(Collectors.toList());
+                if (metricCols.isEmpty()) {
+                    continue;
+                }
+
+                // 3) Extraction des années
+                List<String> yearCols = Arrays.stream(df.columns())
+                    .filter(c -> c.matches(".*\\d{4}$"))
+                    .collect(Collectors.toList());
+                if (yearCols.isEmpty()) {
+                    continue;
+                }
+
+                // 4) Injection de la colonne "type" (nom du fichier sans suffixe)
+                String typeVal = file.getName()
+                    .replaceAll("(?i)par-region\\.csv$", "")
+                    .replace('-', ' ')
+                    .trim();
+                Dataset<Row> withType = df.withColumn("type", lit(typeVal));
+
+                // 5) Unpivot (type, annee, valeur)
+                String stackExpr = "stack(" + yearCols.size() + ", " +
+                    yearCols.stream()
+                        .map(c -> {
+                            String year = c.substring(c.length() - 4);
+                            String metric = c.replaceAll("\\s*\\d{4}$", "");
+                            return "'" + metric + "', '" + year + "', `" + c + "`";
+                        })
+                        .collect(Collectors.joining(", ")) +
+                    ") as (typeMetric, annee, valeur)";
+
+                Dataset<Row> pivoted = withType.select( col("Code région"),col("indicateur"),expr(stackExpr));
+
+
+                // 6) Charger la dimension Commune
+                Dataset<Row> dimCommune = spark.read()
+                    .format("jdbc")
+                    .option("url",    writer.getJdbcUrl())
+                    .option("dbtable","Commune")
+                    .option("user",   writer.getUser())
+                    .option("password",writer.getPassword())
+                    .load();
+
+                // 7) Réplication sur toutes les communes (cross-join)
+                Dataset<Row> joined = pivoted.crossJoin(dimCommune);
+
+             // 8) Générer JSON incluant l’indicateur + la métrique
+                Dataset<Row> withJson = joined.withColumn(
+                    "data",
+                    to_json(
+                        map(
+                            lit("indicateur"), col("indicateur"),  // "indicateur":"Cambriolages…"
+                            col("typeMetric"),  col("valeur")     // "criminalite":"4.5…"  (typeVal = nom du CSV)
+                        )
+                    )
+                );
+
+
+                // 9) Sélection finale
+                Dataset<Row> finalDf = withJson.select(
+                    dimCommune.col("code_com").alias("CODGEO"),
+                    dimCommune.col("nom_com").alias("LIBGEO"),
+                    dimCommune.col("code_dep").alias("Code département"),
+                    col("annee"),
+                    lit(typeVal).alias("type"),
+                    col("data")
+                );
+
+                // 10) Créer la table si besoin
+                ensureFactTable(writer, finalDf, "Donnees_commune");
+
+                // 11) Écriture en append
+                finalDf.write()
+                       .mode(SaveMode.Append)
+                       .jdbc(
+                           writer.getJdbcUrl(),
+                           "Donnees_commune",
+                           writer.getConnectionProps()
+                       );
+                System.out.println("[MySQLConverter] Append régions→communes, lignes : " + finalDf.count());
+            }
+        }
+    }
+
     /**
      * Traite uniquement les fichiers "par-departement.csv" contenant des métriques (% ou "pour mille"),
      * pivote les colonnes année en lignes, et répète les données pour chaque commune.

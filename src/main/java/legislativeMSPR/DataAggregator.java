@@ -10,7 +10,6 @@ import org.apache.spark.sql.types.DataTypes;
 
 import legislativeMSPR.Utils.DataFrameUtils;
 import legislativeMSPR.Utils.DataIngestionUtils;
-import scala.collection.Seq;
 import scala.collection.JavaConverters;
 import static org.apache.spark.sql.functions.first;
 import static org.apache.spark.sql.functions.col;
@@ -138,61 +137,36 @@ public class DataAggregator {
   
   /**
    * Pour un Dataset de Criminalité (Code région, annee, indicateur, unite_de_compte, nombre, taux_pour_mille, insee_pop),
-   * pivote sur la colonne "annee" pour obtenir, pour chaque clef :
-   *   nombre_<year>, taux_pour_mille_<year>, insee_pop_<year>
+   * pivote uniquement sur la colonne "annee" pour obtenir, pour chaque clef :
+   *   taux_pour_mille_<year>
    */
   public static Dataset<Row> pivotByYear(Dataset<Row> ds) {
-	    // 1) liste des années
-	    List<Integer> yearsInt = Arrays.asList(2017, 2022, 2024);
-	    // 2) on caste en Object pour obtenir Seq<Object>
-	    List<Object> yearsObj = yearsInt.stream()
-	      .map(y -> (Object) y)
-	      .collect(Collectors.toList());
-	    Seq<Object> yearSeq = JavaConverters
-	      .asScalaIteratorConverter(yearsObj.iterator())
-	      .asScala()
-	      .toSeq();
+      // Les années à pivoter
+      List<Integer> yearsInt = Arrays.asList(2017, 2022, 2024);
+      // Convertir en Seq<Object> pour Spark
+      List<Object> yearsObj = yearsInt.stream().map(y -> (Object) y).collect(Collectors.toList());
+      scala.collection.Seq<Object> yearSeq = JavaConverters
+        .asScalaIteratorConverter(yearsObj.iterator())
+        .asScala()
+        .toSeq();
 
-	    // clés de grouping
-	    String[] keys = new String[]{ "Code région", "indicateur", "unite_de_compte" };
-	    // conversion des clés en Seq<String>
-	    Seq<String> keySeq = JavaConverters
-	      .asScalaIteratorConverter(Arrays.asList(keys).iterator())
-	      .asScala()
-	      .toSeq();
+      // Clés de grouping
+      String[] keys = new String[]{ "Code région", "indicateur", "unite de compte" };
 
-	    // pivot "nombre"
-	    Dataset<Row> byNombre = ds
-	      .groupBy(col(keys[0]), col(keys[1]), col(keys[2]))
-	      .pivot("annee", yearSeq)
-	      .agg(first("nombre"));
-	    for (Integer y : yearsInt) {
-	      byNombre = byNombre.withColumnRenamed(y.toString(), "nombre_" + y);
-	    }
+      // Pivot sur taux_pour_mille
+      Dataset<Row> byTaux = ds
+        .groupBy(col(keys[0]), col(keys[1]), col(keys[2]))
+        .pivot("annee", yearSeq)
+        .agg(first(col("taux pour mille")));
 
-	    // pivot "taux_pour_mille"
-	    Dataset<Row> byTaux = ds
-	      .groupBy(col(keys[0]), col(keys[1]), col(keys[2]))
-	      .pivot("annee", yearSeq)
-	      .agg(first("taux_pour_mille"));
-	    for (Integer y : yearsInt) {
-	      byTaux = byTaux.withColumnRenamed(y.toString(), "taux_pour_mille_" + y);
-	    }
+      // Renommage des colonnes pivotées
+      for (Integer y : yearsInt) {
+        byTaux = byTaux.withColumnRenamed(y.toString(), "taux pour mille " + y);
+      }
 
-	    // pivot "insee_pop"
-	    Dataset<Row> byPop = ds
-	      .groupBy(col(keys[0]), col(keys[1]), col(keys[2]))
-	      .pivot("annee", yearSeq)
-	      .agg(first("insee_pop"));
-	    for (Integer y : yearsInt) {
-	      byPop = byPop.withColumnRenamed(y.toString(), "insee_pop_" + y);
-	    }
+      return byTaux;
+  }
 
-	    // join final sur les mêmes clés
-	    return byNombre
-	      .join(byTaux, keySeq, "inner")
-	      .join(byPop,  keySeq, "inner");
-	  }
   /**
    * Assure la présence et le bon format des colonnes géographiques :
    * - Code département à 2 caractères (padding à gauche)

@@ -58,59 +58,23 @@ public class Main {
         }
 
      // --- Traitement des loyers par commune (CarteLoyer) ---
-        String baseCarte   = "src/main/resources/inputs/CarteLoyer";
-        String outputCarte = "src/main/resources/outputs/CarteLoyer";
-
-        // 0) création du dossier de base
-        File baseOut = new File(outputCarte);
-        if (!baseOut.exists() && !baseOut.mkdirs()) {
-            throw new RuntimeException("Impossible de créer le dossier " + outputCarte);
-        }
-
-        // 1) on recherche dynamiquement tous les sous-dossiers (années) existants
-        File baseCarteDir = new File(baseCarte);
-        if (!baseCarteDir.exists()) {
-            System.err.println("[Main] Dossier d'entrée introuvable : " + baseCarte);
-        } else {
-            for (File yearDir : baseCarteDir.listFiles(File::isDirectory)) {
-                String year = yearDir.getName();
-                System.out.println("[Main] Traitement CarteLoyer pour l'année " + year);
-
-                // 2) création du sous-dossier de sortie pour cette année
-                File outYearDir = new File(baseOut, year);
-                if (!outYearDir.exists() && !outYearDir.mkdirs()) {
-                    System.err.println("! Impossible de créer le dossier " + outYearDir.getPath());
-                    continue;
-                }
-
-                // 3) itération sur tous les fichiers Excel/xlsx du dossier année
-                List<File> files = FileUtils.listInputFiles(yearDir);
-                if (files.isEmpty()) {
-                    System.out.println("[Main] Aucun fichier de loyers trouvé pour " + year);
-                    continue;
-                }
-
-                for (File loFile : files) {
-                    String fileName = loFile.getName();
-                    System.out.println("→ Traitement fichier : " + loFile.getPath());
-
-                    // 4) Lecture et nettoyage
-                    Dataset<Row> loRaw   = DataIngestionUtils.loadAsDataset(spark, loFile);
-                    Dataset<Row> loGeo   = DataAggregator.ensureGeoColumns(loRaw);
-                    Dataset<Row> loClean = DataCleaner.filterByBretagne(loGeo);
-
-                    // 5) (Éventuelles transformations spécifiques aux loyers…)
-
-                    // 6) Export CSV
-                    String outCsv = fileName.replaceFirst("(?i)\\.xlsx?$", ".csv");
-                    CSVUtils.saveAsSingleCSV(loClean, outYearDir.getPath(), outCsv);
-                    CSVUtils.previewCsv(outYearDir.getPath() + "/" + outCsv);
-
-            
-                }
-            }
-        }
-
+        YearlyProcessor.processByYear(
+        	    spark,
+        	    "src/main/resources/inputs/CarteLoyer",
+        	    "src/main/resources/outputs/CarteLoyer"
+        	);
+     // --- Traitement de la production energetique par commune  ---
+        YearlyProcessor.processByYear(
+        	    spark,
+        	    "src/main/resources/inputs/ProductionEnergetique",
+        	    "src/main/resources/outputs/ProductionEnergetique"
+        	);
+     // --- Traitement des unites urbaines par commune  ---
+        YearlyProcessor.processByYear(
+        	    spark,
+        	    "src/main/resources/inputs/UniteUrbaine",
+        	    "src/main/resources/outputs/UniteUrbaine"
+        	);
 
      // --- Traitement des données démographiques (niveau d'étude) ---
         String eduInput = "src/main/resources/inputs/Demographie-NiveauEtude/2022/population-selon-niveau-etude-par-commune.xlsx";
@@ -135,9 +99,10 @@ public class Main {
         } else {
             System.out.println("[Main] Fichier démographie niveau d'étude introuvable : " + eduInput);
         }
+     
 
         // --- Traitement du fichier de sécurité ---
-        String secInput = "src/main/resources/inputs/Security/criminalite-par-departement.xlsx";
+        String secInput = "src/main/resources/inputs/Security/criminalite-par-region.xlsx";
         File secFile = new File(secInput);
         if (secFile.exists()) {
             Dataset<Row> secRaw = DataIngestionUtils.loadAsDataset(spark, secFile);
@@ -147,10 +112,9 @@ public class Main {
             secPivot = DataAggregator.ensureGeoColumns(secPivot);
             String secOutDir = "src/main/resources/outputs/Security";
             new File(secOutDir).mkdirs();
-            String secCsv = "criminalite-par-departement.csv";
+            String secCsv = "criminalite-par-region.csv";
             CSVUtils.saveAsSingleCSV(secPivot, secOutDir, secCsv);
             CSVUtils.previewCsv(secOutDir + "/" + secCsv);
-            writer.writeTable(secPivot, "CriminaliteFranceDep");
         } else {
             System.out.println("[Main] Fichier de sécurité introuvable : " + secInput);
         }
@@ -188,12 +152,37 @@ public class Main {
         //Gestion des communes niveau BDD
         File geoFile = new File("src/main/resources/inputs/FichierReferenceCommunesDepartement/communes-france.csv");
         MySQLConverter.loadAndWriteCommunesDepartement(spark, writer, geoFile);
-        MySQLConverter.processOutputCSVs(
-                spark,
-                writer,
-                "src/main/resources/outputs"
-            );
-        MySQLConverter.processDepartementsCSVsOnCommunes(spark, writer, "src/main/resources/outputs");
+	     // 2) Déclaration des clés primaires et étrangères
+	     // → Clé primaire sur Departement.code_dep et Commune.code_com
+	     writer.addPrimaryKey("Departement", "code_dep");
+	     writer.addPrimaryKey("Commune",     "code_com");
+	
+	     // → Clé étrangère Commune.code_dep → Departement.code_dep
+	     writer.addForeignKey(
+	         "Commune", "fk_commune_dept",
+	         "code_dep",
+	         "Departement", "code_dep",
+	         "RESTRICT", "CASCADE"
+	     );
+	        MySQLConverter.processOutputCSVs(spark, writer, "src/main/resources/outputs");
+	        MySQLConverter.processDepartementsCSVsOnCommunes(spark, writer, "src/main/resources/outputs");
+	        MySQLConverter.processRegionsCSVsOnCommunes(spark, writer, "src/main/resources/outputs");
+	     // → Clé étrangère Donnees_commune.CODGEO → Commune.code_com
+	     writer.addForeignKey(
+	         "Donnees_commune", "fk_data_commune",
+	         "CODGEO",
+	         "Commune", "code_com",
+	         "RESTRICT", null
+	     );
+	
+	     // → (Optionnel) Donnees_commune.`Code département` → Departement.code_dep
+	     writer.addForeignKey(
+	         "Donnees_commune", "fk_data_dept",
+	         "Code département",
+	         "Departement", "code_dep",
+	         null, null
+	     );
+
 
         //  Dump de la base MySQL
 
