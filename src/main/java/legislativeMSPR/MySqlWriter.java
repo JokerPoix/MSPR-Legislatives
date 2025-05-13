@@ -20,6 +20,7 @@ public class MySqlWriter {
      * @param password  ex. "poix"
      */
     public MySqlWriter(String host, String port, String database, String user, String password) {
+    	
         // on active allowPublicKeyRetrieval pour éviter l’erreur SHA2+clé publique
         this.jdbcUrl = String.format(
             "jdbc:mysql://%s:%s/%s?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true",
@@ -58,4 +59,19 @@ public class MySqlWriter {
             throw new RuntimeException("Erreur en vidant la base MySQL", e);
         }
     }
+    public String getJdbcUrl() {
+        return jdbcUrl;
+    }
+
+    public String getUser() {
+        return connectionProps.getProperty("user");
+    }
+
+    public String getPassword() {
+        return connectionProps.getProperty("password");
+    }
+
+	public Properties getConnectionProps() {
+		return connectionProps;
+	}
 }

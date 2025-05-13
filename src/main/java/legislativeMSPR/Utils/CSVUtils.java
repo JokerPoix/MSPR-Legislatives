@@ -40,96 +40,138 @@ public class CSVUtils {
     }
 
     public static void previewCsv(String csvFilePath) {
-        // Lire le fichier CSV ligne par ligne sans dépendance java.nio
-        List<String> lines = new ArrayList<>();
-        try (java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader(csvFilePath))) {
+        List<String[]> rows = new ArrayList<>();
+        try (var br = new java.io.BufferedReader(new java.io.FileReader(csvFilePath))) {
             String line;
             while ((line = br.readLine()) != null) {
-                lines.add(line);
+                rows.add(line.split(";", -1)); // -1 pour garder les vides
             }
-        } catch (java.io.IOException e) {
+        } catch (IOException e) {
             System.err.println("Erreur lors de la lecture du fichier CSV : " + e.getMessage());
             return;
         }
 
-        int total       = lines.size();
-        int headCount   = Math.min(6, total);
-        int tailCount   = Math.min(5, total - headCount);
-        int available   = total - headCount - tailCount;
-        int randomCount = Math.min(2, Math.max(available, 0));
-
-        System.out.println("=== Aperçu du CSV ===");
-
-        System.out.println("\n-- 6 premières lignes --");
-        for (int i = 0; i < headCount; i++) {
-            System.out.println(lines.get(i));
+        if (rows.isEmpty()) {
+            System.out.println("[CSV vide]");
+            return;
         }
 
-        System.out.println("\n-- 5 dernières lignes --");
-        for (int i = total - tailCount; i < total; i++) {
-            System.out.println(lines.get(i));
+        // Calcul de la largeur max pour chaque colonne
+        int colCount = rows.get(0).length;
+        int[] colWidths = new int[colCount];
+        for (String[] row : rows) {
+            for (int i = 0; i < colCount; i++) {
+                if (i < row.length)
+                    colWidths[i] = Math.max(colWidths[i], row[i].length());
+            }
         }
 
-        if (randomCount > 0) {
-            System.out.println("\n-- " + randomCount + " lignes aléatoires au milieu --");
+        // Fonction pour afficher une ligne joliment
+        java.util.function.Consumer<String[]> printRow = row -> {
+            StringBuilder sb = new StringBuilder("| ");
+            for (int i = 0; i < colCount; i++) {
+                String cell = i < row.length ? row[i] : "";
+                sb.append(String.format("%-" + colWidths[i] + "s", cell)).append(" | ");
+            }
+            System.out.println(sb.toString());
+        };
+
+        // Affichage des parties
+        int total = rows.size();
+        int head = Math.min(6, total);
+        int tail = Math.min(5, total - head);
+        int available = total - head - tail;
+        int middle = Math.min(2, Math.max(available, 0));
+
+        System.out.println("=== Aperçu du CSV ===\n");
+
+        System.out.println("-- 6 premières lignes --");
+        for (int i = 0; i < head; i++) printRow.accept(rows.get(i));
+
+        if (tail > 0) {
+            System.out.println("\n-- 5 dernières lignes --");
+            for (int i = total - tail; i < total; i++) printRow.accept(rows.get(i));
+        }
+
+        if (middle > 0) {
+            System.out.println("\n-- Lignes aléatoires au milieu --");
             Random rand = new Random();
             Set<Integer> indices = new HashSet<>();
-            while (indices.size() < randomCount) {
-                indices.add(rand.nextInt(available) + headCount);
+            while (indices.size() < middle) {
+                indices.add(rand.nextInt(available) + head);
             }
-            for (int idx : indices) {
-                System.out.println(lines.get(idx));
-            }
+            for (int idx : indices) printRow.accept(rows.get(idx));
         }
     }
+
     
     public static void previewXlsx(String xlsxFilePath) {
-        List<String> rows = new ArrayList<>();
+        List<String[]> rows = new ArrayList<>();
         try (var fis = new java.io.FileInputStream(new File(xlsxFilePath));
              Workbook workbook = WorkbookFactory.create(fis)) {
 
             Sheet sheet = workbook.getSheetAt(0);
             for (org.apache.poi.ss.usermodel.Row row : sheet) {
-                StringBuilder sb = new StringBuilder();
+                List<String> cellValues = new ArrayList<>();
                 for (Cell cell : row) {
-                    sb.append(cell.toString()).append(";");
+                    cellValues.add(cell.toString());
                 }
-                if (sb.length() > 0) sb.setLength(sb.length() - 1);
-                rows.add(sb.toString());
-            }
-
-            int total       = rows.size();
-            int headCount   = Math.min(6, total);
-            int tailCount   = Math.min(5, total - headCount);
-            int available   = total - headCount - tailCount;
-            int randomCount = Math.min(2, Math.max(available, 0));
-
-            System.out.println("=== Aperçu du XLSX ===");
-
-            System.out.println("\n-- 6 premières lignes --");
-            for (int i = 0; i < headCount; i++) {
-                System.out.println(rows.get(i));
-            }
-
-            System.out.println("\n-- 5 dernières lignes --");
-            for (int i = total - tailCount; i < total; i++) {
-                System.out.println(rows.get(i));
-            }
-
-            if (randomCount > 0) {
-                System.out.println("\n-- " + randomCount + " lignes aléatoires au milieu --");
-                Random rand = new Random();
-                Set<Integer> indices = new HashSet<>();
-                while (indices.size() < randomCount) {
-                    indices.add(rand.nextInt(available) + headCount);
-                }
-                for (int idx : indices) {
-                    System.out.println(rows.get(idx));
-                }
+                rows.add(cellValues.toArray(new String[0]));
             }
 
         } catch (IOException e) {
             System.err.println("Erreur lors de la lecture du fichier XLSX : " + e.getMessage());
+            return;
+        }
+
+        if (rows.isEmpty()) {
+            System.out.println("[XLSX vide]");
+            return;
+        }
+
+        int colCount = rows.get(0).length;
+        int[] colWidths = new int[colCount];
+        for (String[] row : rows) {
+            for (int i = 0; i < colCount; i++) {
+                if (i < row.length)
+                    colWidths[i] = Math.max(colWidths[i], row[i].length());
+            }
+        }
+
+        java.util.function.Consumer<String[]> printRow = row -> {
+            StringBuilder sb = new StringBuilder("| ");
+            for (int i = 0; i < colCount; i++) {
+                String cell = i < row.length ? row[i] : "";
+                sb.append(String.format("%-" + colWidths[i] + "s", cell)).append(" | ");
+            }
+            System.out.println(sb.toString());
+        };
+
+        int total = rows.size();
+        int head = Math.min(6, total);
+        int tail = Math.min(5, total - head);
+        int available = total - head - tail;
+        int middle = Math.min(2, Math.max(available, 0));
+
+        System.out.println("=== Aperçu du XLSX ===");
+
+        System.out.println("\n-- 6 premières lignes --");
+        for (int i = 0; i < head; i++) printRow.accept(rows.get(i));
+
+        if (tail > 0) {
+            System.out.println("\n-- 5 dernières lignes --");
+            for (int i = total - tail; i < total; i++) printRow.accept(rows.get(i));
+        }
+
+        if (middle > 0) {
+            System.out.println("\n-- Lignes aléatoires au milieu --");
+            Random rand = new Random();
+            Set<Integer> indices = new HashSet<>();
+            while (indices.size() < middle) {
+                indices.add(rand.nextInt(available) + head);
+            }
+            for (int idx : indices) printRow.accept(rows.get(idx));
         }
     }
+
 }

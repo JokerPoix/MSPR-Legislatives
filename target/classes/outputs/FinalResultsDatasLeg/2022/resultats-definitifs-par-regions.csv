@@ -1,2 +1,2 @@
-Code région;Libellé région;Inscrits;Abstentions;% Abs/Ins;Votants;% Votants;Blancs;% Blancs/Ins;% Blancs/Vot;Nuls;% Nuls/Ins;% Nuls/Vot;Exprimés;% Exp/Ins;% Exp/Vot;Score_Gauche;Score_Droite;Score_Divers
-53;Bretagne;2571809;1201428;46.72;1370381.0;53.28;20994.0;0.82;1.53;8327.0;0.32;0.61;1341060.0;52.14;97.86;34.15;65.31;0.54
+Code région;% Exp/Ins;Score_Gauche;Score_Droite;Score_Divers
+53;52.14;34.15;65.31;0.54

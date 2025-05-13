@@ -3,36 +3,20 @@ package legislativeMSPR;
 import legislativeMSPR.Utils.CSVUtils;
 import legislativeMSPR.Utils.DataIngestionUtils;
 import legislativeMSPR.Utils.FileUtils;
-import legislativeMSPR.DataCleaner;
-import legislativeMSPR.DataAggregator;
+import legislativeMSPR.Utils.MySQLConverter;
+import legislativeMSPR.config.SparkContextProvider;
+import static org.apache.spark.sql.functions.col;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
-import org.apache.spark.sql.SparkSession;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        // Réduire les logs
-        Logger.getLogger("org").setLevel(Level.WARN);
-        Logger.getLogger("akka").setLevel(Level.WARN);
-
-        // Initialisation de Spark
-        SparkSession spark = SparkSession.builder()
-                .appName("rendementLoc$")
-                .config("spark.master", "local[*]")
-                .config("spark.driver.memory", "16g")
-                .config("spark.executor.memory", "8g")
-                .config("spark.executor.cores", "4")
-                .config("spark.sql.shuffle.partitions", "16")
-                .getOrCreate();
-        spark.sparkContext().setLogLevel("WARN");
+        var spark = SparkContextProvider.create();
      // ==== Insertion en base via MySqlWriter ====
         MySqlWriter writer = new MySqlWriter(
         	    "localhost", 
@@ -43,9 +27,9 @@ public class Main {
         	);
         writer.dropAllTables();
         // --- Traitement des résultats électoraux ---
-        String inputBase = "src/main/resources/inputs/FinalResultsDatasLeg";
-        String outputBase = "src/main/resources/outputs/FinalResultsDatasLeg";
-        File baseDir = new File(inputBase);
+        String inputDatasLegBase = "src/main/resources/inputs/FinalResultsDatasLeg";
+        String outputDatasLegBase = "src/main/resources/outputs/FinalResultsDatasLeg";
+        File baseDir = new File(inputDatasLegBase);
 
         for (File inFile : FileUtils.listInputFiles(baseDir)) {
         	String fileName = inFile.getName();
@@ -57,44 +41,113 @@ public class Main {
             Dataset<Row> raw = DataIngestionUtils.loadAsDataset(spark, inFile);
 
             // Filtrage géographique
-            Dataset<Row> cleaned = DataCleaner.filterByBretagne(raw);
+            Dataset<Row> cleaned = DataAggregator.ensureGeoColumns(raw);
+            cleaned =DataCleaner.filterByBretagne(cleaned);
 
             // Agrégation des scores Gauche/Droite
-            String refPath = inputBase + "/" + year + "/ReferenceDroiteGauche.csv";
+            String refPath = inputDatasLegBase + "/" + year + "/ReferenceDroiteGauche.csv";
             Dataset<Row> aggregated = DataAggregator.aggregateScores(spark, cleaned, refPath);
-
+            
             // Export CSV
-            String outDir = outputBase + "/" + year;
+            String outDir = outputDatasLegBase + "/" + year;
             new File(outDir).mkdirs();
             String outFile = inFile.getName().replaceAll("\\.xlsx?$", ".csv");
             CSVUtils.saveAsSingleCSV(aggregated, outDir, outFile);
             CSVUtils.previewCsv(outDir + "/" + outFile);
 
-            // Construction du nom de table MySQL sans point ni extension
-            String baseName       = inFile.getName().replaceFirst("(?i)\\.xlsx?$", "");
-            String[] tokens       = baseName.split("[ _-]");
-            String localisation   = tokens[tokens.length - 1];
-            // Ne conserver que lettres, chiffres et underscore
-            String safeLoc        = localisation.replaceAll("[^A-Za-z0-9]", "_");
-            String tableName      = String.format("ResultatLegislative_%s_%s", year, safeLoc);
+        }
 
-            // Debug : vérifier le nom final
-            System.out.println("→ j’écris dans la table MySQL : " + tableName);
+     // --- Traitement des loyers par commune (CarteLoyer) ---
+        String baseCarte   = "src/main/resources/inputs/CarteLoyer";
+        String outputCarte = "src/main/resources/outputs/CarteLoyer";
 
-            writer.writeTable(aggregated, tableName);
+        // 0) création du dossier de base
+        File baseOut = new File(outputCarte);
+        if (!baseOut.exists() && !baseOut.mkdirs()) {
+            throw new RuntimeException("Impossible de créer le dossier " + outputCarte);
+        }
+
+        // 1) on recherche dynamiquement tous les sous-dossiers (années) existants
+        File baseCarteDir = new File(baseCarte);
+        if (!baseCarteDir.exists()) {
+            System.err.println("[Main] Dossier d'entrée introuvable : " + baseCarte);
+        } else {
+            for (File yearDir : baseCarteDir.listFiles(File::isDirectory)) {
+                String year = yearDir.getName();
+                System.out.println("[Main] Traitement CarteLoyer pour l'année " + year);
+
+                // 2) création du sous-dossier de sortie pour cette année
+                File outYearDir = new File(baseOut, year);
+                if (!outYearDir.exists() && !outYearDir.mkdirs()) {
+                    System.err.println("! Impossible de créer le dossier " + outYearDir.getPath());
+                    continue;
+                }
+
+                // 3) itération sur tous les fichiers Excel/xlsx du dossier année
+                List<File> files = FileUtils.listInputFiles(yearDir);
+                if (files.isEmpty()) {
+                    System.out.println("[Main] Aucun fichier de loyers trouvé pour " + year);
+                    continue;
+                }
+
+                for (File loFile : files) {
+                    String fileName = loFile.getName();
+                    System.out.println("→ Traitement fichier : " + loFile.getPath());
+
+                    // 4) Lecture et nettoyage
+                    Dataset<Row> loRaw   = DataIngestionUtils.loadAsDataset(spark, loFile);
+                    Dataset<Row> loGeo   = DataAggregator.ensureGeoColumns(loRaw);
+                    Dataset<Row> loClean = DataCleaner.filterByBretagne(loGeo);
+
+                    // 5) (Éventuelles transformations spécifiques aux loyers…)
+
+                    // 6) Export CSV
+                    String outCsv = fileName.replaceFirst("(?i)\\.xlsx?$", ".csv");
+                    CSVUtils.saveAsSingleCSV(loClean, outYearDir.getPath(), outCsv);
+                    CSVUtils.previewCsv(outYearDir.getPath() + "/" + outCsv);
+
+            
+                }
+            }
+        }
+
+
+     // --- Traitement des données démographiques (niveau d'étude) ---
+        String eduInput = "src/main/resources/inputs/Demographie-NiveauEtude/2022/population-selon-niveau-etude-par-commune.xlsx";
+        File eduFile = new File(eduInput);
+        if (eduFile.exists()) {
+            // 1) lecture
+            Dataset<Row> eduRaw = DataIngestionUtils.loadAsDataset(spark, eduFile);
+
+            // 2)  on s'assure d'avoir Code département, Code de la commune et CODGEO
+            Dataset<Row> eduGeo = DataAggregator.ensureGeoColumns(eduRaw);
+            eduGeo = DataCleaner.filterByBretagne(eduGeo);
+            // 3) agrégation des taux (universitaire vs bac ou moins, par tranche d'âge)
+            Dataset<Row> eduAgg = DataAggregator.aggregateEducation(eduGeo);
+
+            // 4) export CSV
+            String eduOutDir = "src/main/resources/outputs/Demographie-NiveauEtude/2022";
+            new File(eduOutDir).mkdirs();
+            String eduCsv = "population-niveau-etude-par-commune.csv";
+            CSVUtils.saveAsSingleCSV(eduAgg, eduOutDir, eduCsv);
+            CSVUtils.previewCsv(eduOutDir + "/" + eduCsv);
+
+        } else {
+            System.out.println("[Main] Fichier démographie niveau d'étude introuvable : " + eduInput);
         }
 
         // --- Traitement du fichier de sécurité ---
-        String secInput = "src/main/resources/inputs/Security/CriminalityFranceDepartement.xlsx";
+        String secInput = "src/main/resources/inputs/Security/criminalite-par-departement.xlsx";
         File secFile = new File(secInput);
         if (secFile.exists()) {
             Dataset<Row> secRaw = DataIngestionUtils.loadAsDataset(spark, secFile);
             Dataset<Row> secGeo = DataCleaner.filterByBretagne(secRaw);
             Dataset<Row> secFiltered = DataCleaner.filterByYears(secGeo);
             Dataset<Row> secPivot = DataAggregator.pivotByYear(secFiltered);
+            secPivot = DataAggregator.ensureGeoColumns(secPivot);
             String secOutDir = "src/main/resources/outputs/Security";
             new File(secOutDir).mkdirs();
-            String secCsv = "CriminaliteFranceDepartement.csv";
+            String secCsv = "criminalite-par-departement.csv";
             CSVUtils.saveAsSingleCSV(secPivot, secOutDir, secCsv);
             CSVUtils.previewCsv(secOutDir + "/" + secCsv);
             writer.writeTable(secPivot, "CriminaliteFranceDep");
@@ -102,26 +155,48 @@ public class Main {
             System.out.println("[Main] Fichier de sécurité introuvable : " + secInput);
         }
         // Fichiers prets à mettre en BDD
-        String readyDir = "src/main/resources/inputs/ReadyForDataBase";
-        File readyBase = new File(readyDir);
-        if (readyBase.exists()) {
-            for (File inFile : FileUtils.listInputFiles(readyBase)) {
-                // on récupère le nom de base sans extension
-                String baseName = inFile.getName().replaceFirst("(?i)\\.xlsx?$", "")
-                                          .replaceFirst("(?i)\\.csv$", "");
-                // charger en DataFrame
+        String readyIn  = "src/main/resources/inputs/ReadyForDataBase";
+        String readyOut = "src/main/resources/outputs/ReadyForDataBaseCsv";
+        File basereadyBDDIn  = new File(readyIn);
+        File basereadyBDDOut = new File(readyOut);
+        if (!basereadyBDDOut.exists() && !basereadyBDDOut.mkdirs()) {
+            throw new RuntimeException("Impossible de créer le dossier de sortie " + readyOut);
+        }
+
+        if (basereadyBDDIn.exists()) {
+            for (File inFile : FileUtils.listInputFiles(basereadyBDDIn)) {
+                String relPath = basereadyBDDIn.toPath().relativize(inFile.toPath()).toString();
+                if (!relPath.toLowerCase().matches(".*\\.xlsx?$")) continue;
+
+                String outRelative = relPath.replaceFirst("(?i)\\.xlsx?$", ".csv");
+                File outFile = new File(basereadyBDDOut, outRelative);
+                outFile.getParentFile().mkdirs();
+
+                System.out.println("→ Conversion : " + inFile.getPath() + " → " + outFile.getPath());
                 Dataset<Row> df = DataIngestionUtils.loadAsDataset(spark, inFile);
-                // créer un nom de table safe (lettres, chiffres, _)
-                String table = baseName.replaceAll("[^A-Za-z0-9]", "_");
-                System.out.println("→ j’écris en BDD le fichier “" + inFile.getName()
-                                   + "” dans la table : " + table);
-                writer.writeTable(df, table);
+                df = DataAggregator.ensureGeoColumns(df);
+                df = df.withColumn(
+                	    "Code département",
+                	    col("Code département").cast("int")
+                	);
+                CSVUtils.saveAsSingleCSV(df, outFile.getParent(), outFile.getName());
             }
         } else {
-            System.out.println("[Main] Aucun fichier prêt pour la BDD dans " + readyDir);
+            System.out.println("[Main] Aucun dossier ReadyForDataBase trouvé en " + readyIn);
         }
         
-     // Dump de la base MySQL
+        //Gestion des communes niveau BDD
+        File geoFile = new File("src/main/resources/inputs/FichierReferenceCommunesDepartement/communes-france.csv");
+        MySQLConverter.loadAndWriteCommunesDepartement(spark, writer, geoFile);
+        MySQLConverter.processOutputCSVs(
+                spark,
+                writer,
+                "src/main/resources/outputs"
+            );
+        MySQLConverter.processDepartementsCSVsOnCommunes(spark, writer, "src/main/resources/outputs");
+
+        //  Dump de la base MySQL
+
         try {
             String dumpFile = "src/main/resources/outputs/MSPRLegislative.dump";
             ProcessBuilder pb = new ProcessBuilder(

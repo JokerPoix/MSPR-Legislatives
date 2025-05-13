@@ -17,10 +17,15 @@ public class DataIngestionUtils {
      */
     public static Dataset<Row> loadAsDataset(SparkSession spark, File inFile) {
         String path = inFile.getAbsolutePath();
+        String fileName = inFile.getName().toLowerCase();
+
         if (inFile.getName().toLowerCase().endsWith(".csv")) {
+            String delimiter = fileName.contains("referencedroitegauche") ? "," : ";";
+
             return spark.read()
                         .option("header", "true")
-                        .option("delimiter", ";")
+                        .option("delimiter", delimiter)
+                        .option("sep",       delimiter)
                         .csv(path);
         } else if (inFile.getName().toLowerCase().endsWith(".xlsx")) {
             return spark.read()
