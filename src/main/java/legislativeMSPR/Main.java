@@ -198,7 +198,7 @@ public class Main {
         //  Dump de la base MySQL
 
         try {
-            String dumpFile = "src/main/resources/outputs/MSPRLegislative.dump";
+            String dumpFile = "MSPRLegislative.dump";
             ProcessBuilder pb = new ProcessBuilder(
                 "mysqldump", "-u", "poix", "-ppoix", "MSPRLegislative"
             );
