@@ -333,14 +333,41 @@ public class DataAggregator {
           col("taux_bac_ou_moins_25_ans_et_plus")
       );
  }
-  public static Dataset<Row> averagePovertyByCommune(Dataset<Row> df) {
+  public static Dataset<Row> averageByCommune(Dataset<Row> df) {
+	    // Colonnes disponibles
+	    List<String> cols = Arrays.asList(df.columns());
+
+	    // Choix de la métrique et de l'alias
+	    String metricCol, aliasCol;
+	    boolean isIPS;
+	    if (cols.contains("Taux de bas revenus déclarés au seuil de 60 %")) {
+	        metricCol = "Taux de bas revenus déclarés au seuil de 60 %";
+	        aliasCol  = "taux_pauvrete_commune";
+	        isIPS     = false;
+	    } else if (cols.contains("IPS Ensemble GT-PRO")) {
+	        metricCol = "IPS Ensemble GT-PRO";
+	        aliasCol  = "indice_position_sociale";
+	        isIPS     = true;
+	    } else {
+	        throw new IllegalArgumentException(
+	            "Aucune métrique valide trouvée (pauvreté ou IPS)."
+	        );
+	    }
+
+	    // Construction des colonnes de groupBy
+	    // toujours CODGEO et LIBGEO, et si IPS on ajoute 'annee'
+	    Column[] groupCols = isIPS
+	      ? new Column[]{ col("CODGEO"), col("LIBGEO"), col("annee") }
+	      : new Column[]{ col("CODGEO"), col("LIBGEO") };
+
+	    // Agrégation
 	    return df
-	      .groupBy(col("CODGEO"), col("LIBGEO"))
+	      .groupBy(groupCols)
 	      .agg(
 	        format_number(
-	          avg(col("Taux de bas revenus déclarés au seuil de 60 %")),
+	          avg(col(metricCol)),
 	          2
-	        ).alias("taux_pauvrete_commune")
+	        ).alias(aliasCol)
 	      );
 	}
 }

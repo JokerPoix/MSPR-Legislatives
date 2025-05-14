@@ -197,6 +197,13 @@ public class MySqlWriter {
 	    );
 	    execSql(ddl);
 	}
-
+	 /**
+     * Active ou désactive la vérification des clés étrangères.
+     * @param enabled true pour SET FOREIGN_KEY_CHECKS=1, false pour 0
+     */
+    public void setForeignKeyChecks(boolean enabled) {
+        String val = enabled ? "1" : "0";
+        execSql("SET FOREIGN_KEY_CHECKS = " + val);
+    }
 
 }

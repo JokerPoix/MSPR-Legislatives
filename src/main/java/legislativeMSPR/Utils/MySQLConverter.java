@@ -8,13 +8,10 @@ import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.Column;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.UncheckedIOException;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -22,7 +19,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Deque;
 import java.util.List;
 import java.util.function.BiFunction;
@@ -39,33 +35,60 @@ import static org.apache.spark.sql.functions.*;
  */
 public class MySQLConverter {
 
-    /**
+	/**
      * Charge les tables de référence Communes et Départements.
      */
-    public static void loadAndWriteCommunesDepartement(SparkSession spark,
-                                                       MySqlWriter writer,
-                                                       File geoCsv) {
-        // Lecture du CSV
+    public static void loadAndWriteCommunesDepartement(
+            SparkSession spark,
+            MySqlWriter writer,
+            File geoCsv
+    ) {
+        // --- Préparation JDBC props avec désactivation des FK ---
+        Properties jdbcProps = new Properties();
+        jdbcProps.put("user", writer.getUser());
+        jdbcProps.put("password", writer.getPassword());
+        // Désactive FOREIGN_KEY_CHECKS pour toutes connexions Spark
+        jdbcProps.put("sessionInitStatement", "SET FOREIGN_KEY_CHECKS=0");
+
+        // --- 1) Lecture du CSV ---
         Dataset<Row> geo = DataIngestionUtils.loadAsDataset(spark, geoCsv);
 
-        // Dimension Département
+        // --- 2) Création de la dimension Départements ---
         Dataset<Row> departements = geo
-            .withColumn("code_dep", col("Code département").cast("int"))
-            .withColumn("nom_dep", col("Libellé département"))
-            .select("code_dep", "nom_dep").distinct();
+                .withColumn("code_dep", col("Code département").cast("int"))
+                .withColumn("nom_dep",  col("Libellé département"))
+                .select("code_dep", "nom_dep")
+                .distinct();
 
-        // Dimension Commune
+        // --- 3) Création de la dimension Communes ---
         Dataset<Row> communes = geo
-            .withColumn("code_com", col("CODGEO").cast("string"))
-            .withColumn("nom_com", col("Libellé Commune"))
-            .withColumn("geo_point", col("Geo Point"))
-            .withColumn("code_dep", col("Code département").cast("int"))
-            .select("code_com", "nom_com", "geo_point", "code_dep");
+                .withColumn("code_com",  col("CODGEO").cast("string"))
+                .withColumn("nom_com",   col("Libellé Commune"))
+                .withColumn("geo_point", col("Geo Point"))
+                .withColumn("code_dep",  col("Code département").cast("int"))
+                .select("code_com", "nom_com", "geo_point", "code_dep");
 
-        // Écriture
-        writer.writeTable(departements, "Departement");
-        writer.writeTable(communes,     "Commune");
+        // --- 4) Write OVERWRITE Départements avec types SQL explicites ---
+        departements.write()
+                .mode(SaveMode.Overwrite)
+                .option("createTableColumnTypes", "code_dep INT NOT NULL, nom_dep VARCHAR(255)")
+                .jdbc(writer.getJdbcUrl(), "Departement", jdbcProps);
+
+        // --- 5) Write OVERWRITE Communes avec types SQL explicites ---
+        communes.write()
+                .mode(SaveMode.Overwrite)
+                .option("createTableColumnTypes",
+                        "code_com VARCHAR(5) NOT NULL, " +
+                        "nom_com VARCHAR(255), " +
+                        "geo_point VARCHAR(100), " +
+                        "code_dep INT NOT NULL")
+                .jdbc(writer.getJdbcUrl(), "Commune", jdbcProps);
+
+        // --- 6) Réactivation des FK pour connexions manuelles ---
+        writer.execSql("SET FOREIGN_KEY_CHECKS=1");
     }
+
+
 
     /**
      * Méthode générique pour traiter des CSV d'outputs.
@@ -189,45 +212,73 @@ public class MySQLConverter {
         processCSVs(spark, writer, outputsDir, filter, enhancer);
     }
 
-    /**
-     * Exporte Donnees_commune par année et type.
-     */
-    public static void exportDonneesCommuneByYearAndType(SparkSession spark,
-                                                          MySqlWriter writer,
-                                                          String outputBaseDir) throws IOException {
-        Dataset<Row> df = spark.read().format("jdbc")
-            .option("url", writer.getJdbcUrl())
-            .option("dbtable", "Donnees_commune")
-            .option("user", writer.getUser())
-            .option("password", writer.getPassword())
-            .load();
-        List<Row> combos = df.select("annee","type").distinct().collectAsList();
+    public static void exportDonneesCommuneByYearAndType(
+            SparkSession spark,
+            MySqlWriter writer,
+            String outputBaseDir
+    ) {
+        System.out.println("[MySQLConverter] → Début export vers " + outputBaseDir);
+        Dataset<Row> df;
+        try {
+            df = spark.read()
+                .format("jdbc")
+                .option("url", writer.getJdbcUrl())
+                .option("dbtable", "Donnees_commune")
+                .option("user", writer.getUser())
+                .option("password", writer.getPassword())
+                .load();
+        } catch (Exception e) {
+            System.err.println("[MySQLConverter] Échec connexion JDBC : " + e.getMessage());
+            return;
+        }
+
+        long totalRows = df.count();
+        System.out.println("[MySQLConverter] → Lignes chargées : " + totalRows);
+        df.printSchema();
+
+        List<Row> combos = df.select("annee","type")
+                             .distinct()
+                             .collectAsList();
+        System.out.println("[MySQLConverter] → Combinaisons détectées : " + combos.size());
+        if (combos.isEmpty()) {
+            System.out.println("[MySQLConverter] → Aucune combinaison à traiter, arrêt de l'export.");
+            return;
+        }
+
         for (Row r : combos) {
             String annee = r.getString(0);
             String type  = r.getString(1);
-            Dataset<Row> slice = df.filter(col("annee").equalTo(annee).and(col("type").equalTo(type)));
-            String dir = outputBaseDir + "/" + annee;
-            String tmp = dir + "/" + type;
-            String out = dir + "/" + type + ".csv";
-            new File(tmp).mkdirs();
+            System.out.println(String.format(
+                "[MySQLConverter] → Traitement %s / %s",
+                annee, type
+            ));
+
+            Dataset<Row> slice = df.filter(
+                col("annee").equalTo(annee)
+                .and(col("type").equalTo(type))
+            );
             Dataset<Row> flat = DynamicJsonFlattener.flattenMapColumn(slice, "data", "");
-            flat.coalesce(1).write().mode(SaveMode.Overwrite).option("header","true").csv(tmp);
-            renamePartFile(tmp, out);
-            deleteRecursively(Paths.get(tmp));
+
+            String dirYear = outputBaseDir + "/" + annee;
+            new File(dirYear).mkdirs();
+
+            try {
+                CSVUtils.saveAsSingleCSV(flat, dirYear, type + ".csv");
+                long count = flat.count();  // déclenche l'action Spark
+                System.out.println(String.format(
+                    "[MySQLConverter] Exporté %d lignes vers %s/%s",
+                    count, dirYear, type + ".csv"
+                ));
+            } catch (Exception e) {
+                System.err.println(String.format(
+                    "[MySQLConverter] Erreur export %s/%s : %s",
+                    annee, type, e.getMessage()
+                ));
+            }
         }
     }
 
-    private static void renamePartFile(String folder,
-                                       String target) throws IOException {
-        try (DirectoryStream<Path> ds = Files.newDirectoryStream(Paths.get(folder), "part-*.csv")) {
-            for (Path p : ds) { Files.move(p, Paths.get(target), StandardCopyOption.REPLACE_EXISTING); break; }
-        }
-    }
-
-    private static void deleteRecursively(Path path) throws IOException {
-        if (!Files.exists(path)) return;
-        Files.walk(path).sorted(Comparator.reverseOrder()).forEach(p -> { try { Files.delete(p);} catch(IOException e){throw new UncheckedIOException(e);} });
-    }
+    
 
     private static Dataset<Row> loadDimensionCommune(SparkSession spark, MySqlWriter writer) {
         return spark.read().format("jdbc")

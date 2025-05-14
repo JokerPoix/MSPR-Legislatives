@@ -2,7 +2,7 @@ package legislativeMSPR;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
-import static org.apache.spark.sql.functions.col;
+import static org.apache.spark.sql.functions.*;
 
 import java.util.Arrays;
 
@@ -63,6 +63,24 @@ public class DataCleaner {
                 .filter(col("annee").isin((Object[]) ANNEES));
         } else {
             System.out.println("[DataCleaner] Colonne 'annee' introuvable, aucun filtrage sur les années appliqué.");
+            return ds;
+        }
+    }
+    
+    /**
+     * Normalise la colonne 'annee' en conservant uniquement la première année
+     * lorsqu'elle contient un intervalle 'YYYY-YYYY'.
+     */
+    public static Dataset<Row> normalizeYearColumn(Dataset<Row> ds) {
+        if (Arrays.asList(ds.columns()).contains("annee")) {
+            return ds.withColumn(
+                "annee",
+                // Extrait les 4 premiers chiffres s'il s'agit d'un intervalle ou d'une année unique
+                regexp_extract(col("annee"), "^(\\d{4})", 1)
+                    .cast("int")
+            );
+        } else {
+            System.out.println("[DataCleaner] Colonne 'annee' introuvable, aucune normalisation appliquée.");
             return ds;
         }
     }
