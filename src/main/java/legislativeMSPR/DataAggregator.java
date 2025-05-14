@@ -316,8 +316,10 @@ public class DataAggregator {
         .withColumn("taux_universitaire_25_ans_et_plus", pctUniv25p)
         .withColumn("taux_bac_ou_moins_25_ans_et_plus",  pctBac25p);
 
+      Dataset<Row> nonEmpty = enriched.filter(col("population_totale").isNotNull());
+
       // 7) on ne garde QUE les colonnes finales (géographie + agrégats)
-      return enriched.select(
+      return nonEmpty.select(
           col("CODGEO"),
           col("Code département"),
           col("Code de la commune"),

@@ -246,6 +246,18 @@ public class Main {
         } catch (IOException | InterruptedException e) {
             System.err.println("Erreur durant le dump MySQL : " + e.getMessage());
         }
+        
+     // … après avoir chargé toutes vos données BDD …
+        String exportDir = "src/main/resources/exports/Donnees_commune";
+        try {
+            MySQLConverter.exportDonneesCommuneByYearAndType(
+                spark, writer, exportDir
+            );
+        } catch (IOException e) {
+            System.err.println("Erreur d’export CSV : " + e.getMessage());
+        }
+
+
         spark.stop();
     }
 }

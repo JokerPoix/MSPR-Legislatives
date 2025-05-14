@@ -1,0 +1,1193 @@
+CODGEO,LIBGEO,Code département,annee,type,code_de_la_commune,code_com,geo_point,statut_commune,nom_com,code_dep
+22001,Allineuc,22,2022,unite urbaine,001,22001,"48.31157405032765, -2.8670651337472943",hors unité urbaine,Allineuc,22
+22002,Andel,22,2022,unite urbaine,002,22002,"48.49410497493759, -2.5510433254576497",hors unité urbaine,Andel,22
+22003,Aucaleuc,22,2022,unite urbaine,003,22003,"48.451792041709744, -2.1276186283311356",hors unité urbaine,Aucaleuc,22
+22004,Bégard,22,2022,unite urbaine,004,22004,"48.634784370412966, -3.291537395440154",unité urbaine,Bégard,22
+22005,Belle-Isle-en-Terre,22,2022,unite urbaine,005,22005,"48.53106512361239, -3.3818371582833917",hors unité urbaine,Belle-Isle-en-Terre,22
+22006,Berhet,22,2022,unite urbaine,006,22006,"48.69750531447889, -3.308461332158849",hors unité urbaine,Berhet,22
+22008,Bobital,22,2022,unite urbaine,008,22008,"48.41461576165647, -2.0974341309190154",unité urbaine,Bobital,22
+22009,Le Bodéo,22,2022,unite urbaine,009,22009,"48.32624169771798, -2.9213545296739416",hors unité urbaine,Le Bodéo,22
+22011,Boqueho,22,2022,unite urbaine,011,22011,"48.46832061079392, -2.9849252040192678",hors unité urbaine,Boqueho,22
+22012,La Bouillie,22,2022,unite urbaine,012,22012,"48.58358930983129, -2.4419466987465595",hors unité urbaine,La Bouillie,22
+22013,Bourbriac,22,2022,unite urbaine,013,22013,"48.46614145008935, -3.1998492745005143",hors unité urbaine,Bourbriac,22
+22014,Bourseul,22,2022,unite urbaine,014,22014,"48.46712529195602, -2.2649305685662817",hors unité urbaine,Bourseul,22
+22015,Bréhand,22,2022,unite urbaine,015,22015,"48.39371348739721, -2.5887890119592436",hors unité urbaine,Bréhand,22
+22016,Île-de-Bréhat,22,2022,unite urbaine,016,22016,"48.84999753399896, -3.0020099584464472",hors unité urbaine,Île-de-Bréhat,22
+22018,Brélidy,22,2022,unite urbaine,018,22018,"48.64929062701858, -3.227795253843802",hors unité urbaine,Brélidy,22
+22019,Bringolo,22,2022,unite urbaine,019,22019,"48.57715815476378, -3.0063341580506617",hors unité urbaine,Bringolo,22
+22020,Broons,22,2022,unite urbaine,020,22020,"48.31131192288653, -2.2409231184102447",unité urbaine,Broons,22
+22021,Brusvily,22,2022,unite urbaine,021,22021,"48.39398952757658, -2.117702528013565",hors unité urbaine,Brusvily,22
+22023,Bulat-Pestivien,22,2022,unite urbaine,023,22023,"48.43429350906591, -3.332708898349024",hors unité urbaine,Bulat-Pestivien,22
+22024,Calanhel,22,2022,unite urbaine,024,22024,"48.44062078647692, -3.4755663949139017",hors unité urbaine,Calanhel,22
+22025,Callac,22,2022,unite urbaine,025,22025,"48.42196827664741, -3.416491285381751",hors unité urbaine,Callac,22
+22026,Calorguen,22,2022,unite urbaine,026,22026,"48.40509142929895, -2.025985496611696",hors unité urbaine,Calorguen,22
+22028,Camlez,22,2022,unite urbaine,028,22028,"48.7832070650471, -3.3154023929294625",hors unité urbaine,Camlez,22
+22029,Canihuel,22,2022,unite urbaine,029,22029,"48.337245775243694, -3.0959063599846113",hors unité urbaine,Canihuel,22
+22030,Caouënnec-Lanvézéac,22,2022,unite urbaine,030,22030,"48.705892344939876, -3.3675467732029523",hors unité urbaine,Caouënnec-Lanvézéac,22
+22031,Carnoët,22,2022,unite urbaine,031,22031,"48.359241336135476, -3.53211129444564",hors unité urbaine,Carnoët,22
+22032,Caulnes,22,2022,unite urbaine,032,22032,"48.30216325406062, -2.1604139620127762",hors unité urbaine,Caulnes,22
+22033,Caurel,22,2022,unite urbaine,033,22033,"48.21724561201957, -3.039756388323664",hors unité urbaine,Caurel,22
+22034,Cavan,22,2022,unite urbaine,034,22034,"48.68215456074493, -3.3524096713925564",hors unité urbaine,Cavan,22
+22035,Les Champs-Géraux,22,2022,unite urbaine,035,22035,"48.42601578193849, -1.9776790432863975",hors unité urbaine,Les Champs-Géraux,22
+22036,La Chapelle-Blanche,22,2022,unite urbaine,036,22036,"48.26830592024628, -2.1284395259517597",hors unité urbaine,La Chapelle-Blanche,22
+22037,La Chapelle-Neuve,22,2022,unite urbaine,037,22037,"48.46571474215161, -3.4399666603374586",hors unité urbaine,La Chapelle-Neuve,22
+22039,La Chèze,22,2022,unite urbaine,039,22039,"48.13413992879994, -2.66248453321529",hors unité urbaine,La Chèze,22
+22040,Coadout,22,2022,unite urbaine,040,22040,"48.51493819543793, -3.1786769355603184",hors unité urbaine,Coadout,22
+22041,Coatascorn,22,2022,unite urbaine,041,22041,"48.66956621990305, -3.2552637436482668",hors unité urbaine,Coatascorn,22
+22042,Coatréven,22,2022,unite urbaine,042,22042,"48.76341836109597, -3.3259713891013423",hors unité urbaine,Coatréven,22
+22044,Coëtmieux,22,2022,unite urbaine,044,22044,"48.486604566333924, -2.5922050460710464",unité urbaine,Coëtmieux,22
+22045,Cohiniac,22,2022,unite urbaine,045,22045,"48.45147352827626, -2.9467183677877835",hors unité urbaine,Cohiniac,22
+22047,Corlay,22,2022,unite urbaine,047,22047,"48.30991342390647, -3.037664422933633",hors unité urbaine,Corlay,22
+22048,Corseul,22,2022,unite urbaine,048,22048,"48.48303302788376, -2.1663087926283544",hors unité urbaine,Corseul,22
+22049,Créhen,22,2022,unite urbaine,049,22049,"48.53989457783926, -2.19029968087284",hors unité urbaine,Créhen,22
+22050,Dinan,22,2022,unite urbaine,050,22050,"48.44612091913673, -2.0513021305898294",unité urbaine,Dinan,22
+22052,Duault,22,2022,unite urbaine,052,22052,"48.364888158360685, -3.436003914924763",hors unité urbaine,Duault,22
+22053,Éréac,22,2022,unite urbaine,053,22053,"48.274287039210606, -2.343933387805328",hors unité urbaine,Éréac,22
+22054,Erquy,22,2022,unite urbaine,054,22054,"48.61941709431571, -2.4583856753027256",unité urbaine,Erquy,22
+22055,Binic-Étables-sur-Mer,22,2022,unite urbaine,055,22055,"48.616854697979164, -2.8378636783415674",unité urbaine,Binic-Étables-sur-Mer,22
+22056,Évran,22,2022,unite urbaine,056,22056,"48.38491069365288, -1.9800607383794606",hors unité urbaine,Évran,22
+22057,Le Faouët,22,2022,unite urbaine,057,22057,"48.67894581661151, -3.07389448983065",hors unité urbaine,Le Faouët,22
+22059,Le Fœil,22,2022,unite urbaine,059,22059,"48.41742839393511, -2.9149768281574744",hors unité urbaine,Le Fœil,22
+22060,Gausson,22,2022,unite urbaine,060,22060,"48.29305378448452, -2.761208784518627",hors unité urbaine,Gausson,22
+22061,Glomel,22,2022,unite urbaine,061,22061,"48.205711014474254, -3.3880569640213585",hors unité urbaine,Glomel,22
+22062,Gomené,22,2022,unite urbaine,062,22062,"48.18009823823096, -2.4920269673041373",hors unité urbaine,Gomené,22
+22063,Gommenec'h,22,2022,unite urbaine,063,22063,"48.637393629577176, -3.0478214611086005",hors unité urbaine,Gommenec'h,22
+22064,Gouarec,22,2022,unite urbaine,064,22064,"48.23557643640287, -3.1955906946679757",hors unité urbaine,Gouarec,22
+22065,Goudelin,22,2022,unite urbaine,065,22065,"48.60344887015755, -3.0228218900965196",hors unité urbaine,Goudelin,22
+22067,Grâces,22,2022,unite urbaine,067,22067,"48.544781542331755, -3.1824290792102907",unité urbaine,Grâces,22
+22068,Grâce-Uzel,22,2022,unite urbaine,068,22068,"48.25037219275086, -2.794165709487651",hors unité urbaine,Grâce-Uzel,22
+22069,Guenroc,22,2022,unite urbaine,069,22069,"48.313634238785724, -2.0806987621722692",hors unité urbaine,Guenroc,22
+22070,Guingamp,22,2022,unite urbaine,070,22070,"48.5606296002789, -3.153483856443051",unité urbaine,Guingamp,22
+22071,Guitté,22,2022,unite urbaine,071,22071,"48.290858390709175, -2.102006426579971",hors unité urbaine,Guitté,22
+22072,Gurunhuel,22,2022,unite urbaine,072,22072,"48.5084390529387, -3.2887619158372385",hors unité urbaine,Gurunhuel,22
+22073,La Harmoye,22,2022,unite urbaine,073,22073,"48.34601944912991, -2.9687827470942216",hors unité urbaine,La Harmoye,22
+22074,Le Haut-Corlay,22,2022,unite urbaine,074,22074,"48.34049323560732, -3.0321258004545015",hors unité urbaine,Le Haut-Corlay,22
+22075,Hémonstoir,22,2022,unite urbaine,075,22075,"48.157236237898246, -2.850013769833973",hors unité urbaine,Hémonstoir,22
+22076,Hénanbihen,22,2022,unite urbaine,076,22076,"48.55798404647853, -2.381554908505979",hors unité urbaine,Hénanbihen,22
+22077,Hénansal,22,2022,unite urbaine,077,22077,"48.53792668096101, -2.4478386890533526",hors unité urbaine,Hénansal,22
+22079,Hénon,22,2022,unite urbaine,079,22079,"48.38674852310644, -2.683781581736478",hors unité urbaine,Hénon,22
+22081,Hillion,22,2022,unite urbaine,081,22081,"48.502995294821886, -2.6462131760070013",hors unité urbaine,Hillion,22
+22082,Le Hinglé,22,2022,unite urbaine,082,22082,"48.397988313749984, -2.0828373600169927",unité urbaine,Le Hinglé,22
+22083,Illifaut,22,2022,unite urbaine,083,22083,"48.14444310436233, -2.336130932655529",hors unité urbaine,Illifaut,22
+22084,Jugon-les-Lacs,22,2022,unite urbaine,084,22084,"48.40610977170293, -2.326899750070944",hors unité urbaine,Jugon-les-Lacs,22
+22085,Kerbors,22,2022,unite urbaine,085,22085,"48.823601548065966, -3.1817585984897487",unité urbaine,Kerbors,22
+22086,Kerfot,22,2022,unite urbaine,086,22086,"48.73687170732632, -3.0314775082213297",unité urbaine,Kerfot,22
+22087,Kergrist-Moëlou,22,2022,unite urbaine,087,22087,"48.29460489080976, -3.325603227294781",hors unité urbaine,Kergrist-Moëlou,22
+22088,Kerien,22,2022,unite urbaine,088,22088,"48.40939302468879, -3.230680461477553",hors unité urbaine,Kerien,22
+22090,Kermaria-Sulard,22,2022,unite urbaine,090,22090,"48.77349033102501, -3.3733885820496323",unité urbaine,Kermaria-Sulard,22
+22091,Kermoroc'h,22,2022,unite urbaine,091,22091,"48.61487083619394, -3.2036352848070537",hors unité urbaine,Kermoroc'h,22
+22092,Kerpert,22,2022,unite urbaine,092,22092,"48.389910884605634, -3.1364122348887866",hors unité urbaine,Kerpert,22
+22094,Lancieux,22,2022,unite urbaine,094,22094,"48.6008414291423, -2.1483024381537885",unité urbaine,Lancieux,22
+22095,Landebaëron,22,2022,unite urbaine,095,22095,"48.637650509074476, -3.2048713656243346",hors unité urbaine,Landebaëron,22
+22096,Landébia,22,2022,unite urbaine,096,22096,"48.515180464964274, -2.337312105064261",hors unité urbaine,Landébia,22
+22097,La Landec,22,2022,unite urbaine,097,22097,"48.425666428990944, -2.1831046599580097",hors unité urbaine,La Landec,22
+22098,Landéhen,22,2022,unite urbaine,098,22098,"48.42207408910222, -2.541774101454152",hors unité urbaine,Landéhen,22
+22099,Lanfains,22,2022,unite urbaine,099,22099,"48.365375784779125, -2.911495669833046",hors unité urbaine,Lanfains,22
+22101,Langoat,22,2022,unite urbaine,101,22101,"48.73497449558828, -3.2979764397394744",unité urbaine,Langoat,22
+22103,Langrolay-sur-Rance,22,2022,unite urbaine,103,22103,"48.55308299986967, -2.0144312068571977",hors unité urbaine,Langrolay-sur-Rance,22
+22104,Languédias,22,2022,unite urbaine,104,22104,"48.39303484828071, -2.205712406659745",hors unité urbaine,Languédias,22
+22105,Languenan,22,2022,unite urbaine,105,22105,"48.511472098182495, -2.1332072736296857",hors unité urbaine,Languenan,22
+22106,Langueux,22,2022,unite urbaine,106,22106,"48.500031081029526, -2.7097215856661303",unité urbaine,Langueux,22
+22107,Bon Repos sur Blavet,22,2022,unite urbaine,107,22107,"48.223996028900316, -3.123601388977203",hors unité urbaine,Bon Repos sur Blavet,22
+22108,Lanleff,22,2022,unite urbaine,108,22108,"48.69305673767193, -3.04636642694735",hors unité urbaine,Lanleff,22
+22109,Lanloup,22,2022,unite urbaine,109,22109,"48.70966609506934, -2.968620705247752",hors unité urbaine,Lanloup,22
+22110,Lanmérin,22,2022,unite urbaine,110,22110,"48.7398955196288, -3.3575391923189737",hors unité urbaine,Lanmérin,22
+22111,Lanmodez,22,2022,unite urbaine,111,22111,"48.8454616685329, -3.09657660537169",unité urbaine,Lanmodez,22
+22112,Lannebert,22,2022,unite urbaine,112,22112,"48.65055054470595, -3.0090952031802667",hors unité urbaine,Lannebert,22
+22113,Lannion,22,2022,unite urbaine,113,22113,"48.74372057592956, -3.4613016821377243",unité urbaine,Lannion,22
+22114,Lanrelas,22,2022,unite urbaine,114,22114,"48.24615812698913, -2.295194979345555",hors unité urbaine,Lanrelas,22
+22115,Lanrivain,22,2022,unite urbaine,115,22115,"48.359078803487385, -3.215236306567682",hors unité urbaine,Lanrivain,22
+22116,Lanrodec,22,2022,unite urbaine,116,22116,"48.49956508747752, -3.0433156865257875",hors unité urbaine,Lanrodec,22
+22117,Lantic,22,2022,unite urbaine,117,22117,"48.604206339182014, -2.8988006689345998",hors unité urbaine,Lantic,22
+22118,Lanvallay,22,2022,unite urbaine,118,22118,"48.451577637530804, -2.0114884585409434",unité urbaine,Lanvallay,22
+22119,Lanvellec,22,2022,unite urbaine,119,22119,"48.60676786917297, -3.527901691489259",hors unité urbaine,Lanvellec,22
+22121,Lanvollon,22,2022,unite urbaine,121,22121,"48.63350892357017, -2.9901564356599057",unité urbaine,Lanvollon,22
+22122,Laurenan,22,2022,unite urbaine,122,22122,"48.215038335689826, -2.5190952972110403",hors unité urbaine,Laurenan,22
+22124,Lescouët-Gouarec,22,2022,unite urbaine,124,22124,"48.169286969951244, -3.206382639399914",hors unité urbaine,Lescouët-Gouarec,22
+22126,Le Leslay,22,2022,unite urbaine,126,22126,"48.423990652869634, -2.965116944345763",hors unité urbaine,Le Leslay,22
+22127,Lézardrieux,22,2022,unite urbaine,127,22127,"48.80343680465705, -3.109062725836568",unité urbaine,Lézardrieux,22
+22128,Locarn,22,2022,unite urbaine,128,22128,"48.332427425246884, -3.409970759309314",hors unité urbaine,Locarn,22
+22129,Loc-Envel,22,2022,unite urbaine,129,22129,"48.509790586279045, -3.4097689488209104",hors unité urbaine,Loc-Envel,22
+22131,Loguivy-Plougras,22,2022,unite urbaine,131,22131,"48.510492935904004, -3.4917280120826337",hors unité urbaine,Loguivy-Plougras,22
+22132,Lohuec,22,2022,unite urbaine,132,22132,"48.46218951875436, -3.5269405948992083",hors unité urbaine,Lohuec,22
+22133,Loscouët-sur-Meu,22,2022,unite urbaine,133,22133,"48.175775994107525, -2.2510777423542248",hors unité urbaine,Loscouët-sur-Meu,22
+22134,Louannec,22,2022,unite urbaine,134,22134,"48.78340809955394, -3.4120568265797586",unité urbaine,Louannec,22
+22135,Louargat,22,2022,unite urbaine,135,22135,"48.561118148300984, -3.3409028444766324",hors unité urbaine,Louargat,22
+22136,Loudéac,22,2022,unite urbaine,136,22136,"48.17440032876323, -2.750532416873835",unité urbaine,Loudéac,22
+22137,Maël-Carhaix,22,2022,unite urbaine,137,22137,"48.288071874347686, -3.410398312983865",hors unité urbaine,Maël-Carhaix,22
+22138,Maël-Pestivien,22,2022,unite urbaine,138,22138,"48.40376732808839, -3.29029377751837",hors unité urbaine,Maël-Pestivien,22
+22139,Magoar,22,2022,unite urbaine,139,22139,"48.40121375167732, -3.1770985526858846",hors unité urbaine,Magoar,22
+22140,La Malhoure,22,2022,unite urbaine,140,22140,"48.39639125952189, -2.4944073420385817",hors unité urbaine,La Malhoure,22
+22141,Mantallot,22,2022,unite urbaine,141,22141,"48.71048099353365, -3.29263621851506",hors unité urbaine,Mantallot,22
+22143,Matignon,22,2022,unite urbaine,143,22143,"48.601615150300745, -2.2901490021441537",hors unité urbaine,Matignon,22
+22144,La Méaugon,22,2022,unite urbaine,144,22144,"48.50442394473271, -2.846723598380565",unité urbaine,La Méaugon,22
+22145,Mégrit,22,2022,unite urbaine,145,22145,"48.389733819073925, -2.2674010013311876",hors unité urbaine,Mégrit,22
+22146,Mellionnec,22,2022,unite urbaine,146,22146,"48.16847510350928, -3.290144558300456",hors unité urbaine,Mellionnec,22
+22147,Merdrignac,22,2022,unite urbaine,147,22147,"48.193666253812545, -2.3962263250940814",unité urbaine,Merdrignac,22
+22147,Merdrignac,22,2022,unite urbaine,147,22147,"48.193666253812545, -2.3962263250940814",hors unité urbaine,Merdrignac,22
+22148,Mérillac,22,2022,unite urbaine,148,22148,"48.249932901208375, -2.391016176335452",hors unité urbaine,Mérillac,22
+22149,Merléac,22,2022,unite urbaine,149,22149,"48.272646029706195, -2.9111878285013244",hors unité urbaine,Merléac,22
+22150,Le Merzer,22,2022,unite urbaine,150,22150,"48.58175740786484, -3.075000469662988",hors unité urbaine,Le Merzer,22
+22152,Minihy-Tréguier,22,2022,unite urbaine,152,22152,"48.7679732173215, -3.259390093495907",unité urbaine,Minihy-Tréguier,22
+22153,Moncontour,22,2022,unite urbaine,153,22153,"48.35828488139576, -2.633834275073219",hors unité urbaine,Moncontour,22
+22155,La Motte,22,2022,unite urbaine,155,22155,"48.23134465685796, -2.7051289011505077",hors unité urbaine,La Motte,22
+22156,Moustéru,22,2022,unite urbaine,156,22156,"48.52882253971148, -3.234921403671726",hors unité urbaine,Moustéru,22
+22157,Le Moustoir,22,2022,unite urbaine,157,22157,"48.273660027370745, -3.491275051198534",hors unité urbaine,Le Moustoir,22
+22158,Guerlédan,22,2022,unite urbaine,158,22158,"48.20148379493991, -2.9579644187448335",hors unité urbaine,Guerlédan,22
+22160,Noyal,22,2022,unite urbaine,160,22160,"48.451111692186544, -2.4637973567577154",unité urbaine,Noyal,22
+22161,Pabu,22,2022,unite urbaine,161,22161,"48.582713836218865, -3.1431922194761563",unité urbaine,Pabu,22
+22162,Paimpol,22,2022,unite urbaine,162,22162,"48.77341237427662, -3.0547770418859117",unité urbaine,Paimpol,22
+22163,Paule,22,2022,unite urbaine,163,22163,"48.227634919736666, -3.4609317309280505",hors unité urbaine,Paule,22
+22164,Pédernec,22,2022,unite urbaine,164,22164,"48.588027198469696, -3.2771017455559184",hors unité urbaine,Pédernec,22
+22165,Penguily,22,2022,unite urbaine,165,22165,"48.37127054936064, -2.4942661296116597",hors unité urbaine,Penguily,22
+22166,Penvénan,22,2022,unite urbaine,166,22166,"48.81700826489818, -3.301898392456582",hors unité urbaine,Penvénan,22
+22168,Perros-Guirec,22,2022,unite urbaine,168,22168,"48.81212816242925, -3.4669735051428145",unité urbaine,Perros-Guirec,22
+22169,Peumerit-Quintin,22,2022,unite urbaine,169,22169,"48.3633623991001, -3.2850971954653323",hors unité urbaine,Peumerit-Quintin,22
+22170,Plaine-Haute,22,2022,unite urbaine,170,22170,"48.44330686250468, -2.859141354483835",hors unité urbaine,Plaine-Haute,22
+22171,Plaintel,22,2022,unite urbaine,171,22171,"48.41026620350685, -2.8103473870124343",unité urbaine,Plaintel,22
+22172,Plancoët,22,2022,unite urbaine,172,22172,"48.514587985964525, -2.2193340279391998",unité urbaine,Plancoët,22
+22174,Pléboulle,22,2022,unite urbaine,174,22174,"48.59482857983857, -2.3335886850339618",hors unité urbaine,Pléboulle,22
+22175,Plédéliac,22,2022,unite urbaine,175,22175,"48.468676894060096, -2.3716237728696155",hors unité urbaine,Plédéliac,22
+22176,Plédran,22,2022,unite urbaine,176,22176,"48.44322179655236, -2.7451057245552435",unité urbaine,Plédran,22
+22177,Pléguien,22,2022,unite urbaine,177,22177,"48.63483483497731, -2.9483662165981883",unité urbaine,Pléguien,22
+22178,Pléhédel,22,2022,unite urbaine,178,22178,"48.69465351088745, -3.0067518941250695",hors unité urbaine,Pléhédel,22
+22180,Plélan-le-Petit,22,2022,unite urbaine,180,22180,"48.426818874411204, -2.224119382295178",hors unité urbaine,Plélan-le-Petit,22
+22181,Plélauff,22,2022,unite urbaine,181,22181,"48.19831050359028, -3.2038041544780835",hors unité urbaine,Plélauff,22
+22182,Plélo,22,2022,unite urbaine,182,22182,"48.5540365817355, -2.9276114233388237",hors unité urbaine,Plélo,22
+22183,Plémet,22,2022,unite urbaine,183,22183,"48.17458914462472, -2.5970205727773386",unité urbaine,Plémet,22
+22184,Plémy,22,2022,unite urbaine,184,22184,"48.33814970468506, -2.676600308020385",hors unité urbaine,Plémy,22
+22185,Plénée-Jugon,22,2022,unite urbaine,185,22185,"48.35568772170431, -2.4152109230019456",hors unité urbaine,Plénée-Jugon,22
+22186,Pléneuf-Val-André,22,2022,unite urbaine,186,22186,"48.583590024616825, -2.529603874827951",unité urbaine,Pléneuf-Val-André,22
+22187,Plérin,22,2022,unite urbaine,187,22187,"48.54399626161453, -2.769713010180491",unité urbaine,Plérin,22
+22188,Plerneuf,22,2022,unite urbaine,188,22188,"48.50578538306872, -2.8804807769133474",unité urbaine,Plerneuf,22
+22189,Plésidy,22,2022,unite urbaine,189,22189,"48.441565954939556, -3.126098611824184",hors unité urbaine,Plésidy,22
+22190,Pleslin-Trigavou,22,2022,unite urbaine,190,22190,"48.52754674850393, -2.071280262807143",unité urbaine,Pleslin-Trigavou,22
+22193,Plestan,22,2022,unite urbaine,193,22193,"48.41468043166207, -2.4413164240059184",hors unité urbaine,Plestan,22
+22194,Plestin-les-Grèves,22,2022,unite urbaine,194,22194,"48.64771211551533, -3.6201791709357827",unité urbaine,Plestin-les-Grèves,22
+22195,Pleubian,22,2022,unite urbaine,195,22195,"48.842911190343344, -3.134493849898723",unité urbaine,Pleubian,22
+22196,Pleudaniel,22,2022,unite urbaine,196,22196,"48.76196277150734, -3.154469609002931",hors unité urbaine,Pleudaniel,22
+22197,Pleudihen-sur-Rance,22,2022,unite urbaine,197,22197,"48.50951544309431, -1.9412624801936378",hors unité urbaine,Pleudihen-sur-Rance,22
+22198,Pleumeur-Bodou,22,2022,unite urbaine,198,22198,"48.78542781504321, -3.518777493190809",unité urbaine,Pleumeur-Bodou,22
+22199,Pleumeur-Gautier,22,2022,unite urbaine,199,22199,"48.800469646874966, -3.151540920684789",hors unité urbaine,Pleumeur-Gautier,22
+22201,Plévenon,22,2022,unite urbaine,201,22201,"48.65647836354202, -2.31997098103021",hors unité urbaine,Plévenon,22
+22201,Plévenon,22,2022,unite urbaine,201,22201,"48.65647836354202, -2.31997098103021",hors unité urbaine,Plévenon,22
+22202,Plévin,22,2022,unite urbaine,202,22202,"48.2236933611001, -3.516379511444769",hors unité urbaine,Plévin,22
+22204,Ploëzal,22,2022,unite urbaine,204,22204,"48.71683177824035, -3.1808589207836055",hors unité urbaine,Ploëzal,22
+22205,Plorec-sur-Arguenon,22,2022,unite urbaine,205,22205,"48.46360846668484, -2.3010423354649867",hors unité urbaine,Plorec-sur-Arguenon,22
+22206,Châtelaudren-Plouagat,22,2022,unite urbaine,206,22206,"48.53038727713945, -2.989574473485287",unité urbaine,Châtelaudren-Plouagat,22
+22207,Plouaret,22,2022,unite urbaine,207,22207,"48.61949008013532, -3.483272137839892",unité urbaine,Plouaret,22
+22208,Plouasne,22,2022,unite urbaine,208,22208,"48.31178706593236, -2.007880383435003",hors unité urbaine,Plouasne,22
+22209,Beaussais-sur-Mer,22,2022,unite urbaine,209,22209,"48.56046648898241, -2.1365246980572077",unité urbaine,Beaussais-sur-Mer,22
+22210,Ploubazlanec,22,2022,unite urbaine,210,22210,"48.80531646998795, -3.044734163599906",unité urbaine,Ploubazlanec,22
+22211,Ploubezre,22,2022,unite urbaine,211,22211,"48.685540104635514, -3.4484114804534305",unité urbaine,Ploubezre,22
+22212,Plouëc-du-Trieux,22,2022,unite urbaine,212,22212,"48.67218252212366, -3.1875937861160675",hors unité urbaine,Plouëc-du-Trieux,22
+22213,Plouër-sur-Rance,22,2022,unite urbaine,213,22213,"48.525076993155004, -2.0064772868034786",unité urbaine,Plouër-sur-Rance,22
+22214,Plouézec,22,2022,unite urbaine,214,22214,"48.73857830623221, -2.9792489742525143",unité urbaine,Plouézec,22
+22215,Ploufragan,22,2022,unite urbaine,215,22215,"48.487289095102696, -2.8081004181194076",unité urbaine,Ploufragan,22
+22216,Plougonver,22,2022,unite urbaine,216,22216,"48.4850234183266, -3.3748184940250456",hors unité urbaine,Plougonver,22
+22217,Plougras,22,2022,unite urbaine,217,22217,"48.496580804818194, -3.5645663818142",hors unité urbaine,Plougras,22
+22218,Plougrescant,22,2022,unite urbaine,218,22218,"48.83997977804071, -3.239732572991491",hors unité urbaine,Plougrescant,22
+22219,Plouguenast-Langast,22,2022,unite urbaine,219,22219,"48.27977801969337, -2.6900266392636634",hors unité urbaine,Plouguenast-Langast,22
+22220,Plouguernével,22,2022,unite urbaine,220,22220,"48.23416976040906, -3.2473071374026845",hors unité urbaine,Plouguernével,22
+22221,Plouguiel,22,2022,unite urbaine,221,22221,"48.804943058278226, -3.2446560431653406",unité urbaine,Plouguiel,22
+22222,Plouha,22,2022,unite urbaine,222,22222,"48.68202883059129, -2.931517174565538",unité urbaine,Plouha,22
+22223,Plouisy,22,2022,unite urbaine,223,22223,"48.58399154200864, -3.191244686218797",unité urbaine,Plouisy,22
+22224,Ploulec'h,22,2022,unite urbaine,224,22224,"48.718037956613536, -3.500172435990223",unité urbaine,Ploulec'h,22
+22225,Ploumagoar,22,2022,unite urbaine,225,22225,"48.530550245147154, -3.1094049735917677",unité urbaine,Ploumagoar,22
+22226,Ploumilliau,22,2022,unite urbaine,226,22226,"48.68379026242281, -3.513468350501465",hors unité urbaine,Ploumilliau,22
+22227,Plounérin,22,2022,unite urbaine,227,22227,"48.56649543690494, -3.548705082358268",hors unité urbaine,Plounérin,22
+22228,Plounévez-Moëdec,22,2022,unite urbaine,228,22228,"48.55114767248558, -3.445163187208987",hors unité urbaine,Plounévez-Moëdec,22
+22229,Plounévez-Quintin,22,2022,unite urbaine,229,22229,"48.285371578031594, -3.24079164125249",hors unité urbaine,Plounévez-Quintin,22
+22231,Plourac'h,22,2022,unite urbaine,231,22231,"48.41850510629578, -3.5517448855804483",hors unité urbaine,Plourac'h,22
+22232,Plourhan,22,2022,unite urbaine,232,22232,"48.63109130934533, -2.8819978469492353",unité urbaine,Plourhan,22
+22233,Plourivo,22,2022,unite urbaine,233,22233,"48.741508792266956, -3.0916003685447224",unité urbaine,Plourivo,22
+22234,Plouvara,22,2022,unite urbaine,234,22234,"48.49714890248999, -2.925240294524288",hors unité urbaine,Plouvara,22
+22235,Plouzélambre,22,2022,unite urbaine,235,22235,"48.64796838664791, -3.536869429523705",hors unité urbaine,Plouzélambre,22
+22236,Pludual,22,2022,unite urbaine,236,22236,"48.66623575223378, -2.986204337744563",hors unité urbaine,Pludual,22
+22237,Pluduno,22,2022,unite urbaine,237,22237,"48.52380485329088, -2.280573255090437",unité urbaine,Pluduno,22
+22237,Pluduno,22,2022,unite urbaine,237,22237,"48.52380485329088, -2.280573255090437",hors unité urbaine,Pluduno,22
+22238,Plufur,22,2022,unite urbaine,238,22238,"48.610934256721144, -3.5724334146423677",hors unité urbaine,Plufur,22
+22239,Plumaudan,22,2022,unite urbaine,239,22239,"48.35648212102285, -2.115087696133466",hors unité urbaine,Plumaudan,22
+22240,Plumaugat,22,2022,unite urbaine,240,22240,"48.24543099765484, -2.2308622835043583",hors unité urbaine,Plumaugat,22
+22241,Plumieux,22,2022,unite urbaine,241,22241,"48.106145167028124, -2.5912220866061655",hors unité urbaine,Plumieux,22
+22241,Plumieux,22,2022,unite urbaine,241,22241,"48.106145167028124, -2.5912220866061655",hors unité urbaine,Plumieux,22
+22241,Plumieux,22,2022,unite urbaine,241,22241,"48.106145167028124, -2.5912220866061655",hors unité urbaine,Plumieux,22
+22242,Plurien,22,2022,unite urbaine,242,22242,"48.609775286003305, -2.400186098696598",hors unité urbaine,Plurien,22
+22243,Plusquellec,22,2022,unite urbaine,243,22243,"48.39927908013636, -3.484092849456566",hors unité urbaine,Plusquellec,22
+22244,Plussulien,22,2022,unite urbaine,244,22244,"48.2782231526076, -3.0655453547562916",hors unité urbaine,Plussulien,22
+22245,Pluzunet,22,2022,unite urbaine,245,22245,"48.63674271423779, -3.3714806804905773",hors unité urbaine,Pluzunet,22
+22246,Pommeret,22,2022,unite urbaine,246,22246,"48.45848844728416, -2.62222372557139",unité urbaine,Pommeret,22
+22248,Pommerit-le-Vicomte,22,2022,unite urbaine,248,22248,"48.61825542744474, -3.102895321623121",hors unité urbaine,Pommerit-le-Vicomte,22
+22249,Pont-Melvez,22,2022,unite urbaine,249,22249,"48.47431751653194, -3.284976469260663",hors unité urbaine,Pont-Melvez,22
+22250,Pontrieux,22,2022,unite urbaine,250,22250,"48.69979623594092, -3.1591538791565714",hors unité urbaine,Pontrieux,22
+22251,Pordic,22,2022,unite urbaine,251,22251,"48.56737669717271, -2.830211081088653",unité urbaine,Pordic,22
+22254,Prat,22,2022,unite urbaine,254,22254,"48.68203410583672, -3.298018645171776",hors unité urbaine,Prat,22
+22255,La Prénessaye,22,2022,unite urbaine,255,22255,"48.185934905275595, -2.6477738266212514",hors unité urbaine,La Prénessaye,22
+22256,Quemper-Guézennec,22,2022,unite urbaine,256,22256,"48.69995953420054, -3.108932114402417",hors unité urbaine,Quemper-Guézennec,22
+22257,Quemperven,22,2022,unite urbaine,257,22257,"48.725720882511204, -3.336658804538417",hors unité urbaine,Quemperven,22
+22258,Quessoy,22,2022,unite urbaine,258,22258,"48.42686665994725, -2.6564491536079555",hors unité urbaine,Quessoy,22
+22259,Quévert,22,2022,unite urbaine,259,22259,"48.46300172694678, -2.0857854971630276",unité urbaine,Quévert,22
+22260,Le Quillio,22,2022,unite urbaine,260,22260,"48.24037676760562, -2.8979149686613312",hors unité urbaine,Le Quillio,22
+22261,Quintenic,22,2022,unite urbaine,261,22261,"48.51024406560141, -2.421403787476828",hors unité urbaine,Quintenic,22
+22262,Quintin,22,2022,unite urbaine,262,22262,"48.40333804955121, -2.911687900047397",unité urbaine,Quintin,22
+22263,Le Quiou,22,2022,unite urbaine,263,22263,"48.34572093530981, -1.9971468539337076",hors unité urbaine,Le Quiou,22
+22264,La Roche-Jaudy,22,2022,unite urbaine,264,22264,"48.73168265014376, -3.2332361305423283",unité urbaine,La Roche-Jaudy,22
+22265,Rospez,22,2022,unite urbaine,265,22265,"48.735705197533385, -3.386851043297325",hors unité urbaine,Rospez,22
+22266,Rostrenen,22,2022,unite urbaine,266,22266,"48.221350295199755, -3.311658878688656",unité urbaine,Rostrenen,22
+22267,Rouillac,22,2022,unite urbaine,267,22267,"48.30658366356695, -2.369103666992024",hors unité urbaine,Rouillac,22
+22268,Ruca,22,2022,unite urbaine,268,22268,"48.561815546029436, -2.3352456790830622",hors unité urbaine,Ruca,22
+22269,Runan,22,2022,unite urbaine,269,22269,"48.68679083111384, -3.227092214035688",hors unité urbaine,Runan,22
+22271,Saint-Adrien,22,2022,unite urbaine,271,22271,"48.48938971781212, -3.132212146735206",hors unité urbaine,Saint-Adrien,22
+22272,Saint-Agathon,22,2022,unite urbaine,272,22272,"48.56304026903393, -3.1008145779522356",unité urbaine,Saint-Agathon,22
+22273,Saint-Alban,22,2022,unite urbaine,273,22273,"48.55472352746748, -2.5087568336430603",hors unité urbaine,Saint-Alban,22
+22274,Saint-André-des-Eaux,22,2022,unite urbaine,274,22274,"48.373140348965485, -2.013147856687605",hors unité urbaine,Saint-André-des-Eaux,22
+22275,Saint-Barnabé,22,2022,unite urbaine,275,22275,"48.138232645362876, -2.702076853457908",hors unité urbaine,Saint-Barnabé,22
+22276,Saint-Bihy,22,2022,unite urbaine,276,22276,"48.375417872633165, -2.96712057246496",hors unité urbaine,Saint-Bihy,22
+22277,Saint-Brandan,22,2022,unite urbaine,277,22277,"48.389901171384295, -2.8629816779868276",hors unité urbaine,Saint-Brandan,22
+22278,Saint-Brieuc,22,2022,unite urbaine,278,22278,"48.51485172596246, -2.7633107258871803",unité urbaine,Saint-Brieuc,22
+22279,Saint-Caradec,22,2022,unite urbaine,279,22279,"48.19188963202525, -2.86752798517365",hors unité urbaine,Saint-Caradec,22
+22280,Saint-Carné,22,2022,unite urbaine,280,22280,"48.41921926777833, -2.0551012123403662",unité urbaine,Saint-Carné,22
+22281,Saint-Carreuc,22,2022,unite urbaine,281,22281,"48.404115341161514, -2.7497303856617274",hors unité urbaine,Saint-Carreuc,22
+22282,Saint-Cast-le-Guildo,22,2022,unite urbaine,282,22282,"48.60361333921216, -2.248602591723071",unité urbaine,Saint-Cast-le-Guildo,22
+22283,Saint-Clet,22,2022,unite urbaine,283,22283,"48.66983686509369, -3.1374360172938354",hors unité urbaine,Saint-Clet,22
+22284,Saint-Connan,22,2022,unite urbaine,284,22284,"48.41245274176569, -3.0751160708441336",hors unité urbaine,Saint-Connan,22
+22285,Saint-Connec,22,2022,unite urbaine,285,22285,"48.180184489996904, -2.925741320443639",hors unité urbaine,Saint-Connec,22
+22286,Saint-Denoual,22,2022,unite urbaine,286,22286,"48.518755846945496, -2.383681985569108",hors unité urbaine,Saint-Denoual,22
+22287,Saint-Donan,22,2022,unite urbaine,287,22287,"48.465809598511285, -2.8865220247531798",hors unité urbaine,Saint-Donan,22
+22288,Saint-Étienne-du-Gué-de-l'Isle,22,2022,unite urbaine,288,22288,"48.08570250700337, -2.643116980636368",hors unité urbaine,Saint-Étienne-du-Gué-de-l'Isle,22
+22289,Saint-Fiacre,22,2022,unite urbaine,289,22289,"48.45524442271936, -3.052646449276801",hors unité urbaine,Saint-Fiacre,22
+22291,Saint-Gildas,22,2022,unite urbaine,291,22291,"48.42252057412616, -3.0064778314205967",hors unité urbaine,Saint-Gildas,22
+22293,Saint-Gilles-les-Bois,22,2022,unite urbaine,293,22293,"48.657131650780954, -3.0908668002011983",hors unité urbaine,Saint-Gilles-les-Bois,22
+22294,Saint-Gilles-Pligeaux,22,2022,unite urbaine,294,22294,"48.379696420723874, -3.0869094051136288",hors unité urbaine,Saint-Gilles-Pligeaux,22
+22295,Saint-Gilles-Vieux-Marché,22,2022,unite urbaine,295,22295,"48.25020250896402, -2.9695564323709553",hors unité urbaine,Saint-Gilles-Vieux-Marché,22
+22296,Saint-Glen,22,2022,unite urbaine,296,22296,"48.353174401247955, -2.5212768301020363",hors unité urbaine,Saint-Glen,22
+22299,Saint-Hélen,22,2022,unite urbaine,299,22299,"48.46600430528192, -1.9592638913150324",hors unité urbaine,Saint-Hélen,22
+22300,Saint-Hervé,22,2022,unite urbaine,300,22300,"48.27415212630237, -2.8122563929605593",hors unité urbaine,Saint-Hervé,22
+22302,Saint-Jacut-de-la-Mer,22,2022,unite urbaine,302,22302,"48.59273825268418, -2.1922313500946506",hors unité urbaine,Saint-Jacut-de-la-Mer,22
+22304,Saint-Jean-Kerdaniel,22,2022,unite urbaine,304,22304,"48.552569489421266, -3.0344991184971084",hors unité urbaine,Saint-Jean-Kerdaniel,22
+22305,Saint-Jouan-de-l'Isle,22,2022,unite urbaine,305,22305,"48.2664014945255, -2.178668219985802",hors unité urbaine,Saint-Jouan-de-l'Isle,22
+22306,Saint-Judoce,22,2022,unite urbaine,306,22306,"48.36276028644149, -1.9540576509609984",hors unité urbaine,Saint-Judoce,22
+22307,Saint-Julien,22,2022,unite urbaine,307,22307,"48.44752227694301, -2.8179024440338862",unité urbaine,Saint-Julien,22
+22308,Saint-Juvat,22,2022,unite urbaine,308,22308,"48.36187051088316, -2.0544040793248772",hors unité urbaine,Saint-Juvat,22
+22310,Saint-Laurent,22,2022,unite urbaine,310,22310,"48.61584518217856, -3.2429792563607864",hors unité urbaine,Saint-Laurent,22
+22311,Saint-Lormel,22,2022,unite urbaine,311,22311,"48.551527127480924, -2.2356205945646788",hors unité urbaine,Saint-Lormel,22
+22312,Saint-Maden,22,2022,unite urbaine,312,22312,"48.33761283084385, -2.068749098710134",hors unité urbaine,Saint-Maden,22
+22313,Saint-Martin-des-Prés,22,2022,unite urbaine,313,22313,"48.305325601577145, -2.964675143154532",hors unité urbaine,Saint-Martin-des-Prés,22
+22314,Saint-Maudan,22,2022,unite urbaine,314,22314,"48.11126952716154, -2.7681977474805777",hors unité urbaine,Saint-Maudan,22
+22315,Saint-Maudez,22,2022,unite urbaine,315,22315,"48.4544806876825, -2.182546600838218",hors unité urbaine,Saint-Maudez,22
+22316,Saint-Mayeux,22,2022,unite urbaine,316,22316,"48.264035989606086, -3.015630026934005",hors unité urbaine,Saint-Mayeux,22
+22317,Saint-Méloir-des-Bois,22,2022,unite urbaine,317,22317,"48.44238852383879, -2.2570287304713066",hors unité urbaine,Saint-Méloir-des-Bois,22
+22318,Saint-Michel-de-Plélan,22,2022,unite urbaine,318,22318,"48.462517653803566, -2.2219142048526956",hors unité urbaine,Saint-Michel-de-Plélan,22
+22319,Saint-Michel-en-Grève,22,2022,unite urbaine,319,22319,"48.67433993987417, -3.5566456902871044",hors unité urbaine,Saint-Michel-en-Grève,22
+22320,Saint-Nicodème,22,2022,unite urbaine,320,22320,"48.35407894472967, -3.3398443466795644",hors unité urbaine,Saint-Nicodème,22
+22321,Saint-Nicolas-du-Pélem,22,2022,unite urbaine,321,22321,"48.322747608871424, -3.1643533662853915",hors unité urbaine,Saint-Nicolas-du-Pélem,22
+22322,Saint-Péver,22,2022,unite urbaine,322,22322,"48.48253156312096, -3.0907309023369103",hors unité urbaine,Saint-Péver,22
+22323,Saint-Pôtan,22,2022,unite urbaine,323,22323,"48.55742195774306, -2.293196544819061",hors unité urbaine,Saint-Pôtan,22
+22324,Saint-Quay-Perros,22,2022,unite urbaine,324,22324,"48.781533179693625, -3.4497148782345137",unité urbaine,Saint-Quay-Perros,22
+22325,Saint-Quay-Portrieux,22,2022,unite urbaine,325,22325,"48.65409653504049, -2.8432806060833724",unité urbaine,Saint-Quay-Portrieux,22
+22326,Saint-Rieul,22,2022,unite urbaine,326,22326,"48.442756624027034, -2.420467597223518",hors unité urbaine,Saint-Rieul,22
+22327,Saint-Samson-sur-Rance,22,2022,unite urbaine,327,22327,"48.49142544779024, -2.0186274562777173",hors unité urbaine,Saint-Samson-sur-Rance,22
+22328,Saint-Servais,22,2022,unite urbaine,328,22328,"48.386615901912556, -3.3742699079437326",hors unité urbaine,Saint-Servais,22
+22330,Saint-Thélo,22,2022,unite urbaine,330,22330,"48.246377971630956, -2.840952357786138",hors unité urbaine,Saint-Thélo,22
+22331,Sainte-Tréphine,22,2022,unite urbaine,331,22331,"48.26576439236164, -3.169668269937842",hors unité urbaine,Sainte-Tréphine,22
+22332,Saint-Trimoël,22,2022,unite urbaine,332,22332,"48.393646810494076, -2.5412862373097482",hors unité urbaine,Saint-Trimoël,22
+22333,Saint-Vran,22,2022,unite urbaine,333,22333,"48.24329965511069, -2.456955340483327",hors unité urbaine,Saint-Vran,22
+22334,Saint-Igeaux,22,2022,unite urbaine,334,22334,"48.27739267784361, -3.1144886899529576",hors unité urbaine,Saint-Igeaux,22
+22335,Senven-Léhart,22,2022,unite urbaine,335,22335,"48.43524954757208, -3.065248795767099",hors unité urbaine,Senven-Léhart,22
+22337,Sévignac,22,2022,unite urbaine,337,22337,"48.332359750678485, -2.3198028238153525",hors unité urbaine,Sévignac,22
+22338,Squiffiec,22,2022,unite urbaine,338,22338,"48.63739398496615, -3.1667291042396215",hors unité urbaine,Squiffiec,22
+22339,Taden,22,2022,unite urbaine,339,22339,"48.487864499900226, -2.0542220825272572",hors unité urbaine,Taden,22
+22340,Tonquédec,22,2022,unite urbaine,340,22340,"48.67585912150836, -3.4003826594572883",hors unité urbaine,Tonquédec,22
+22341,Tramain,22,2022,unite urbaine,341,22341,"48.39991881113289, -2.389069232919647",hors unité urbaine,Tramain,22
+22342,Trébédan,22,2022,unite urbaine,342,22342,"48.40593968834034, -2.162912929257299",hors unité urbaine,Trébédan,22
+22343,Trébeurden,22,2022,unite urbaine,343,22343,"48.771017043640185, -3.5580091279400636",unité urbaine,Trébeurden,22
+22344,Trébrivan,22,2022,unite urbaine,344,22344,"48.310130878716734, -3.480979093557651",hors unité urbaine,Trébrivan,22
+22345,Trébry,22,2022,unite urbaine,345,22345,"48.3456874173447, -2.5576675063953207",hors unité urbaine,Trébry,22
+22346,Trédaniel,22,2022,unite urbaine,346,22346,"48.34652230817231, -2.6052764478330435",hors unité urbaine,Trédaniel,22
+22347,Trédarzec,22,2022,unite urbaine,347,22347,"48.791135560533206, -3.2010945470937124",unité urbaine,Trédarzec,22
+22348,Trédias,22,2022,unite urbaine,348,22348,"48.365029012625335, -2.223155357652727",hors unité urbaine,Trédias,22
+22349,Trédrez-Locquémeau,22,2022,unite urbaine,349,22349,"48.70786004074584, -3.5635644143972796",hors unité urbaine,Trédrez-Locquémeau,22
+22350,Tréduder,22,2022,unite urbaine,350,22350,"48.654791763935656, -3.566579965559253",hors unité urbaine,Tréduder,22
+22351,Treffrin,22,2022,unite urbaine,351,22351,"48.2985077985793, -3.5267684519728286",unité urbaine,Treffrin,22
+22352,Tréfumel,22,2022,unite urbaine,352,22352,"48.33733289508829, -2.0239291297217643",hors unité urbaine,Tréfumel,22
+22353,Trégastel,22,2022,unite urbaine,353,22353,"48.81720640789529, -3.5073250888119487",unité urbaine,Trégastel,22
+22354,Tréglamus,22,2022,unite urbaine,354,22354,"48.55696485740258, -3.2546290079690814",hors unité urbaine,Tréglamus,22
+22356,Trégomeur,22,2022,unite urbaine,356,22356,"48.5673467100913, -2.8833714458847868",hors unité urbaine,Trégomeur,22
+22358,Trégonneau,22,2022,unite urbaine,358,22358,"48.613932216458565, -3.1632148012510446",hors unité urbaine,Trégonneau,22
+22359,Trégrom,22,2022,unite urbaine,359,22359,"48.59485513742797, -3.4026792795067093",hors unité urbaine,Trégrom,22
+22360,Trégueux,22,2022,unite urbaine,360,22360,"48.48032442317931, -2.745097817749216",unité urbaine,Trégueux,22
+22361,Tréguidel,22,2022,unite urbaine,361,22361,"48.600294369291674, -2.9427837937593764",hors unité urbaine,Tréguidel,22
+22362,Tréguier,22,2022,unite urbaine,362,22362,"48.78432609355878, -3.2323635346482997",unité urbaine,Tréguier,22
+22363,Trélévern,22,2022,unite urbaine,363,22363,"48.80139243121289, -3.36968784063376",unité urbaine,Trélévern,22
+22364,Trélivan,22,2022,unite urbaine,364,22364,"48.43050710216832, -2.1066145088602153",unité urbaine,Trélivan,22
+22365,Trémargat,22,2022,unite urbaine,365,22365,"48.33011725801109, -3.267158891170826",hors unité urbaine,Trémargat,22
+22366,Trémel,22,2022,unite urbaine,366,22366,"48.604910145622725, -3.6178954777311847",hors unité urbaine,Trémel,22
+22368,Tréméreuc,22,2022,unite urbaine,368,22368,"48.56030751476144, -2.063739677699312",unité urbaine,Tréméreuc,22
+22369,Trémeur,22,2022,unite urbaine,369,22369,"48.35065601742312, -2.268540546424408",hors unité urbaine,Trémeur,22
+22370,Tréméven,22,2022,unite urbaine,370,22370,"48.67136101756008, -3.03217825848345",hors unité urbaine,Tréméven,22
+22371,Trémorel,22,2022,unite urbaine,371,22371,"48.191345434020995, -2.302331099455107",hors unité urbaine,Trémorel,22
+22372,Trémuson,22,2022,unite urbaine,372,22372,"48.5245298638382, -2.848563798623896",unité urbaine,Trémuson,22
+22373,Tréogan,22,2022,unite urbaine,373,22373,"48.18693596932489, -3.5293689271781603",hors unité urbaine,Tréogan,22
+22375,Tressignaux,22,2022,unite urbaine,375,22375,"48.61042982628992, -2.975256115667468",unité urbaine,Tressignaux,22
+22376,Trévé,22,2022,unite urbaine,376,22376,"48.216250324759606, -2.807523428832321",hors unité urbaine,Trévé,22
+22377,Tréveneuc,22,2022,unite urbaine,377,22377,"48.6598608633688, -2.873916409373055",unité urbaine,Tréveneuc,22
+22378,Trévérec,22,2022,unite urbaine,378,22378,"48.6593111264371, -3.055159337958461",hors unité urbaine,Trévérec,22
+22379,Trévou-Tréguignec,22,2022,unite urbaine,379,22379,"48.81188591337173, -3.3449039997241417",unité urbaine,Trévou-Tréguignec,22
+22380,Trévron,22,2022,unite urbaine,380,22380,"48.388871430691424, -2.0681624638529756",hors unité urbaine,Trévron,22
+22381,Trézény,22,2022,unite urbaine,381,22381,"48.75438431411275, -3.361107047764407",hors unité urbaine,Trézény,22
+22383,Troguéry,22,2022,unite urbaine,383,22383,"48.759723599934254, -3.2245634153118523",hors unité urbaine,Troguéry,22
+22384,Uzel,22,2022,unite urbaine,384,22384,"48.28095984210413, -2.847819582785454",hors unité urbaine,Uzel,22
+22385,La Vicomté-sur-Rance,22,2022,unite urbaine,385,22385,"48.48785318675125, -1.9833936003151997",hors unité urbaine,La Vicomté-sur-Rance,22
+22386,Le Vieux-Bourg,22,2022,unite urbaine,386,22386,"48.39067894840724, -3.0036362766763243",hors unité urbaine,Le Vieux-Bourg,22
+22387,Le Vieux-Marché,22,2022,unite urbaine,387,22387,"48.61356896560643, -3.4381657002665205",unité urbaine,Le Vieux-Marché,22
+22388,Vildé-Guingalan,22,2022,unite urbaine,388,22388,"48.436341207341954, -2.151585554530895",hors unité urbaine,Vildé-Guingalan,22
+22389,Yffiniac,22,2022,unite urbaine,389,22389,"48.4679358135574, -2.6817276354156308",unité urbaine,Yffiniac,22
+22390,Yvias,22,2022,unite urbaine,390,22390,"48.71464017346286, -3.0462754071344658",hors unité urbaine,Yvias,22
+22391,Yvignac-la-Tour,22,2022,unite urbaine,391,22391,"48.34906512233677, -2.1705271693088832",hors unité urbaine,Yvignac-la-Tour,22
+29001,Argol,29,2022,unite urbaine,001,29001,"48.24985950275675, -4.299014155732905",hors unité urbaine,Argol,29
+29002,Arzano,29,2022,unite urbaine,002,29002,"47.89317340716374, -3.442755410196712",hors unité urbaine,Arzano,29
+29003,Audierne,29,2022,unite urbaine,003,29003,"48.0277346395964, -4.56142848950124",unité urbaine,Audierne,29
+29004,Bannalec,29,2022,unite urbaine,004,29004,"47.93523952370625, -3.695212815025375",unité urbaine,Bannalec,29
+29005,Baye,29,2022,unite urbaine,005,29005,"47.85585269987857, -3.6132344888630112",hors unité urbaine,Baye,29
+29006,Bénodet,29,2022,unite urbaine,006,29006,"47.87842194466297, -4.076056097043243",unité urbaine,Bénodet,29
+29007,Berrien,29,2022,unite urbaine,007,29007,"48.40302260650541, -3.7657070439880784",hors unité urbaine,Berrien,29
+29008,Beuzec-Cap-Sizun,29,2022,unite urbaine,008,29008,"48.07167377896529, -4.507384747992127",hors unité urbaine,Beuzec-Cap-Sizun,29
+29010,Bodilis,29,2022,unite urbaine,010,29010,"48.51531993406892, -4.120071275834516",hors unité urbaine,Bodilis,29
+29011,Bohars,29,2022,unite urbaine,011,29011,"48.43135873020495, -4.521859794324753",unité urbaine,Bohars,29
+29012,Bolazec,29,2022,unite urbaine,012,29012,"48.4427800195455, -3.5945040897576557",hors unité urbaine,Bolazec,29
+29013,Botmeur,29,2022,unite urbaine,013,29013,"48.3768560390799, -3.922713555944506",hors unité urbaine,Botmeur,29
+29014,Botsorhel,29,2022,unite urbaine,014,29014,"48.506149690265225, -3.6287837986547244",hors unité urbaine,Botsorhel,29
+29015,Bourg-Blanc,29,2022,unite urbaine,015,29015,"48.495755138424094, -4.50003045399556",unité urbaine,Bourg-Blanc,29
+29016,Brasparts,29,2022,unite urbaine,016,29016,"48.319461337799964, -3.9502985766764875",hors unité urbaine,Brasparts,29
+29017,Brélès,29,2022,unite urbaine,017,29017,"48.471187096978994, -4.687127834037883",unité urbaine,Brélès,29
+29018,Brennilis,29,2022,unite urbaine,018,29018,"48.35990822902084, -3.850904376567688",hors unité urbaine,Brennilis,29
+29019,Brest,29,2022,unite urbaine,019,29019,"48.40025315002706, -4.5022743091573005",unité urbaine,Brest,29
+29021,Plounéour-Brignogan-plages,29,2022,unite urbaine,021,29021,"48.65265646259037, -4.330026301718726",hors unité urbaine,Plounéour-Brignogan-plages,29
+29022,Camaret-sur-Mer,29,2022,unite urbaine,022,29022,"48.26815074995694, -4.586871402544252",unité urbaine,Camaret-sur-Mer,29
+29023,Carantec,29,2022,unite urbaine,023,29023,"48.65687533095654, -3.9145636201202967",unité urbaine,Carantec,29
+29024,Carhaix-Plouguer,29,2022,unite urbaine,024,29024,"48.26874866034538, -3.5660276318224926",unité urbaine,Carhaix-Plouguer,29
+29025,Cast,29,2022,unite urbaine,025,29025,"48.14889070095511, -4.11886748848833",hors unité urbaine,Cast,29
+29026,Châteaulin,29,2022,unite urbaine,026,29026,"48.2029550902763, -4.073744375880054",unité urbaine,Châteaulin,29
+29027,Châteauneuf-du-Faou,29,2022,unite urbaine,027,29027,"48.188821339429424, -3.8208583033939227",unité urbaine,Châteauneuf-du-Faou,29
+29028,Cléden-Cap-Sizun,29,2022,unite urbaine,028,29028,"48.05401321365994, -4.656168731474595",hors unité urbaine,Cléden-Cap-Sizun,29
+29029,Cléden-Poher,29,2022,unite urbaine,029,29029,"48.24311008262776, -3.6641547736120073",hors unité urbaine,Cléden-Poher,29
+29030,Cléder,29,2022,unite urbaine,030,29030,"48.66034559095374, -4.124319206412822",unité urbaine,Cléder,29
+29031,Clohars-Carnoët,29,2022,unite urbaine,031,29031,"47.79448852750255, -3.566712666045648",unité urbaine,Clohars-Carnoët,29
+29032,Clohars-Fouesnant,29,2022,unite urbaine,032,29032,"47.89816997127278, -4.082832727881424",unité urbaine,Clohars-Fouesnant,29
+29033,Le Cloître-Pleyben,29,2022,unite urbaine,033,29033,"48.258689605035194, -3.896689194540526",hors unité urbaine,Le Cloître-Pleyben,29
+29034,Le Cloître-Saint-Thégonnec,29,2022,unite urbaine,034,29034,"48.459764066341506, -3.792460092776704",hors unité urbaine,Le Cloître-Saint-Thégonnec,29
+29035,Coat-Méal,29,2022,unite urbaine,035,29035,"48.506020855819415, -4.5397719977914175",hors unité urbaine,Coat-Méal,29
+29036,Collorec,29,2022,unite urbaine,036,29036,"48.29150283144146, -3.771339346619694",hors unité urbaine,Collorec,29
+29037,Combrit,29,2022,unite urbaine,037,29037,"47.8871419559671, -4.164161134106372",unité urbaine,Combrit,29
+29038,Commana,29,2022,unite urbaine,038,29038,"48.41038510420793, -3.9696770372899137",hors unité urbaine,Commana,29
+29039,Concarneau,29,2022,unite urbaine,039,29039,"47.896435981192745, -3.9071513793560153",unité urbaine,Concarneau,29
+29040,Le Conquet,29,2022,unite urbaine,040,29040,"48.35842564114117, -4.785348725132085",unité urbaine,Le Conquet,29
+29041,Coray,29,2022,unite urbaine,041,29041,"48.06593992425383, -3.855077686186193",hors unité urbaine,Coray,29
+29043,Daoulas,29,2022,unite urbaine,043,29043,"48.35581020789005, -4.263891208363922",hors unité urbaine,Daoulas,29
+29044,Dinéault,29,2022,unite urbaine,044,29044,"48.21777614260057, -4.166686864651242",hors unité urbaine,Dinéault,29
+29045,Dirinon,29,2022,unite urbaine,045,29045,"48.40085118131671, -4.26921133774732",hors unité urbaine,Dirinon,29
+29046,Douarnenez,29,2022,unite urbaine,046,29046,"48.08013693636966, -4.328018989613503",unité urbaine,Douarnenez,29
+29047,Le Drennec,29,2022,unite urbaine,047,29047,"48.533046445871356, -4.381947749530848",unité urbaine,Le Drennec,29
+29048,Edern,29,2022,unite urbaine,048,29048,"48.11942161458446, -3.960661264086226",unité urbaine,Edern,29
+29049,Elliant,29,2022,unite urbaine,049,29049,"48.00786090012379, -3.9025421950941364",hors unité urbaine,Elliant,29
+29051,Ergué-Gabéric,29,2022,unite urbaine,051,29051,"48.01220240599772, -4.007881523773466",unité urbaine,Ergué-Gabéric,29
+29053,Le Faou,29,2022,unite urbaine,053,29053,"48.305559227171706, -4.142596564319735",hors unité urbaine,Le Faou,29
+29054,La Feuillée,29,2022,unite urbaine,054,29054,"48.391153831609444, -3.852120077831934",hors unité urbaine,La Feuillée,29
+29055,Le Folgoët,29,2022,unite urbaine,055,29055,"48.56627496534868, -4.352318033089235",unité urbaine,Le Folgoët,29
+29056,La Forest-Landerneau,29,2022,unite urbaine,056,29056,"48.434157334700664, -4.314870922291029",hors unité urbaine,La Forest-Landerneau,29
+29057,La Forêt-Fouesnant,29,2022,unite urbaine,057,29057,"47.92055182843626, -3.9680565665042997",unité urbaine,La Forêt-Fouesnant,29
+29059,Garlan,29,2022,unite urbaine,059,29059,"48.60384903724015, -3.766570282904476",hors unité urbaine,Garlan,29
+29060,Gouesnach,29,2022,unite urbaine,060,29060,"47.91720488553766, -4.110905929109813",unité urbaine,Gouesnach,29
+29061,Gouesnou,29,2022,unite urbaine,061,29061,"48.44670208782615, -4.463234125883929",unité urbaine,Gouesnou,29
+29062,Gouézec,29,2022,unite urbaine,062,29062,"48.170053672046436, -3.9722052250657516",hors unité urbaine,Gouézec,29
+29063,Goulien,29,2022,unite urbaine,063,29063,"48.05842125444981, -4.592585202487077",hors unité urbaine,Goulien,29
+29064,Goulven,29,2022,unite urbaine,064,29064,"48.623832019315394, -4.295728583726178",hors unité urbaine,Goulven,29
+29065,Gourlizon,29,2022,unite urbaine,065,29065,"48.02537738841695, -4.2695900628292165",hors unité urbaine,Gourlizon,29
+29066,Guengat,29,2022,unite urbaine,066,29066,"48.04124146798606, -4.1960462124654185",hors unité urbaine,Guengat,29
+29067,Guerlesquin,29,2022,unite urbaine,067,29067,"48.53185675701634, -3.587703927159778",hors unité urbaine,Guerlesquin,29
+29068,Guiclan,29,2022,unite urbaine,068,29068,"48.54314706557307, -3.9798045375770723",hors unité urbaine,Guiclan,29
+29069,Guilers,29,2022,unite urbaine,069,29069,"48.41910761330982, -4.562254932280249",unité urbaine,Guilers,29
+29070,Guiler-sur-Goyen,29,2022,unite urbaine,070,29070,"48.01682992983615, -4.361192692227408",hors unité urbaine,Guiler-sur-Goyen,29
+29071,Guilligomarc'h,29,2022,unite urbaine,071,29071,"47.943410694230884, -3.4261176626878007",hors unité urbaine,Guilligomarc'h,29
+29072,Guilvinec,29,2022,unite urbaine,072,29072,"47.800371610906396, -4.285929875685125",unité urbaine,Guilvinec,29
+29073,Guimaëc,29,2022,unite urbaine,073,29073,"48.679214133229294, -3.7060273858467134",unité urbaine,Guimaëc,29
+29074,Guimiliau,29,2022,unite urbaine,074,29074,"48.48167353539161, -3.997089830041908",hors unité urbaine,Guimiliau,29
+29075,Guipavas,29,2022,unite urbaine,075,29075,"48.43068081836312, -4.3964404319991",unité urbaine,Guipavas,29
+29076,Milizac-Guipronvel,29,2022,unite urbaine,076,29076,"48.4650492020598, -4.567909087200272",unité urbaine,Milizac-Guipronvel,29
+29077,Guissény,29,2022,unite urbaine,077,29077,"48.61708425764093, -4.411605619883663",hors unité urbaine,Guissény,29
+29078,Hanvec,29,2022,unite urbaine,078,29078,"48.329907605582925, -4.139715476470275",hors unité urbaine,Hanvec,29
+29079,Henvic,29,2022,unite urbaine,079,29079,"48.63265115189536, -3.931409390053223",unité urbaine,Henvic,29
+29080,Hôpital-Camfrout,29,2022,unite urbaine,080,29080,"48.324254487392075, -4.2388133557759415",unité urbaine,Hôpital-Camfrout,29
+29081,Huelgoat,29,2022,unite urbaine,081,29081,"48.361687457613684, -3.7584834844122184",hors unité urbaine,Huelgoat,29
+29082,Île-de-Batz,29,2022,unite urbaine,082,29082,"48.745687273655065, -4.014964811181948",hors unité urbaine,Île-de-Batz,29
+29083,Île-de-Sein,29,2022,unite urbaine,083,29083,"48.03828667399717, -4.857115772787123",hors unité urbaine,Île-de-Sein,29
+29084,Île-Molène,29,2022,unite urbaine,084,29084,"48.39650638263539, -4.95860984970815",hors unité urbaine,Île-Molène,29
+29085,Île-Tudy,29,2022,unite urbaine,085,29085,"47.85368984962777, -4.160682693777692",unité urbaine,Île-Tudy,29
+29086,Irvillac,29,2022,unite urbaine,086,29086,"48.366928813953095, -4.201410807644828",hors unité urbaine,Irvillac,29
+29087,Le Juch,29,2022,unite urbaine,087,29087,"48.05547290273416, -4.265145881143125",hors unité urbaine,Le Juch,29
+29089,Kergloff,29,2022,unite urbaine,089,29089,"48.28018256234892, -3.645913922535779",hors unité urbaine,Kergloff,29
+29090,Kerlaz,29,2022,unite urbaine,090,29090,"48.09144665712037, -4.26353342786953",hors unité urbaine,Kerlaz,29
+29091,Kerlouan,29,2022,unite urbaine,091,29091,"48.647789822850825, -4.378660820202829",unité urbaine,Kerlouan,29
+29093,Kernilis,29,2022,unite urbaine,093,29093,"48.575390983605665, -4.411071986708034",hors unité urbaine,Kernilis,29
+29094,Kernouës,29,2022,unite urbaine,094,29094,"48.593981073886454, -4.344599252165043",unité urbaine,Kernouës,29
+29095,Kersaint-Plabennec,29,2022,unite urbaine,095,29095,"48.478853728216336, -4.362545184483814",hors unité urbaine,Kersaint-Plabennec,29
+29097,Lampaul-Guimiliau,29,2022,unite urbaine,097,29097,"48.483723613082184, -4.040465447415244",unité urbaine,Lampaul-Guimiliau,29
+29098,Lampaul-Plouarzel,29,2022,unite urbaine,098,29098,"48.44998747386722, -4.764174507571006",unité urbaine,Lampaul-Plouarzel,29
+29099,Lampaul-Ploudalmézeau,29,2022,unite urbaine,099,29099,"48.553746506278976, -4.647871865751587",hors unité urbaine,Lampaul-Ploudalmézeau,29
+29100,Lanarvily,29,2022,unite urbaine,100,29100,"48.560967608487516, -4.3826960023339225",hors unité urbaine,Lanarvily,29
+29101,Landéda,29,2022,unite urbaine,101,29101,"48.58916524739115, -4.57675680630691",unité urbaine,Landéda,29
+29102,Landeleau,29,2022,unite urbaine,102,29102,"48.25300420218527, -3.7327951041798424",hors unité urbaine,Landeleau,29
+29103,Landerneau,29,2022,unite urbaine,103,29103,"48.45110778868429, -4.264152882864628",unité urbaine,Landerneau,29
+29104,Landévennec,29,2022,unite urbaine,104,29104,"48.281224839702475, -4.312661984824064",hors unité urbaine,Landévennec,29
+29105,Landivisiau,29,2022,unite urbaine,105,29105,"48.51640261852274, -4.060783070547436",unité urbaine,Landivisiau,29
+29106,Landrévarzec,29,2022,unite urbaine,106,29106,"48.08963265088694, -4.074997079023522",hors unité urbaine,Landrévarzec,29
+29107,Landudal,29,2022,unite urbaine,107,29107,"48.05668867459854, -3.9778274656680614",hors unité urbaine,Landudal,29
+29108,Landudec,29,2022,unite urbaine,108,29108,"47.99526921387853, -4.328045263751018",hors unité urbaine,Landudec,29
+29109,Landunvez,29,2022,unite urbaine,109,29109,"48.5344353698899, -4.730012305282042",unité urbaine,Landunvez,29
+29110,Langolen,29,2022,unite urbaine,110,29110,"48.07417082150882, -3.9164610772232744",hors unité urbaine,Langolen,29
+29111,Lanhouarneau,29,2022,unite urbaine,111,29111,"48.57533816797108, -4.204438013327355",hors unité urbaine,Lanhouarneau,29
+29112,Lanildut,29,2022,unite urbaine,112,29112,"48.48194475014225, -4.732948942685772",unité urbaine,Lanildut,29
+29113,Lanmeur,29,2022,unite urbaine,113,29113,"48.64250369863524, -3.7215051477891663",unité urbaine,Lanmeur,29
+29114,Lannéanou,29,2022,unite urbaine,114,29114,"48.498179864794736, -3.665268595146401",hors unité urbaine,Lannéanou,29
+29115,Lannédern,29,2022,unite urbaine,115,29115,"48.2894425317954, -3.902772708828803",hors unité urbaine,Lannédern,29
+29116,Lanneuffret,29,2022,unite urbaine,116,29116,"48.49589121381534, -4.201542201914353",hors unité urbaine,Lanneuffret,29
+29117,Lannilis,29,2022,unite urbaine,117,29117,"48.56994589230279, -4.524869284806563",unité urbaine,Lannilis,29
+29119,Lanrivoaré,29,2022,unite urbaine,119,29119,"48.46635819950866, -4.634545220768509",hors unité urbaine,Lanrivoaré,29
+29120,Lanvéoc,29,2022,unite urbaine,120,29120,"48.27558020880024, -4.44444112428863",hors unité urbaine,Lanvéoc,29
+29122,Laz,29,2022,unite urbaine,122,29122,"48.13567050990772, -3.839933751061994",hors unité urbaine,Laz,29
+29123,Lennon,29,2022,unite urbaine,123,29123,"48.20546331412685, -3.9030169227757714",hors unité urbaine,Lennon,29
+29124,Lesneven,29,2022,unite urbaine,124,29124,"48.579931585671595, -4.312933724793882",unité urbaine,Lesneven,29
+29125,Leuhan,29,2022,unite urbaine,125,29125,"48.10057890067153, -3.7785032101202103",hors unité urbaine,Leuhan,29
+29126,Loc-Brévalaire,29,2022,unite urbaine,126,29126,"48.5541101799201, -4.407112229029026",hors unité urbaine,Loc-Brévalaire,29
+29128,Loc-Eguiner,29,2022,unite urbaine,128,29128,"48.475723095066506, -4.092368553481046",hors unité urbaine,Loc-Eguiner,29
+29130,Locmaria-Plouzané,29,2022,unite urbaine,130,29130,"48.371494419106476, -4.6501415011963045",unité urbaine,Locmaria-Plouzané,29
+29131,Locmélar,29,2022,unite urbaine,131,29131,"48.45022373991974, -4.057920780623325",hors unité urbaine,Locmélar,29
+29132,Locquénolé,29,2022,unite urbaine,132,29132,"48.623753872217286, -3.8635049658216465",hors unité urbaine,Locquénolé,29
+29133,Locquirec,29,2022,unite urbaine,133,29133,"48.68293224020927, -3.667591686451052",unité urbaine,Locquirec,29
+29134,Locronan,29,2022,unite urbaine,134,29134,"48.09808247011511, -4.213159629376257",hors unité urbaine,Locronan,29
+29135,Loctudy,29,2022,unite urbaine,135,29135,"47.8250080388282, -4.187716209185317",unité urbaine,Loctudy,29
+29136,Locunolé,29,2022,unite urbaine,136,29136,"47.92400600666529, -3.4855835159260575",hors unité urbaine,Locunolé,29
+29137,Logonna-Daoulas,29,2022,unite urbaine,137,29137,"48.328566992568575, -4.288585040379255",hors unité urbaine,Logonna-Daoulas,29
+29139,Lopérec,29,2022,unite urbaine,139,29139,"48.301668236340326, -4.034668296165992",hors unité urbaine,Lopérec,29
+29140,Loperhet,29,2022,unite urbaine,140,29140,"48.38414779632583, -4.313770602601793",unité urbaine,Loperhet,29
+29141,Loqueffret,29,2022,unite urbaine,141,29141,"48.32987401468242, -3.8588575360932413",hors unité urbaine,Loqueffret,29
+29142,Lothey,29,2022,unite urbaine,142,29142,"48.18384573719344, -4.02568958039754",hors unité urbaine,Lothey,29
+29143,Mahalon,29,2022,unite urbaine,143,29143,"48.027138085356306, -4.419501237289253",hors unité urbaine,Mahalon,29
+29144,La Martyre,29,2022,unite urbaine,144,29144,"48.43704686558675, -4.169956269532001",hors unité urbaine,La Martyre,29
+29145,Confort-Meilars,29,2022,unite urbaine,145,29145,"48.056032274688235, -4.434730806445163",hors unité urbaine,Confort-Meilars,29
+29146,Melgven,29,2022,unite urbaine,146,29146,"47.91303838353783, -3.84185416567477",hors unité urbaine,Melgven,29
+29147,Mellac,29,2022,unite urbaine,147,29147,"47.8985632538431, -3.587911742183202",hors unité urbaine,Mellac,29
+29148,Mespaul,29,2022,unite urbaine,148,29148,"48.61478365960004, -4.03268318122176",hors unité urbaine,Mespaul,29
+29150,Moëlan-sur-Mer,29,2022,unite urbaine,150,29150,"47.806298657338104, -3.645596039415908",unité urbaine,Moëlan-sur-Mer,29
+29151,Morlaix,29,2022,unite urbaine,151,29151,"48.600172746985365, -3.820230290300184",unité urbaine,Morlaix,29
+29152,Motreff,29,2022,unite urbaine,152,29152,"48.21979760019313, -3.562673865944389",hors unité urbaine,Motreff,29
+29153,Névez,29,2022,unite urbaine,153,29153,"47.81546601151469, -3.775896435760512",unité urbaine,Névez,29
+29156,Pencran,29,2022,unite urbaine,156,29156,"48.44370716796157, -4.221167925857598",unité urbaine,Pencran,29
+29158,Penmarch,29,2022,unite urbaine,158,29158,"47.81233052276366, -4.341450919809526",unité urbaine,Penmarch,29
+29159,Peumerit,29,2022,unite urbaine,159,29159,"47.946755130238095, -4.295840731375638",hors unité urbaine,Peumerit,29
+29160,Plabennec,29,2022,unite urbaine,160,29160,"48.49366275086781, -4.419497186859718",unité urbaine,Plabennec,29
+29161,Pleuven,29,2022,unite urbaine,161,29161,"47.91484621756746, -4.046040349143941",unité urbaine,Pleuven,29
+29162,Pleyben,29,2022,unite urbaine,162,29162,"48.23806529764443, -3.975576007013348",unité urbaine,Pleyben,29
+29163,Pleyber-Christ,29,2022,unite urbaine,163,29163,"48.51067272439773, -3.8717124413373902",unité urbaine,Pleyber-Christ,29
+29165,Plobannalec-Lesconil,29,2022,unite urbaine,165,29165,"47.82100864724522, -4.2280101533267525",unité urbaine,Plobannalec-Lesconil,29
+29166,Ploéven,29,2022,unite urbaine,166,29166,"48.15816524996369, -4.212889635775947",hors unité urbaine,Ploéven,29
+29167,Plogastel-Saint-Germain,29,2022,unite urbaine,167,29167,"47.977414993882434, -4.2637804082560535",hors unité urbaine,Plogastel-Saint-Germain,29
+29168,Plogoff,29,2022,unite urbaine,168,29168,"48.035053993990765, -4.67943185261289",hors unité urbaine,Plogoff,29
+29169,Plogonnec,29,2022,unite urbaine,169,29169,"48.072804741106935, -4.158669702259817",hors unité urbaine,Plogonnec,29
+29170,Plomelin,29,2022,unite urbaine,170,29170,"47.935833589390114, -4.15009510373057",unité urbaine,Plomelin,29
+29171,Plomeur,29,2022,unite urbaine,171,29171,"47.83814360958785, -4.294383401021233",unité urbaine,Plomeur,29
+29172,Plomodiern,29,2022,unite urbaine,172,29172,"48.18095314958231, -4.217323897912878",hors unité urbaine,Plomodiern,29
+29173,Plonéis,29,2022,unite urbaine,173,29173,"48.01111626924694, -4.209345066556811",unité urbaine,Plonéis,29
+29174,Plonéour-Lanvern,29,2022,unite urbaine,174,29174,"47.90856192950337, -4.265121600273014",unité urbaine,Plonéour-Lanvern,29
+29176,Plonévez-Porzay,29,2022,unite urbaine,176,29176,"48.127500970380616, -4.23929751807622",hors unité urbaine,Plonévez-Porzay,29
+29177,Plouarzel,29,2022,unite urbaine,177,29177,"48.43889118804663, -4.7210699477096405",hors unité urbaine,Plouarzel,29
+29178,Ploudalmézeau,29,2022,unite urbaine,178,29178,"48.537582319699936, -4.6697345611895695",unité urbaine,Ploudalmézeau,29
+29179,Ploudaniel,29,2022,unite urbaine,179,29179,"48.52304886903614, -4.313790072614656",hors unité urbaine,Ploudaniel,29
+29180,Ploudiry,29,2022,unite urbaine,180,29180,"48.4574493636135, -4.1292889538002715",hors unité urbaine,Ploudiry,29
+29181,Plouédern,29,2022,unite urbaine,181,29181,"48.48285319960529, -4.2527271618386395",hors unité urbaine,Plouédern,29
+29182,Plouégat-Guérand,29,2022,unite urbaine,182,29182,"48.62167974222534, -3.6702827305488466",hors unité urbaine,Plouégat-Guérand,29
+29183,Plouégat-Moysan,29,2022,unite urbaine,183,29183,"48.57012909021984, -3.616577489657529",hors unité urbaine,Plouégat-Moysan,29
+29184,Plouénan,29,2022,unite urbaine,184,29184,"48.6210445420373, -3.98044024238278",hors unité urbaine,Plouénan,29
+29185,Plouescat,29,2022,unite urbaine,185,29185,"48.66553165387689, -4.180112643273047",unité urbaine,Plouescat,29
+29186,Plouezoc'h,29,2022,unite urbaine,186,29186,"48.63721667754028, -3.8156544603112534",unité urbaine,Plouezoc'h,29
+29187,Plougar,29,2022,unite urbaine,187,29187,"48.55649486797537, -4.128531430218059",hors unité urbaine,Plougar,29
+29188,Plougasnou,29,2022,unite urbaine,188,29188,"48.67741339588434, -3.8117441993924177",unité urbaine,Plougasnou,29
+29189,Plougastel-Daoulas,29,2022,unite urbaine,189,29189,"48.3603173039468, -4.382673752226675",unité urbaine,Plougastel-Daoulas,29
+29190,Plougonvelin,29,2022,unite urbaine,190,29190,"48.351093493796476, -4.718045184224957",unité urbaine,Plougonvelin,29
+29191,Plougonven,29,2022,unite urbaine,191,29191,"48.50563261681473, -3.727496231267587",hors unité urbaine,Plougonven,29
+29192,Plougoulm,29,2022,unite urbaine,192,29192,"48.656284429797005, -4.04193149230964",hors unité urbaine,Plougoulm,29
+29193,Plougourvest,29,2022,unite urbaine,193,29193,"48.55368420875413, -4.07331961037924",hors unité urbaine,Plougourvest,29
+29196,Plouguin,29,2022,unite urbaine,196,29196,"48.528930645496374, -4.592539484452854",hors unité urbaine,Plouguin,29
+29197,Plouhinec,29,2022,unite urbaine,197,29197,"48.01422335635547, -4.485638810963973",unité urbaine,Plouhinec,29
+29198,Plouider,29,2022,unite urbaine,198,29198,"48.60173440857641, -4.292695500691613",hors unité urbaine,Plouider,29
+29199,Plouigneau,29,2022,unite urbaine,199,29199,"48.57328848849654, -3.7022202573445995",unité urbaine,Plouigneau,29
+29201,Ploumoguer,29,2022,unite urbaine,201,29201,"48.39975175322028, -4.715685340081954",hors unité urbaine,Ploumoguer,29
+29202,Plounéour-Ménez,29,2022,unite urbaine,202,29202,"48.445728911689905, -3.8807840970884606",hors unité urbaine,Plounéour-Ménez,29
+29204,Plounéventer,29,2022,unite urbaine,204,29204,"48.52090438138386, -4.208926736677648",hors unité urbaine,Plounéventer,29
+29205,Plounévézel,29,2022,unite urbaine,205,29205,"48.31211062693353, -3.5746417872895093",unité urbaine,Plounévézel,29
+29206,Plounévez-Lochrist,29,2022,unite urbaine,206,29206,"48.61968714804501, -4.198629121314788",hors unité urbaine,Plounévez-Lochrist,29
+29207,Plourin-lès-Morlaix,29,2022,unite urbaine,207,29207,"48.521824143118046, -3.800356241427641",unité urbaine,Plourin-lès-Morlaix,29
+29208,Plourin,29,2022,unite urbaine,208,29208,"48.503033648072396, -4.684617067259213",hors unité urbaine,Plourin,29
+29209,Plouvien,29,2022,unite urbaine,209,29209,"48.53947268202248, -4.465369706954327",unité urbaine,Plouvien,29
+29210,Plouvorn,29,2022,unite urbaine,210,29210,"48.576884031834155, -4.0221810729086",unité urbaine,Plouvorn,29
+29211,Plouyé,29,2022,unite urbaine,211,29211,"48.32066342999453, -3.734425058186254",hors unité urbaine,Plouyé,29
+29212,Plouzané,29,2022,unite urbaine,212,29212,"48.37762353081911, -4.59896664614105",unité urbaine,Plouzané,29
+29213,Plouzévédé,29,2022,unite urbaine,213,29213,"48.592444868696894, -4.095746357557586",hors unité urbaine,Plouzévédé,29
+29214,Plovan,29,2022,unite urbaine,214,29214,"47.93295321514497, -4.359921988507206",hors unité urbaine,Plovan,29
+29215,Plozévet,29,2022,unite urbaine,215,29215,"47.98289539329704, -4.409595620065422",unité urbaine,Plozévet,29
+29216,Pluguffan,29,2022,unite urbaine,216,29216,"47.97220404641501, -4.1875241109393455",unité urbaine,Pluguffan,29
+29217,Pont-Aven,29,2022,unite urbaine,217,29217,"47.87221336540582, -3.765728130245548",unité urbaine,Pont-Aven,29
+29218,Pont-Croix,29,2022,unite urbaine,218,29218,"48.046355067830525, -4.4976033520720025",hors unité urbaine,Pont-Croix,29
+29220,Pont-l'Abbé,29,2022,unite urbaine,220,29220,"47.86518510033503, -4.216779264849821",unité urbaine,Pont-l'Abbé,29
+29221,Porspoder,29,2022,unite urbaine,221,29221,"48.49845052430643, -4.754124168172735",unité urbaine,Porspoder,29
+29222,Port-Launay,29,2022,unite urbaine,222,29222,"48.21780102241249, -4.081891745393643",unité urbaine,Port-Launay,29
+29224,Pouldergat,29,2022,unite urbaine,224,29224,"48.04015419009224, -4.326541284120877",hors unité urbaine,Pouldergat,29
+29225,Pouldreuzic,29,2022,unite urbaine,225,29225,"47.961160213664726, -4.3638563976131906",hors unité urbaine,Pouldreuzic,29
+29226,Poullan-sur-Mer,29,2022,unite urbaine,226,29226,"48.07707709554969, -4.397647297801551",hors unité urbaine,Poullan-sur-Mer,29
+29227,Poullaouen,29,2022,unite urbaine,227,29227,"48.34787565724279, -3.6436478102242273",hors unité urbaine,Poullaouen,29
+29228,Primelin,29,2022,unite urbaine,228,29228,"48.02898111578937, -4.60524582085726",hors unité urbaine,Primelin,29
+29229,Quéménéven,29,2022,unite urbaine,229,29229,"48.118063530532716, -4.143925818894822",hors unité urbaine,Quéménéven,29
+29230,Querrien,29,2022,unite urbaine,230,29230,"47.955432557541535, -3.5475381384262166",hors unité urbaine,Querrien,29
+29233,Quimperlé,29,2022,unite urbaine,233,29233,"47.856152094565374, -3.555022112400577",unité urbaine,Quimperlé,29
+29234,Rédené,29,2022,unite urbaine,234,29234,"47.85540573677962, -3.4870644099357286",hors unité urbaine,Rédené,29
+29235,Le Relecq-Kerhuon,29,2022,unite urbaine,235,29235,"48.40322052215855, -4.401240130002044",unité urbaine,Le Relecq-Kerhuon,29
+29236,Riec-sur-Bélon,29,2022,unite urbaine,236,29236,"47.849123976536085, -3.6905107071999694",unité urbaine,Riec-sur-Bélon,29
+29237,La Roche-Maurice,29,2022,unite urbaine,237,29237,"48.473432281760175, -4.194586689329399",unité urbaine,La Roche-Maurice,29
+29238,Roscanvel,29,2022,unite urbaine,238,29238,"48.31905101378226, -4.558353177823428",hors unité urbaine,Roscanvel,29
+29239,Roscoff,29,2022,unite urbaine,239,29239,"48.71197473807686, -3.9886850107195486",unité urbaine,Roscoff,29
+29240,Rosnoën,29,2022,unite urbaine,240,29240,"48.27137737155706, -4.198543556175292",hors unité urbaine,Rosnoën,29
+29241,Rosporden,29,2022,unite urbaine,241,29241,"47.958175435760594, -3.800743293031348",unité urbaine,Rosporden,29
+29243,Saint-Coulitz,29,2022,unite urbaine,243,29243,"48.18221974219988, -4.066883108447141",hors unité urbaine,Saint-Coulitz,29
+29244,Saint-Derrien,29,2022,unite urbaine,244,29244,"48.54460394010847, -4.186616308437929",hors unité urbaine,Saint-Derrien,29
+29245,Saint-Divy,29,2022,unite urbaine,245,29245,"48.45431043009017, -4.330189727936171",unité urbaine,Saint-Divy,29
+29246,Saint-Eloy,29,2022,unite urbaine,246,29246,"48.3635347842645, -4.115377551434588",hors unité urbaine,Saint-Eloy,29
+29247,Saint-Évarzec,29,2022,unite urbaine,247,29247,"47.9537748355455, -4.009798466157899",unité urbaine,Saint-Évarzec,29
+29248,Saint-Frégant,29,2022,unite urbaine,248,29248,"48.59979615456267, -4.373335966333686",hors unité urbaine,Saint-Frégant,29
+29249,Saint-Goazec,29,2022,unite urbaine,249,29249,"48.15165435411844, -3.7659024769082086",hors unité urbaine,Saint-Goazec,29
+29250,Saint-Hernin,29,2022,unite urbaine,250,29250,"48.20812081997656, -3.611006946851952",hors unité urbaine,Saint-Hernin,29
+29251,Saint-Jean-du-Doigt,29,2022,unite urbaine,251,29251,"48.67002698434251, -3.7628680194593773",unité urbaine,Saint-Jean-du-Doigt,29
+29252,Saint-Jean-Trolimon,29,2022,unite urbaine,252,29252,"47.86849163199846, -4.30916465543175",unité urbaine,Saint-Jean-Trolimon,29
+29254,Saint-Martin-des-Champs,29,2022,unite urbaine,254,29254,"48.57605637296352, -3.8559708921225164",unité urbaine,Saint-Martin-des-Champs,29
+29255,Saint-Méen,29,2022,unite urbaine,255,29255,"48.55475750467601, -4.258825010193796",hors unité urbaine,Saint-Méen,29
+29256,Saint-Nic,29,2022,unite urbaine,256,29256,"48.21099928188342, -4.280458475728606",hors unité urbaine,Saint-Nic,29
+29257,Saint-Pabu,29,2022,unite urbaine,257,29257,"48.562355553743245, -4.619760162899474",unité urbaine,Saint-Pabu,29
+29259,Saint-Pol-de-Léon,29,2022,unite urbaine,259,29259,"48.67261399484696, -3.9889649514467895",unité urbaine,Saint-Pol-de-Léon,29
+29260,Saint-Renan,29,2022,unite urbaine,260,29260,"48.426043886661304, -4.624003302341501",unité urbaine,Saint-Renan,29
+29261,Saint-Rivoal,29,2022,unite urbaine,261,29261,"48.34916479505323, -3.987759628195394",hors unité urbaine,Saint-Rivoal,29
+29262,Saint-Sauveur,29,2022,unite urbaine,262,29262,"48.44826427216525, -4.000249112803793",hors unité urbaine,Saint-Sauveur,29
+29263,Saint-Ségal,29,2022,unite urbaine,263,29263,"48.23579083742642, -4.077582892592827",hors unité urbaine,Saint-Ségal,29
+29264,Saint-Servais,29,2022,unite urbaine,264,29264,"48.51542238170894, -4.158216092784721",hors unité urbaine,Saint-Servais,29
+29265,Sainte-Sève,29,2022,unite urbaine,265,29265,"48.560268989859175, -3.8891291369827936",hors unité urbaine,Sainte-Sève,29
+29266,Saint-Thégonnec Loc-Eguiner,29,2022,unite urbaine,266,29266,"48.50227078914918, -3.940488035721464",unité urbaine,Saint-Thégonnec Loc-Eguiner,29
+29267,Saint-Thois,29,2022,unite urbaine,267,29267,"48.1533951717719, -3.9061505493124073",hors unité urbaine,Saint-Thois,29
+29268,Saint-Thonan,29,2022,unite urbaine,268,29268,"48.47710340265056, -4.322690068512908",unité urbaine,Saint-Thonan,29
+29269,Saint-Thurien,29,2022,unite urbaine,269,29269,"47.956750012635574, -3.619963967575167",hors unité urbaine,Saint-Thurien,29
+29270,Saint-Urbain,29,2022,unite urbaine,270,29270,"48.397066868317864, -4.222060031673514",hors unité urbaine,Saint-Urbain,29
+29271,Saint-Vougay,29,2022,unite urbaine,271,29271,"48.588844088813886, -4.146283030998401",hors unité urbaine,Saint-Vougay,29
+29272,Saint-Yvi,29,2022,unite urbaine,272,29272,"47.9599536139332, -3.9388486393653013",hors unité urbaine,Saint-Yvi,29
+29273,Santec,29,2022,unite urbaine,273,29273,"48.6998675399381, -4.031588842965409",unité urbaine,Santec,29
+29275,Scrignac,29,2022,unite urbaine,275,29275,"48.42657464114599, -3.6683314220871432",hors unité urbaine,Scrignac,29
+29276,Sibiril,29,2022,unite urbaine,276,29276,"48.66430991853121, -4.071764793592539",hors unité urbaine,Sibiril,29
+29277,Sizun,29,2022,unite urbaine,277,29277,"48.39486358601009, -4.045096918736153",hors unité urbaine,Sizun,29
+29278,Spézet,29,2022,unite urbaine,278,29278,"48.18610867026052, -3.6919790371455",hors unité urbaine,Spézet,29
+29279,Taulé,29,2022,unite urbaine,279,29279,"48.604497609140765, -3.8991030319172117",hors unité urbaine,Taulé,29
+29280,Telgruc-sur-Mer,29,2022,unite urbaine,280,29280,"48.23349195315418, -4.35726298659193",hors unité urbaine,Telgruc-sur-Mer,29
+29281,Tourch,29,2022,unite urbaine,281,29281,"48.02711612992852, -3.823393220780043",hors unité urbaine,Tourch,29
+29282,Trébabu,29,2022,unite urbaine,282,29282,"48.37059667231015, -4.732274355695323",hors unité urbaine,Trébabu,29
+29284,Treffiagat,29,2022,unite urbaine,284,29284,"47.804975811831454, -4.26009056247007",unité urbaine,Treffiagat,29
+29285,Tréflaouénan,29,2022,unite urbaine,285,29285,"48.62695640675765, -4.098753229840943",hors unité urbaine,Tréflaouénan,29
+29286,Tréflévénez,29,2022,unite urbaine,286,29286,"48.41556074645047, -4.175816425774317",hors unité urbaine,Tréflévénez,29
+29287,Tréflez,29,2022,unite urbaine,287,29287,"48.62648279999985, -4.257296614894699",hors unité urbaine,Tréflez,29
+29288,Trégarantec,29,2022,unite urbaine,288,29288,"48.5494298690965, -4.289532649173262",hors unité urbaine,Trégarantec,29
+29289,Trégarvan,29,2022,unite urbaine,289,29289,"48.23771627882694, -4.231047883859354",hors unité urbaine,Trégarvan,29
+29290,Tréglonou,29,2022,unite urbaine,290,29290,"48.547561658543934, -4.547504654190292",hors unité urbaine,Tréglonou,29
+29291,Trégourez,29,2022,unite urbaine,291,29291,"48.10582591488604, -3.871582204648712",hors unité urbaine,Trégourez,29
+29292,Tréguennec,29,2022,unite urbaine,292,29292,"47.88482065896248, -4.339131135957931",hors unité urbaine,Tréguennec,29
+29293,Trégunc,29,2022,unite urbaine,293,29293,"47.83821373494853, -3.8410619959153665",unité urbaine,Trégunc,29
+29294,Le Tréhou,29,2022,unite urbaine,294,29294,"48.39387180446539, -4.129534893088426",hors unité urbaine,Le Tréhou,29
+29295,Trémaouézan,29,2022,unite urbaine,295,29295,"48.508702240766816, -4.2557974309317945",hors unité urbaine,Trémaouézan,29
+29296,Tréméoc,29,2022,unite urbaine,296,29296,"47.90728287732169, -4.219951972361853",unité urbaine,Tréméoc,29
+29297,Tréméven,29,2022,unite urbaine,297,29297,"47.902151560062684, -3.525013715222406",unité urbaine,Tréméven,29
+29298,Tréogat,29,2022,unite urbaine,298,29298,"47.909598897267045, -4.341089279601158",hors unité urbaine,Tréogat,29
+29299,Tréouergat,29,2022,unite urbaine,299,29299,"48.49496085228286, -4.601873962139421",hors unité urbaine,Tréouergat,29
+29300,Le Trévoux,29,2022,unite urbaine,300,29300,"47.88858678599208, -3.6570293688059947",hors unité urbaine,Le Trévoux,29
+29301,Trézilidé,29,2022,unite urbaine,301,29301,"48.61009205223091, -4.08453016883681",hors unité urbaine,Trézilidé,29
+29302,Pont-de-Buis-lès-Quimerch,29,2022,unite urbaine,302,29302,"48.274461596785976, -4.1076167058104955",unité urbaine,Pont-de-Buis-lès-Quimerch,29
+35001,Acigné,35,2022,unite urbaine,001,35001,"48.14647324275454, -1.5191578483090815",unité urbaine,Acigné,35
+35002,Amanlis,35,2022,unite urbaine,002,35002,"47.99980525712724, -1.4961212843766156",hors unité urbaine,Amanlis,35
+35003,Andouillé-Neuville,35,2022,unite urbaine,003,35003,"48.29765717845717, -1.5958140874051243",hors unité urbaine,Andouillé-Neuville,35
+35004,Val-Couesnon,35,2022,unite urbaine,004,35004,"48.44007996396879, -1.4626825378414101",hors unité urbaine,Val-Couesnon,35
+35005,Arbrissel,35,2022,unite urbaine,005,35005,"47.927056401327846, -1.2949717465080743",hors unité urbaine,Arbrissel,35
+35006,Argentré-du-Plessis,35,2022,unite urbaine,006,35006,"48.04841603336822, -1.138441732891718",unité urbaine,Argentré-du-Plessis,35
+35007,Aubigné,35,2022,unite urbaine,007,35007,"48.29883347125943, -1.630950896856052",hors unité urbaine,Aubigné,35
+35008,Availles-sur-Seiche,35,2022,unite urbaine,008,35008,"47.95811181094663, -1.1855961909319603",hors unité urbaine,Availles-sur-Seiche,35
+35009,Baguer-Morvan,35,2022,unite urbaine,009,35009,"48.50486664150201, -1.7716881536540086",hors unité urbaine,Baguer-Morvan,35
+35010,Baguer-Pican,35,2022,unite urbaine,010,35010,"48.549890858189976, -1.691120521746967",hors unité urbaine,Baguer-Pican,35
+35012,Bain-de-Bretagne,35,2022,unite urbaine,012,35012,"47.830231648923785, -1.6763369438514282",unité urbaine,Bain-de-Bretagne,35
+35013,Bains-sur-Oust,35,2022,unite urbaine,013,35013,"47.71220004234264, -2.075623599840452",hors unité urbaine,Bains-sur-Oust,35
+35014,Bais,35,2022,unite urbaine,014,35014,"48.011081070770075, -1.305387299087277",hors unité urbaine,Bais,35
+35015,Balazé,35,2022,unite urbaine,015,35015,"48.177905964758736, -1.1832423280670892",hors unité urbaine,Balazé,35
+35016,Baulon,35,2022,unite urbaine,016,35016,"47.99496011515991, -1.9294063847538778",hors unité urbaine,Baulon,35
+35017,La Baussaine,35,2022,unite urbaine,017,35017,"48.312947500624276, -1.8966169156764674",hors unité urbaine,La Baussaine,35
+35018,La Bazouge-du-Désert,35,2022,unite urbaine,018,35018,"48.44396511019734, -1.1096719466145948",hors unité urbaine,La Bazouge-du-Désert,35
+35019,Bazouges-la-Pérouse,35,2022,unite urbaine,019,35019,"48.44063188554587, -1.563598386619256",hors unité urbaine,Bazouges-la-Pérouse,35
+35021,Beaucé,35,2022,unite urbaine,021,35021,"48.346757745802186, -1.155558321320474",unité urbaine,Beaucé,35
+35022,Bécherel,35,2022,unite urbaine,022,35022,"48.29629668005712, -1.942863279259336",hors unité urbaine,Bécherel,35
+35023,Bédée,35,2022,unite urbaine,023,35023,"48.186750546278596, -1.950019203950162",unité urbaine,Bédée,35
+35024,Betton,35,2022,unite urbaine,024,35024,"48.18125312560542, -1.6464563368763738",unité urbaine,Betton,35
+35025,Billé,35,2022,unite urbaine,025,35025,"48.29386005705974, -1.2511258646991912",hors unité urbaine,Billé,35
+35026,Bléruais,35,2022,unite urbaine,026,35026,"48.11585194959232, -2.115548709357491",hors unité urbaine,Bléruais,35
+35027,Boisgervilly,35,2022,unite urbaine,027,35027,"48.166811917886925, -2.0835775790376387",hors unité urbaine,Boisgervilly,35
+35028,Boistrudan,35,2022,unite urbaine,028,35028,"47.975498816947336, -1.3974354507168307",hors unité urbaine,Boistrudan,35
+35029,Bonnemain,35,2022,unite urbaine,029,35029,"48.471176036566725, -1.76133278952476",hors unité urbaine,Bonnemain,35
+35030,La Bosse-de-Bretagne,35,2022,unite urbaine,030,35030,"47.86816577360735, -1.5888065255139727",hors unité urbaine,La Bosse-de-Bretagne,35
+35031,La Bouëxière,35,2022,unite urbaine,031,35031,"48.174545832878174, -1.4370271292193724",unité urbaine,La Bouëxière,35
+35032,Bourgbarré,35,2022,unite urbaine,032,35032,"47.98862388712728, -1.6223991612889899",unité urbaine,Bourgbarré,35
+35033,Bourg-des-Comptes,35,2022,unite urbaine,033,35033,"47.921454498039566, -1.7222911361365694",unité urbaine,Bourg-des-Comptes,35
+35034,La Boussac,35,2022,unite urbaine,034,35034,"48.51685422044735, -1.6489424410136284",hors unité urbaine,La Boussac,35
+35035,Bovel,35,2022,unite urbaine,035,35035,"47.95677021441788, -1.959767226226906",hors unité urbaine,Bovel,35
+35037,Bréal-sous-Montfort,35,2022,unite urbaine,037,35037,"48.044854533568945, -1.8655920918200706",unité urbaine,Bréal-sous-Montfort,35
+35038,Bréal-sous-Vitré,35,2022,unite urbaine,038,35038,"48.09253100776219, -1.06077141597044",hors unité urbaine,Bréal-sous-Vitré,35
+35039,Brécé,35,2022,unite urbaine,039,35039,"48.110479231156376, -1.4898104869014541",hors unité urbaine,Brécé,35
+35040,Breteil,35,2022,unite urbaine,040,35040,"48.13824145402763, -1.910451545037365",unité urbaine,Breteil,35
+35041,Brie,35,2022,unite urbaine,041,35041,"47.951365065545936, -1.5505641619247028",hors unité urbaine,Brie,35
+35042,Brielles,35,2022,unite urbaine,042,35042,"48.01159670908795, -1.0985435039377853",hors unité urbaine,Brielles,35
+35044,Broualan,35,2022,unite urbaine,044,35044,"48.475284354025746, -1.661158544649374",hors unité urbaine,Broualan,35
+35045,Bruc-sur-Aff,35,2022,unite urbaine,045,35045,"47.81427539251612, -2.006175534725598",hors unité urbaine,Bruc-sur-Aff,35
+35046,Les Brulais,35,2022,unite urbaine,046,35046,"47.89071922130091, -2.0560380850975495",hors unité urbaine,Les Brulais,35
+35047,Bruz,35,2022,unite urbaine,047,35047,"48.025913217225295, -1.7485061399065818",unité urbaine,Bruz,35
+35049,Cancale,35,2022,unite urbaine,049,35049,"48.68323505651569, -1.8653440052151957",unité urbaine,Cancale,35
+35050,Cardroc,35,2022,unite urbaine,050,35050,"48.28470455026268, -1.8935771677866975",hors unité urbaine,Cardroc,35
+35051,Cesson-Sévigné,35,2022,unite urbaine,051,35051,"48.12039966477695, -1.5972458503417073",unité urbaine,Cesson-Sévigné,35
+35052,Champeaux,35,2022,unite urbaine,052,35052,"48.1388596292254, -1.3008218711245072",hors unité urbaine,Champeaux,35
+35054,Chanteloup,35,2022,unite urbaine,054,35054,"47.95405538669706, -1.6248083598562981",hors unité urbaine,Chanteloup,35
+35055,Chantepie,35,2022,unite urbaine,055,35055,"48.0820254003614, -1.6038647846199452",unité urbaine,Chantepie,35
+35056,La Chapelle-aux-Filtzméens,35,2022,unite urbaine,056,35056,"48.38167275542124, -1.8180490445944262",hors unité urbaine,La Chapelle-aux-Filtzméens,35
+35057,La Chapelle-Bouëxic,35,2022,unite urbaine,057,35057,"47.93709233843912, -1.923023784125729",hors unité urbaine,La Chapelle-Bouëxic,35
+35058,La Chapelle-Chaussée,35,2022,unite urbaine,058,35058,"48.26671127882724, -1.8639649480634999",hors unité urbaine,La Chapelle-Chaussée,35
+35059,La Chapelle-des-Fougeretz,35,2022,unite urbaine,059,35059,"48.177081629218016, -1.7413145032368083",unité urbaine,La Chapelle-des-Fougeretz,35
+35060,La Chapelle du Lou du Lac,35,2022,unite urbaine,060,35060,"48.21577942205229, -1.9935190861582797",hors unité urbaine,La Chapelle du Lou du Lac,35
+35061,La Chapelle-Erbrée,35,2022,unite urbaine,061,35061,"48.1403565011557, -1.0896552943536257",hors unité urbaine,La Chapelle-Erbrée,35
+35062,La Chapelle-Fleurigné,35,2022,unite urbaine,062,35062,"48.34606495847208, -1.0960060831255682",hors unité urbaine,La Chapelle-Fleurigné,35
+35063,La Chapelle-Saint-Aubert,35,2022,unite urbaine,063,35063,"48.309919542657944, -1.3146741908013213",hors unité urbaine,La Chapelle-Saint-Aubert,35
+35064,La Chapelle-de-Brain,35,2022,unite urbaine,064,35064,"47.69757349467855, -1.9348815673813846",hors unité urbaine,La Chapelle-de-Brain,35
+35065,La Chapelle-Thouarault,35,2022,unite urbaine,065,35065,"48.125188790762834, -1.8582145247678479",unité urbaine,La Chapelle-Thouarault,35
+35066,Chartres-de-Bretagne,35,2022,unite urbaine,066,35066,"48.04492350696027, -1.7064516656360236",unité urbaine,Chartres-de-Bretagne,35
+35067,Chasné-sur-Illet,35,2022,unite urbaine,067,35067,"48.23539084784159, -1.571414344792969",hors unité urbaine,Chasné-sur-Illet,35
+35068,Châteaubourg,35,2022,unite urbaine,068,35068,"48.119808410436114, -1.4040398446091604",unité urbaine,Châteaubourg,35
+35069,Châteaugiron,35,2022,unite urbaine,069,35069,"48.048968891681916, -1.4746343796925527",unité urbaine,Châteaugiron,35
+35070,Châteauneuf-d'Ille-et-Vilaine,35,2022,unite urbaine,070,35070,"48.55802217069095, -1.9284954537688372",hors unité urbaine,Châteauneuf-d'Ille-et-Vilaine,35
+35071,Le Châtellier,35,2022,unite urbaine,071,35071,"48.425896840037744, -1.2457157447414038",hors unité urbaine,Le Châtellier,35
+35072,Châtillon-en-Vendelais,35,2022,unite urbaine,072,35072,"48.2288565479042, -1.1647621068898542",hors unité urbaine,Châtillon-en-Vendelais,35
+35075,Chauvigné,35,2022,unite urbaine,075,35075,"48.37652362164467, -1.452165796745462",hors unité urbaine,Chauvigné,35
+35076,Chavagne,35,2022,unite urbaine,076,35076,"48.056321999554854, -1.7865485555526568",unité urbaine,Chavagne,35
+35077,Chelun,35,2022,unite urbaine,077,35077,"47.85485770094006, -1.2435247407855508",hors unité urbaine,Chelun,35
+35078,Cherrueix,35,2022,unite urbaine,078,35078,"48.59485566404594, -1.7155084136445806",hors unité urbaine,Cherrueix,35
+35079,Chevaigné,35,2022,unite urbaine,079,35079,"48.22444351530812, -1.6363052011237675",unité urbaine,Chevaigné,35
+35080,Cintré,35,2022,unite urbaine,080,35080,"48.10859121395969, -1.8859488662368307",hors unité urbaine,Cintré,35
+35081,Clayes,35,2022,unite urbaine,081,35081,"48.17905847824082, -1.8537562140797788",hors unité urbaine,Clayes,35
+35082,Coësmes,35,2022,unite urbaine,082,35082,"47.87221088062034, -1.416270149833475",hors unité urbaine,Coësmes,35
+35084,Comblessac,35,2022,unite urbaine,084,35084,"47.872363431039645, -2.088404799728695",hors unité urbaine,Comblessac,35
+35085,Combourg,35,2022,unite urbaine,085,35085,"48.408753699983144, -1.7453444163953886",unité urbaine,Combourg,35
+35086,Combourtillé,35,2022,unite urbaine,086,35086,"48.26624655642658, -1.2644591815512451",hors unité urbaine,Combourtillé,35
+35087,Cornillé,35,2022,unite urbaine,087,35087,"48.08232593066305, -1.3138456079406102",hors unité urbaine,Cornillé,35
+35088,Corps-Nuds,35,2022,unite urbaine,088,35088,"47.982426201924376, -1.5701594380628259",unité urbaine,Corps-Nuds,35
+35089,La Couyère,35,2022,unite urbaine,089,35089,"47.8941553849704, -1.5017429307265269",hors unité urbaine,La Couyère,35
+35090,Crevin,35,2022,unite urbaine,090,35090,"47.930330698750744, -1.6567878000865206",unité urbaine,Crevin,35
+35091,Le Crouais,35,2022,unite urbaine,091,35091,"48.20937170509668, -2.1509956728944903",hors unité urbaine,Le Crouais,35
+35092,Cuguen,35,2022,unite urbaine,092,35092,"48.44064614594325, -1.656344059125251",hors unité urbaine,Cuguen,35
+35093,Dinard,35,2022,unite urbaine,093,35093,"48.6247418029858, -2.062086402017181",unité urbaine,Dinard,35
+35094,Dingé,35,2022,unite urbaine,094,35094,"48.34697793236181, -1.7102571474409098",hors unité urbaine,Dingé,35
+35095,Dol-de-Bretagne,35,2022,unite urbaine,095,35095,"48.53657645489995, -1.7420828657421403",unité urbaine,Dol-de-Bretagne,35
+35096,Domagné,35,2022,unite urbaine,096,35096,"48.0674377367923, -1.4062201329912196",hors unité urbaine,Domagné,35
+35097,Domalain,35,2022,unite urbaine,097,35097,"47.999216648992224, -1.2393693328963329",hors unité urbaine,Domalain,35
+35098,La Dominelais,35,2022,unite urbaine,098,35098,"47.763436347907735, -1.6735412932096705",hors unité urbaine,La Dominelais,35
+35099,Domloup,35,2022,unite urbaine,099,35099,"48.06846576801134, -1.5429526238262687",unité urbaine,Domloup,35
+35101,Dourdain,35,2022,unite urbaine,101,35101,"48.19332401145025, -1.3799025561590517",hors unité urbaine,Dourdain,35
+35102,Drouges,35,2022,unite urbaine,102,35102,"47.90217122331372, -1.2601964724962464",hors unité urbaine,Drouges,35
+35103,Eancé,35,2022,unite urbaine,103,35103,"47.82372043585145, -1.251937275028488",hors unité urbaine,Eancé,35
+35104,Epiniac,35,2022,unite urbaine,104,35104,"48.49972415366313, -1.703048004041398",hors unité urbaine,Epiniac,35
+35105,Erbrée,35,2022,unite urbaine,105,35105,"48.10933733047943, -1.116871476226544",hors unité urbaine,Erbrée,35
+35106,Ercé-en-Lamée,35,2022,unite urbaine,106,35106,"47.817939717184544, -1.5824150407302084",hors unité urbaine,Ercé-en-Lamée,35
+35107,Ercé-près-Liffré,35,2022,unite urbaine,107,35107,"48.254539390042304, -1.5170262457629726",hors unité urbaine,Ercé-près-Liffré,35
+35108,Essé,35,2022,unite urbaine,108,35108,"47.947923039565644, -1.4307106197297845",hors unité urbaine,Essé,35
+35109,Étrelles,35,2022,unite urbaine,109,35109,"48.06974242186027, -1.2159716374187075",hors unité urbaine,Étrelles,35
+35110,Feins,35,2022,unite urbaine,110,35110,"48.328170263015465, -1.6259086678206032",hors unité urbaine,Feins,35
+35111,Le Ferré,35,2022,unite urbaine,111,35111,"48.486613019908745, -1.2942127683040119",hors unité urbaine,Le Ferré,35
+35114,Forges-la-Forêt,35,2022,unite urbaine,114,35114,"47.86155684172024, -1.292913473338416",hors unité urbaine,Forges-la-Forêt,35
+35115,Fougères,35,2022,unite urbaine,115,35115,"48.35276718322625, -1.1944135772968316",unité urbaine,Fougères,35
+35116,La Fresnais,35,2022,unite urbaine,116,35116,"48.58768702702082, -1.8352100900894583",unité urbaine,La Fresnais,35
+35117,Gaël,35,2022,unite urbaine,117,35117,"48.11849227702529, -2.228619220252467",hors unité urbaine,Gaël,35
+35118,Gahard,35,2022,unite urbaine,118,35118,"48.28821725201028, -1.5271973109861021",hors unité urbaine,Gahard,35
+35119,Gennes-sur-Seiche,35,2022,unite urbaine,119,35119,"47.997960656606374, -1.1329055924905396",hors unité urbaine,Gennes-sur-Seiche,35
+35120,Gévezé,35,2022,unite urbaine,120,35120,"48.21331706172669, -1.7990054643715325",unité urbaine,Gévezé,35
+35121,Gosné,35,2022,unite urbaine,121,35121,"48.25038062935976, -1.4586632867491638",hors unité urbaine,Gosné,35
+35122,La Gouesnière,35,2022,unite urbaine,122,35122,"48.60300705610042, -1.887278840515235",hors unité urbaine,La Gouesnière,35
+35123,Goven,35,2022,unite urbaine,123,35123,"48.00979169793487, -1.8390688459781963",unité urbaine,Goven,35
+35124,Grand-Fougeray,35,2022,unite urbaine,124,35124,"47.734207580870034, -1.728304575925691",hors unité urbaine,Grand-Fougeray,35
+35125,La Guerche-de-Bretagne,35,2022,unite urbaine,125,35125,"47.943904868425264, -1.2432228880104614",unité urbaine,La Guerche-de-Bretagne,35
+35126,Guichen,35,2022,unite urbaine,126,35126,"47.96534796477551, -1.7902098233955697",unité urbaine,Guichen,35
+35127,Guignen,35,2022,unite urbaine,127,35127,"47.92342051419802, -1.861984115368674",hors unité urbaine,Guignen,35
+35128,Guipel,35,2022,unite urbaine,128,35128,"48.29244715061501, -1.723622895613564",hors unité urbaine,Guipel,35
+35131,L'Hermitage,35,2022,unite urbaine,131,35131,"48.12210406716139, -1.816343492594703",unité urbaine,L'Hermitage,35
+35132,Hirel,35,2022,unite urbaine,132,35132,"48.59361443800582, -1.8091853750456932",hors unité urbaine,Hirel,35
+35133,Iffendic,35,2022,unite urbaine,133,35133,"48.11397790627641, -2.0241562248166636",unité urbaine,Iffendic,35
+35134,Les Iffs,35,2022,unite urbaine,134,35134,"48.29414597962963, -1.8663366757957618",hors unité urbaine,Les Iffs,35
+35135,Irodouër,35,2022,unite urbaine,135,35135,"48.246246869535845, -1.950394719384135",hors unité urbaine,Irodouër,35
+35136,Janzé,35,2022,unite urbaine,136,35136,"47.942818393168494, -1.5008217042548893",unité urbaine,Janzé,35
+35137,Javené,35,2022,unite urbaine,137,35137,"48.31709025111877, -1.2059792708434958",unité urbaine,Javené,35
+35138,Laignelet,35,2022,unite urbaine,138,35138,"48.37969385527992, -1.1528904591638076",hors unité urbaine,Laignelet,35
+35139,Laillé,35,2022,unite urbaine,139,35139,"47.967022370647356, -1.7139398906777104",unité urbaine,Laillé,35
+35140,Lalleu,35,2022,unite urbaine,140,35140,"47.85595727759633, -1.5223305854541698",hors unité urbaine,Lalleu,35
+35141,Landavran,35,2022,unite urbaine,141,35141,"48.16100500975766, -1.2848342049132944",hors unité urbaine,Landavran,35
+35142,Landéan,35,2022,unite urbaine,142,35142,"48.41311522054373, -1.147800027000854",hors unité urbaine,Landéan,35
+35143,Landujan,35,2022,unite urbaine,143,35143,"48.247668314149585, -2.008432436445526",hors unité urbaine,Landujan,35
+35144,Langan,35,2022,unite urbaine,144,35144,"48.23601572142538, -1.8451901989553843",hors unité urbaine,Langan,35
+35145,Langon,35,2022,unite urbaine,145,35145,"47.733735525734964, -1.8718393359591181",hors unité urbaine,Langon,35
+35146,Langouet,35,2022,unite urbaine,146,35146,"48.25459072055225, -1.8096488028645494",hors unité urbaine,Langouet,35
+35148,Lanrigan,35,2022,unite urbaine,148,35148,"48.3914625762964, -1.691950509327462",hors unité urbaine,Lanrigan,35
+35149,Lassy,35,2022,unite urbaine,149,35149,"47.972129791730175, -1.8640078738832258",hors unité urbaine,Lassy,35
+35150,Lécousse,35,2022,unite urbaine,150,35150,"48.35987469826374, -1.2210261111294776",unité urbaine,Lécousse,35
+35151,Lieuron,35,2022,unite urbaine,151,35151,"47.85191925409779, -1.92967717636341",hors unité urbaine,Lieuron,35
+35152,Liffré,35,2022,unite urbaine,152,35152,"48.20413216246477, -1.5143753230436945",unité urbaine,Liffré,35
+35153,Lillemer,35,2022,unite urbaine,153,35153,"48.57081749963645, -1.8549671684581222",hors unité urbaine,Lillemer,35
+35154,Livré-sur-Changeon,35,2022,unite urbaine,154,35154,"48.22721590803195, -1.3484821109731198",hors unité urbaine,Livré-sur-Changeon,35
+35155,Lohéac,35,2022,unite urbaine,155,35155,"47.87259088418468, -1.8887569533413051",hors unité urbaine,Lohéac,35
+35156,Longaulnay,35,2022,unite urbaine,156,35156,"48.30953814835501, -1.9411034906786995",hors unité urbaine,Longaulnay,35
+35157,Le Loroux,35,2022,unite urbaine,157,35157,"48.39483741150758, -1.082981785743635",hors unité urbaine,Le Loroux,35
+35159,Lourmais,35,2022,unite urbaine,159,35159,"48.44149587152473, -1.7327307872197084",hors unité urbaine,Lourmais,35
+35160,Loutehel,35,2022,unite urbaine,160,35160,"47.937014395640006, -2.079635370133538",hors unité urbaine,Loutehel,35
+35161,Louvigné-de-Bais,35,2022,unite urbaine,161,35161,"48.05234962461086, -1.3387029247396556",hors unité urbaine,Louvigné-de-Bais,35
+35162,Louvigné-du-Désert,35,2022,unite urbaine,162,35162,"48.4867985675941, -1.1234790001978698",unité urbaine,Louvigné-du-Désert,35
+35163,Luitré-Dompierre,35,2022,unite urbaine,163,35163,"48.28681322047517, -1.134055313200611",hors unité urbaine,Luitré-Dompierre,35
+35164,Marcillé-Raoul,35,2022,unite urbaine,164,35164,"48.374837420363065, -1.6137758614366802",hors unité urbaine,Marcillé-Raoul,35
+35165,Marcillé-Robert,35,2022,unite urbaine,165,35165,"47.958559505638235, -1.3539127908107476",hors unité urbaine,Marcillé-Robert,35
+35166,Marpiré,35,2022,unite urbaine,166,35166,"48.14704266360746, -1.352562451995908",hors unité urbaine,Marpiré,35
+35167,Martigné-Ferchaud,35,2022,unite urbaine,167,35167,"47.828497019470916, -1.327648654088484",hors unité urbaine,Martigné-Ferchaud,35
+35168,Val d'Anast,35,2022,unite urbaine,168,35168,"47.90301685621791, -1.999514645125563",hors unité urbaine,Val d'Anast,35
+35169,Maxent,35,2022,unite urbaine,169,35169,"47.9783264227376, -2.01613867329766",hors unité urbaine,Maxent,35
+35170,Mecé,35,2022,unite urbaine,170,35170,"48.24117530489468, -1.2865009535647316",hors unité urbaine,Mecé,35
+35171,Médréac,35,2022,unite urbaine,171,35171,"48.26119123572668, -2.060997795729424",hors unité urbaine,Médréac,35
+35172,Meillac,35,2022,unite urbaine,172,35172,"48.42049090918857, -1.8225764137896725",hors unité urbaine,Meillac,35
+35173,Melesse,35,2022,unite urbaine,173,35173,"48.2193610307846, -1.6895816794364977",unité urbaine,Melesse,35
+35174,Mellé,35,2022,unite urbaine,174,35174,"48.48438965248119, -1.1910813208631468",hors unité urbaine,Mellé,35
+35175,Mernel,35,2022,unite urbaine,175,35175,"47.898750163981504, -1.9528771362268087",hors unité urbaine,Mernel,35
+35176,Guipry-Messac,35,2022,unite urbaine,176,35176,"47.82156398157027, -1.8304724713085467",unité urbaine,Guipry-Messac,35
+35177,La Mézière,35,2022,unite urbaine,177,35177,"48.21264921821098, -1.750675484838395",unité urbaine,La Mézière,35
+35178,Mézières-sur-Couesnon,35,2022,unite urbaine,178,35178,"48.296882370054284, -1.4385549955137613",hors unité urbaine,Mézières-sur-Couesnon,35
+35179,Miniac-Morvan,35,2022,unite urbaine,179,35179,"48.52473153992315, -1.8951254491935552",unité urbaine,Miniac-Morvan,35
+35180,Miniac-sous-Bécherel,35,2022,unite urbaine,180,35180,"48.2810204718649, -1.9268726929173277",hors unité urbaine,Miniac-sous-Bécherel,35
+35181,Le Minihic-sur-Rance,35,2022,unite urbaine,181,35181,"48.575903468742474, -2.0131303418061766",hors unité urbaine,Le Minihic-sur-Rance,35
+35183,Mondevert,35,2022,unite urbaine,183,35183,"48.08450893021636, -1.0903824331980856",hors unité urbaine,Mondevert,35
+35184,Montauban-de-Bretagne,35,2022,unite urbaine,184,35184,"48.20427298994769, -2.0654492330225964",unité urbaine,Montauban-de-Bretagne,35
+35185,Montautour,35,2022,unite urbaine,185,35185,"48.20467461202798, -1.120846454357211",hors unité urbaine,Montautour,35
+35186,Mont-Dol,35,2022,unite urbaine,186,35186,"48.570838795053675, -1.758182871510525",hors unité urbaine,Mont-Dol,35
+35187,Monterfil,35,2022,unite urbaine,187,35187,"48.060055157038825, -1.9903845766342225",hors unité urbaine,Monterfil,35
+35188,Montfort-sur-Meu,35,2022,unite urbaine,188,35188,"48.1261161434467, -1.9639345184295152",unité urbaine,Montfort-sur-Meu,35
+35189,Montgermont,35,2022,unite urbaine,189,35189,"48.15400479128792, -1.7170279751846915",unité urbaine,Montgermont,35
+35190,Monthault,35,2022,unite urbaine,190,35190,"48.512338496445295, -1.1758867054555608",hors unité urbaine,Monthault,35
+35191,Les Portes du Coglais,35,2022,unite urbaine,191,35191,"48.44918995270498, -1.3356487435988094",hors unité urbaine,Les Portes du Coglais,35
+35192,Montreuil-des-Landes,35,2022,unite urbaine,192,35192,"48.25087343243222, -1.2279119961226739",hors unité urbaine,Montreuil-des-Landes,35
+35193,Montreuil-le-Gast,35,2022,unite urbaine,193,35193,"48.243955442979846, -1.7203958059464923",hors unité urbaine,Montreuil-le-Gast,35
+35194,Montreuil-sous-Pérouse,35,2022,unite urbaine,194,35194,"48.15115236109369, -1.2425898870442573",hors unité urbaine,Montreuil-sous-Pérouse,35
+35195,Montreuil-sur-Ille,35,2022,unite urbaine,195,35195,"48.305603944104526, -1.6688110108352618",unité urbaine,Montreuil-sur-Ille,35
+35196,Mordelles,35,2022,unite urbaine,196,35196,"48.085916511468106, -1.8426616880534559",unité urbaine,Mordelles,35
+35197,Mouazé,35,2022,unite urbaine,197,35197,"48.21823290384827, -1.6075653799019256",hors unité urbaine,Mouazé,35
+35198,Moulins,35,2022,unite urbaine,198,35198,"48.00878165450204, -1.362901013870492",hors unité urbaine,Moulins,35
+35199,Moussé,35,2022,unite urbaine,199,35199,"47.91752457260718, -1.2794087675472177",hors unité urbaine,Moussé,35
+35200,Moutiers,35,2022,unite urbaine,200,35200,"47.976012809565105, -1.2052813495556647",hors unité urbaine,Moutiers,35
+35201,Muel,35,2022,unite urbaine,201,35201,"48.1200607763001, -2.1624829383434436",hors unité urbaine,Muel,35
+35202,La Noë-Blanche,35,2022,unite urbaine,202,35202,"47.795074886087214, -1.7458463253393552",hors unité urbaine,La Noë-Blanche,35
+35203,La Nouaye,35,2022,unite urbaine,203,35203,"48.166352169192315, -1.974728813357398",hors unité urbaine,La Nouaye,35
+35204,Nouvoitou,35,2022,unite urbaine,204,35204,"48.030579799793564, -1.5523453188013727",unité urbaine,Nouvoitou,35
+35205,Noyal-sous-Bazouges,35,2022,unite urbaine,205,35205,"48.41751955893901, -1.6240354454389352",hors unité urbaine,Noyal-sous-Bazouges,35
+35206,Noyal-Châtillon-sur-Seiche,35,2022,unite urbaine,206,35206,"48.05231871142257, -1.6627284909787454",unité urbaine,Noyal-Châtillon-sur-Seiche,35
+35207,Noyal-sur-Vilaine,35,2022,unite urbaine,207,35207,"48.091422506563276, -1.505239433810198",unité urbaine,Noyal-sur-Vilaine,35
+35208,Orgères,35,2022,unite urbaine,208,35208,"47.98521340354542, -1.6657663932979176",unité urbaine,Orgères,35
+35210,Pacé,35,2022,unite urbaine,210,35210,"48.15267424488268, -1.7773286627618046",unité urbaine,Pacé,35
+35211,Paimpont,35,2022,unite urbaine,211,35211,"48.030318912729, -2.173174951389354",hors unité urbaine,Paimpont,35
+35212,Pancé,35,2022,unite urbaine,212,35212,"47.888673808518696, -1.6428361004605478",hors unité urbaine,Pancé,35
+35214,Parcé,35,2022,unite urbaine,214,35214,"48.27100866198818, -1.194688868357175",hors unité urbaine,Parcé,35
+35215,Parigné,35,2022,unite urbaine,215,35215,"48.42564245368213, -1.1976946140142226",hors unité urbaine,Parigné,35
+35216,Parthenay-de-Bretagne,35,2022,unite urbaine,216,35216,"48.1880715437502, -1.8291188225841772",hors unité urbaine,Parthenay-de-Bretagne,35
+35217,Le Pertre,35,2022,unite urbaine,217,35217,"48.03460846669007, -1.056081623909977",hors unité urbaine,Le Pertre,35
+35218,Le Petit-Fougeray,35,2022,unite urbaine,218,35218,"47.927969795330114, -1.6162236966639998",hors unité urbaine,Le Petit-Fougeray,35
+35219,Pipriac,35,2022,unite urbaine,219,35219,"47.811361304044496, -1.9372965526785553",unité urbaine,Pipriac,35
+35220,Piré-Chancé,35,2022,unite urbaine,220,35220,"48.01351680305809, -1.4215004847157346",hors unité urbaine,Piré-Chancé,35
+35221,Pléchâtel,35,2022,unite urbaine,221,35221,"47.87517535420026, -1.7341150582174831",hors unité urbaine,Pléchâtel,35
+35222,Pleine-Fougères,35,2022,unite urbaine,222,35222,"48.53106618575119, -1.5736724240740974",hors unité urbaine,Pleine-Fougères,35
+35223,Plélan-le-Grand,35,2022,unite urbaine,223,35223,"47.99665062833287, -2.0798613079484096",unité urbaine,Plélan-le-Grand,35
+35224,Plerguer,35,2022,unite urbaine,224,35224,"48.52868808849777, -1.8460749996070223",unité urbaine,Plerguer,35
+35225,Plesder,35,2022,unite urbaine,225,35225,"48.4179064375013, -1.929981226308309",hors unité urbaine,Plesder,35
+35226,Pleugueneuc,35,2022,unite urbaine,226,35226,"48.404538438514734, -1.8857522763163015",hors unité urbaine,Pleugueneuc,35
+35227,Pleumeleuc,35,2022,unite urbaine,227,35227,"48.18341737490215, -1.8935690783055514",unité urbaine,Pleumeleuc,35
+35228,Pleurtuit,35,2022,unite urbaine,228,35228,"48.582681829103976, -2.060106288244273",unité urbaine,Pleurtuit,35
+35229,Pocé-les-Bois,35,2022,unite urbaine,229,35229,"48.11503919054396, -1.2591364617618237",hors unité urbaine,Pocé-les-Bois,35
+35230,Poilley,35,2022,unite urbaine,230,35230,"48.46597819707766, -1.256584978968836",hors unité urbaine,Poilley,35
+35231,Poligné,35,2022,unite urbaine,231,35231,"47.8989836970104, -1.6860818941533022",hors unité urbaine,Poligné,35
+35232,Princé,35,2022,unite urbaine,232,35232,"48.23755185094209, -1.1058560885692104",hors unité urbaine,Princé,35
+35233,Québriac,35,2022,unite urbaine,233,35233,"48.35657330186942, -1.8130044738569537",hors unité urbaine,Québriac,35
+35234,Quédillac,35,2022,unite urbaine,234,35234,"48.2377992575257, -2.1437199063856895",hors unité urbaine,Quédillac,35
+35235,Rannée,35,2022,unite urbaine,235,35235,"47.90038136250444, -1.2268946656390862",unité urbaine,Rannée,35
+35236,Redon,35,2022,unite urbaine,236,35236,"47.66121677716608, -2.080163096315868",unité urbaine,Redon,35
+35237,Renac,35,2022,unite urbaine,237,35237,"47.72782297662942, -1.9667551116529394",hors unité urbaine,Renac,35
+35238,Rennes,35,2022,unite urbaine,238,35238,"48.11167956598057, -1.6818689569630096",unité urbaine,Rennes,35
+35239,Retiers,35,2022,unite urbaine,239,35239,"47.905816633937405, -1.3437506309168037",unité urbaine,Retiers,35
+35240,Le Rheu,35,2022,unite urbaine,240,35240,"48.097275606268866, -1.7810066434882224",unité urbaine,Le Rheu,35
+35241,La Richardais,35,2022,unite urbaine,241,35241,"48.609214414462805, -2.0437149492683195",unité urbaine,La Richardais,35
+35242,Rimou,35,2022,unite urbaine,242,35242,"48.38773820836932, -1.528374725461777",hors unité urbaine,Rimou,35
+35243,Romagné,35,2022,unite urbaine,243,35243,"48.34454262393609, -1.262507054726637",unité urbaine,Romagné,35
+35244,Romazy,35,2022,unite urbaine,244,35244,"48.380550659582255, -1.4931996514446573",hors unité urbaine,Romazy,35
+35245,Romillé,35,2022,unite urbaine,245,35245,"48.22242043247925, -1.878721878596426",unité urbaine,Romillé,35
+35246,Roz-Landrieux,35,2022,unite urbaine,246,35246,"48.545817989333564, -1.8175189776058154",hors unité urbaine,Roz-Landrieux,35
+35247,Roz-sur-Couesnon,35,2022,unite urbaine,247,35247,"48.596239897299675, -1.5931992031261517",hors unité urbaine,Roz-sur-Couesnon,35
+35248,Sains,35,2022,unite urbaine,248,35248,"48.55598819460127, -1.603980349885301",hors unité urbaine,Sains,35
+35249,Sainte-Anne-sur-Vilaine,35,2022,unite urbaine,249,35249,"47.734162119142376, -1.8051525743159136",hors unité urbaine,Sainte-Anne-sur-Vilaine,35
+35250,Saint-Armel,35,2022,unite urbaine,250,35250,"48.01335342047276, -1.5805628441028805",hors unité urbaine,Saint-Armel,35
+35251,Saint-Aubin-d'Aubigné,35,2022,unite urbaine,251,35251,"48.26193473447018, -1.6003523769237749",unité urbaine,Saint-Aubin-d'Aubigné,35
+35252,Saint-Aubin-des-Landes,35,2022,unite urbaine,252,35252,"48.10036552770044, -1.2915064569220978",hors unité urbaine,Saint-Aubin-des-Landes,35
+35253,Saint-Aubin-du-Cormier,35,2022,unite urbaine,253,35253,"48.258346052617924, -1.4209557346508155",unité urbaine,Saint-Aubin-du-Cormier,35
+35255,Saint-Benoît-des-Ondes,35,2022,unite urbaine,255,35255,"48.613511745345676, -1.8610522192468053",hors unité urbaine,Saint-Benoît-des-Ondes,35
+35256,Saint-Briac-sur-Mer,35,2022,unite urbaine,256,35256,"48.6158843649785, -2.1235133068874013",unité urbaine,Saint-Briac-sur-Mer,35
+35257,Maen Roch,35,2022,unite urbaine,257,35257,"48.4006355517509, -1.3457276180254811",unité urbaine,Maen Roch,35
+35258,Saint-Brieuc-des-Iffs,35,2022,unite urbaine,258,35258,"48.30379956003011, -1.843296277109194",hors unité urbaine,Saint-Brieuc-des-Iffs,35
+35259,Saint-Broladre,35,2022,unite urbaine,259,35259,"48.580120704277945, -1.661163473535528",hors unité urbaine,Saint-Broladre,35
+35260,Saint-Christophe-des-Bois,35,2022,unite urbaine,260,35260,"48.226696581688344, -1.2363756593130186",hors unité urbaine,Saint-Christophe-des-Bois,35
+35261,Saint-Christophe-de-Valains,35,2022,unite urbaine,261,35261,"48.34137011267515, -1.4514324958928626",hors unité urbaine,Saint-Christophe-de-Valains,35
+35262,Sainte-Colombe,35,2022,unite urbaine,262,35262,"47.895369410241635, -1.4575126195858843",hors unité urbaine,Sainte-Colombe,35
+35263,Saint-Coulomb,35,2022,unite urbaine,263,35263,"48.67723592378046, -1.9211390967979765",hors unité urbaine,Saint-Coulomb,35
+35264,Saint-Didier,35,2022,unite urbaine,264,35264,"48.09326691887594, -1.3579516170135162",unité urbaine,Saint-Didier,35
+35265,Saint-Domineuc,35,2022,unite urbaine,265,35265,"48.3605657435202, -1.8693874521277982",hors unité urbaine,Saint-Domineuc,35
+35266,Saint-Erblon,35,2022,unite urbaine,266,35266,"48.01891266239769, -1.6426008975608934",unité urbaine,Saint-Erblon,35
+35268,Saint-Ganton,35,2022,unite urbaine,268,35268,"47.7698240986416, -1.891042957420449",hors unité urbaine,Saint-Ganton,35
+35270,Saint-Georges-de-Gréhaigne,35,2022,unite urbaine,270,35270,"48.57880347452856, -1.5496475224829838",hors unité urbaine,Saint-Georges-de-Gréhaigne,35
+35271,Saint-Georges-de-Reintembault,35,2022,unite urbaine,271,35271,"48.51298947716827, -1.2351772725971935",hors unité urbaine,Saint-Georges-de-Reintembault,35
+35272,Saint-Germain-du-Pinel,35,2022,unite urbaine,272,35272,"48.00489220803604, -1.1726835047024422",hors unité urbaine,Saint-Germain-du-Pinel,35
+35273,Saint-Germain-en-Coglès,35,2022,unite urbaine,273,35273,"48.397526117226775, -1.2648445438594238",hors unité urbaine,Saint-Germain-en-Coglès,35
+35274,Saint-Germain-sur-Ille,35,2022,unite urbaine,274,35274,"48.250458465168734, -1.6520318490148052",hors unité urbaine,Saint-Germain-sur-Ille,35
+35275,Saint-Gilles,35,2022,unite urbaine,275,35275,"48.15224569267868, -1.8537968723170708",unité urbaine,Saint-Gilles,35
+35276,Saint-Gondran,35,2022,unite urbaine,276,35276,"48.26812837539284, -1.8253709079345006",hors unité urbaine,Saint-Gondran,35
+35277,Saint-Gonlay,35,2022,unite urbaine,277,35277,"48.11309826936629, -2.076225797148181",hors unité urbaine,Saint-Gonlay,35
+35278,Saint-Grégoire,35,2022,unite urbaine,278,35278,"48.15849263307686, -1.685339999670711",unité urbaine,Saint-Grégoire,35
+35279,Saint-Guinoux,35,2022,unite urbaine,279,35279,"48.58001308421343, -1.8886390545803577",hors unité urbaine,Saint-Guinoux,35
+35280,Saint-Hilaire-des-Landes,35,2022,unite urbaine,280,35280,"48.338312383539865, -1.3665772470754047",hors unité urbaine,Saint-Hilaire-des-Landes,35
+35281,Saint-Jacques-de-la-Lande,35,2022,unite urbaine,281,35281,"48.07611933393252, -1.7225558094413485",unité urbaine,Saint-Jacques-de-la-Lande,35
+35282,Rives-du-Couesnon,35,2022,unite urbaine,282,35282,"48.284928479079234, -1.3457462162051441",hors unité urbaine,Rives-du-Couesnon,35
+35283,Saint-Jean-sur-Vilaine,35,2022,unite urbaine,283,35283,"48.12118832020811, -1.3397883210165715",hors unité urbaine,Saint-Jean-sur-Vilaine,35
+35284,Saint-Jouan-des-Guérets,35,2022,unite urbaine,284,35284,"48.60398157276344, -1.9652881930111346",unité urbaine,Saint-Jouan-des-Guérets,35
+35285,Saint-Just,35,2022,unite urbaine,285,35285,"47.76443676476582, -1.969131139990741",hors unité urbaine,Saint-Just,35
+35286,Saint-Léger-des-Prés,35,2022,unite urbaine,286,35286,"48.38835113407722, -1.657127876652756",hors unité urbaine,Saint-Léger-des-Prés,35
+35287,Saint-Lunaire,35,2022,unite urbaine,287,35287,"48.620029946915494, -2.096785519080407",unité urbaine,Saint-Lunaire,35
+35288,Saint-Malo,35,2022,unite urbaine,288,35288,"48.64003675777474, -1.9808472198720661",unité urbaine,Saint-Malo,35
+35289,Saint-Malo-de-Phily,35,2022,unite urbaine,289,35289,"47.86784038522282, -1.8054028101735835",hors unité urbaine,Saint-Malo-de-Phily,35
+35290,Saint-Malon-sur-Mel,35,2022,unite urbaine,290,35290,"48.09437214122615, -2.1115323559307053",hors unité urbaine,Saint-Malon-sur-Mel,35
+35291,Saint-Marcan,35,2022,unite urbaine,291,35291,"48.58525989276481, -1.6280482596748214",hors unité urbaine,Saint-Marcan,35
+35292,Saint-Marc-le-Blanc,35,2022,unite urbaine,292,35292,"48.3733963840385, -1.3977254047287042",hors unité urbaine,Saint-Marc-le-Blanc,35
+35294,Sainte-Marie,35,2022,unite urbaine,294,35294,"47.69352040056791, -2.013585803376961",unité urbaine,Sainte-Marie,35
+35295,Saint-Maugan,35,2022,unite urbaine,295,35295,"48.1367232884349, -2.1021891339116663",hors unité urbaine,Saint-Maugan,35
+35296,Saint-Médard-sur-Ille,35,2022,unite urbaine,296,35296,"48.2729957698673, -1.6709220520125765",hors unité urbaine,Saint-Médard-sur-Ille,35
+35297,Saint-Méen-le-Grand,35,2022,unite urbaine,297,35297,"48.19234019983671, -2.1949712086050135",unité urbaine,Saint-Méen-le-Grand,35
+35299,Saint-Méloir-des-Ondes,35,2022,unite urbaine,299,35299,"48.6386564332079, -1.905853879101373",unité urbaine,Saint-Méloir-des-Ondes,35
+35300,Saint-M'Hervé,35,2022,unite urbaine,300,35300,"48.172505049918755, -1.111556875085379",hors unité urbaine,Saint-M'Hervé,35
+35302,Saint-Onen-la-Chapelle,35,2022,unite urbaine,302,35302,"48.16947558230001, -2.1556775354042856",unité urbaine,Saint-Onen-la-Chapelle,35
+35304,Saint-Ouen-des-Alleux,35,2022,unite urbaine,304,35304,"48.326847854647575, -1.4277251987844217",hors unité urbaine,Saint-Ouen-des-Alleux,35
+35305,Saint-Péran,35,2022,unite urbaine,305,35305,"48.05682234399225, -2.0645269259210486",hors unité urbaine,Saint-Péran,35
+35306,Saint-Père-Marc-en-Poulet,35,2022,unite urbaine,306,35306,"48.5841256650766, -1.929248121761322",hors unité urbaine,Saint-Père-Marc-en-Poulet,35
+35307,Saint-Pern,35,2022,unite urbaine,307,35307,"48.28121669177965, -1.983188668724824",hors unité urbaine,Saint-Pern,35
+35308,Mesnil-Roc'h,35,2022,unite urbaine,308,35308,"48.458014238148365, -1.8778402832831353",hors unité urbaine,Mesnil-Roc'h,35
+35309,Saint-Rémy-du-Plain,35,2022,unite urbaine,309,35309,"48.37610453586513, -1.5664239134957254",hors unité urbaine,Saint-Rémy-du-Plain,35
+35310,Saint-Sauveur-des-Landes,35,2022,unite urbaine,310,35310,"48.34688943676666, -1.3142718991136215",unité urbaine,Saint-Sauveur-des-Landes,35
+35311,Saint-Séglin,35,2022,unite urbaine,311,35311,"47.85176893478345, -2.0260110052735247",hors unité urbaine,Saint-Séglin,35
+35312,Saint-Senoux,35,2022,unite urbaine,312,35312,"47.910001473653764, -1.7900153160392098",hors unité urbaine,Saint-Senoux,35
+35314,Saint-Suliac,35,2022,unite urbaine,314,35314,"48.57052970461543, -1.9672781051274861",hors unité urbaine,Saint-Suliac,35
+35315,Saint-Sulpice-la-Forêt,35,2022,unite urbaine,315,35315,"48.21240640954021, -1.5758728629651189",hors unité urbaine,Saint-Sulpice-la-Forêt,35
+35316,Saint-Sulpice-des-Landes,35,2022,unite urbaine,316,35316,"47.77696196439249, -1.6257192631872557",hors unité urbaine,Saint-Sulpice-des-Landes,35
+35317,Saint-Symphorien,35,2022,unite urbaine,317,35317,"48.280270451880995, -1.8031497826557576",hors unité urbaine,Saint-Symphorien,35
+35317,Saint-Symphorien,35,2022,unite urbaine,317,35317,"48.280270451880995, -1.8031497826557576",hors unité urbaine,Saint-Symphorien,35
+35318,Saint-Thual,35,2022,unite urbaine,318,35318,"48.33563642058643, -1.9317864716205941",hors unité urbaine,Saint-Thual,35
+35319,Saint-Thurial,35,2022,unite urbaine,319,35319,"48.03349117108601, -1.9405409637027893",hors unité urbaine,Saint-Thurial,35
+35320,Saint-Uniac,35,2022,unite urbaine,320,35320,"48.16699659038882, -2.032800711301364",hors unité urbaine,Saint-Uniac,35
+35321,Saulnières,35,2022,unite urbaine,321,35321,"47.91920650185441, -1.5778407084654573",hors unité urbaine,Saulnières,35
+35322,Le Sel-de-Bretagne,35,2022,unite urbaine,322,35322,"47.89802497825739, -1.60629956887909",hors unité urbaine,Le Sel-de-Bretagne,35
+35324,La Selle-en-Luitré,35,2022,unite urbaine,324,35324,"48.320562200824725, -1.1509066491396103",hors unité urbaine,La Selle-en-Luitré,35
+35325,La Selle-Guerchaise,35,2022,unite urbaine,325,35325,"47.94282472997957, -1.1704119192818814",hors unité urbaine,La Selle-Guerchaise,35
+35326,Sens-de-Bretagne,35,2022,unite urbaine,326,35326,"48.33638894417459, -1.5540357672679326",hors unité urbaine,Sens-de-Bretagne,35
+35327,Servon-sur-Vilaine,35,2022,unite urbaine,327,35327,"48.12113500300613, -1.4579774301963044",unité urbaine,Servon-sur-Vilaine,35
+35328,Sixt-sur-Aff,35,2022,unite urbaine,328,35328,"47.77488008436435, -2.049603208411056",hors unité urbaine,Sixt-sur-Aff,35
+35329,Sougeal,35,2022,unite urbaine,329,35329,"48.502289590770985, -1.5150621072780759",hors unité urbaine,Sougeal,35
+35330,Taillis,35,2022,unite urbaine,330,35330,"48.18431188226761, -1.240049656412916",hors unité urbaine,Taillis,35
+35331,Talensac,35,2022,unite urbaine,331,35331,"48.09117072197027, -1.9261355341713093",hors unité urbaine,Talensac,35
+35332,Teillay,35,2022,unite urbaine,332,35332,"47.80750013594904, -1.5224505817549963",hors unité urbaine,Teillay,35
+35333,Le Theil-de-Bretagne,35,2022,unite urbaine,333,35333,"47.917871730175385, -1.4218404692640998",unité urbaine,Le Theil-de-Bretagne,35
+35334,Thorigné-Fouillard,35,2022,unite urbaine,334,35334,"48.15661369051908, -1.5844372268831357",unité urbaine,Thorigné-Fouillard,35
+35335,Thourie,35,2022,unite urbaine,335,35335,"47.848547896109274, -1.4580345179839755",hors unité urbaine,Thourie,35
+35336,Le Tiercent,35,2022,unite urbaine,336,35336,"48.35002198509106, -1.423469007138757",hors unité urbaine,Le Tiercent,35
+35337,Tinténiac,35,2022,unite urbaine,337,35337,"48.323509655712265, -1.8299439794584789",unité urbaine,Tinténiac,35
+35338,Torcé,35,2022,unite urbaine,338,35338,"48.061284960697265, -1.270683504798285",hors unité urbaine,Torcé,35
+35339,Trans-la-Forêt,35,2022,unite urbaine,339,35339,"48.48772160693331, -1.6037968840587815",hors unité urbaine,Trans-la-Forêt,35
+35340,Treffendel,35,2022,unite urbaine,340,35340,"48.03164573430121, -2.0086929290469047",hors unité urbaine,Treffendel,35
+35342,Trémeheuc,35,2022,unite urbaine,342,35342,"48.4385592170784, -1.6973721174473604",hors unité urbaine,Trémeheuc,35
+35343,Tresbœuf,35,2022,unite urbaine,343,35343,"47.88050243578782, -1.5535180594703555",hors unité urbaine,Tresbœuf,35
+35345,Trévérien,35,2022,unite urbaine,345,35345,"48.37116916799059, -1.920227250044733",hors unité urbaine,Trévérien,35
+35346,Trimer,35,2022,unite urbaine,346,35346,"48.344763833256536, -1.8972282370570666",hors unité urbaine,Trimer,35
+35347,Val-d'Izé,35,2022,unite urbaine,347,35347,"48.1898218657134, -1.3050699797547467",hors unité urbaine,Val-d'Izé,35
+35350,Vergéal,35,2022,unite urbaine,350,35350,"48.03592859059881, -1.2556557483847002",hors unité urbaine,Vergéal,35
+35351,Le Verger,35,2022,unite urbaine,351,35351,"48.06581856617977, -1.9363080457080253",hors unité urbaine,Le Verger,35
+35352,Vern-sur-Seiche,35,2022,unite urbaine,352,35352,"48.052831604657925, -1.605159244957337",unité urbaine,Vern-sur-Seiche,35
+35353,Vezin-le-Coquet,35,2022,unite urbaine,353,35353,"48.11767166084482, -1.7492456301085477",unité urbaine,Vezin-le-Coquet,35
+35354,Vieux-Viel,35,2022,unite urbaine,354,35354,"48.501362659041725, -1.5533886446943055",hors unité urbaine,Vieux-Viel,35
+35355,Vieux-Vy-sur-Couesnon,35,2022,unite urbaine,355,35355,"48.33454864334593, -1.499153613481337",hors unité urbaine,Vieux-Vy-sur-Couesnon,35
+35356,Vignoc,35,2022,unite urbaine,356,35356,"48.25694634287076, -1.7636273940686726",hors unité urbaine,Vignoc,35
+35357,Villamée,35,2022,unite urbaine,357,35357,"48.45567754195919, -1.2192774470159629",hors unité urbaine,Villamée,35
+35358,La Ville-ès-Nonais,35,2022,unite urbaine,358,35358,"48.549159352652836, -1.9523044191431178",hors unité urbaine,La Ville-ès-Nonais,35
+35359,Visseiche,35,2022,unite urbaine,359,35359,"47.96029647198793, -1.2984754081778298",hors unité urbaine,Visseiche,35
+35360,Vitré,35,2022,unite urbaine,360,35360,"48.11411110392002, -1.1934825616829488",unité urbaine,Vitré,35
+35361,Le Vivier-sur-Mer,35,2022,unite urbaine,361,35361,"48.59750139668909, -1.780928626236919",hors unité urbaine,Le Vivier-sur-Mer,35
+35362,Le Tronchet,35,2022,unite urbaine,362,35362,"48.49285533181018, -1.84141144421661",hors unité urbaine,Le Tronchet,35
+35363,Pont-Péan,35,2022,unite urbaine,363,35363,"48.010947299613775, -1.6963752103689798",unité urbaine,Pont-Péan,35
+56001,Allaire,56,2022,unite urbaine,001,56001,"47.63932253698999, -2.177336657660106",unité urbaine,Allaire,56
+56002,Ambon,56,2022,unite urbaine,002,56002,"47.55716569325688, -2.541060006324297",hors unité urbaine,Ambon,56
+56003,Arradon,56,2022,unite urbaine,003,56003,"47.6338754295188, -2.822766188601684",unité urbaine,Arradon,56
+56004,Arzal,56,2022,unite urbaine,004,56004,"47.52138230773197, -2.4041423968682887",hors unité urbaine,Arzal,56
+56005,Arzon,56,2022,unite urbaine,005,56005,"47.54765744203478, -2.886464038848551",unité urbaine,Arzon,56
+56006,Augan,56,2022,unite urbaine,006,56006,"47.91250537632371, -2.2676421931309756",hors unité urbaine,Augan,56
+56007,Auray,56,2022,unite urbaine,007,56007,"47.66748009764836, -2.990485003314689",unité urbaine,Auray,56
+56008,Baden,56,2022,unite urbaine,008,56008,"47.61499818396553, -2.9032979546431608",unité urbaine,Baden,56
+56009,Bangor,56,2022,unite urbaine,009,56009,"47.313070086088764, -3.1927713996702525",hors unité urbaine,Bangor,56
+56010,Baud,56,2022,unite urbaine,010,56010,"47.87555375485843, -3.0307099983174473",unité urbaine,Baud,56
+56011,Béganne,56,2022,unite urbaine,011,56011,"47.60273636562616, -2.2442414016131775",hors unité urbaine,Béganne,56
+56012,Beignon,56,2022,unite urbaine,012,56012,"47.965835834555435, -2.180339647082372",hors unité urbaine,Beignon,56
+56013,Belz,56,2022,unite urbaine,013,56013,"47.672409748649926, -3.161736554927675",unité urbaine,Belz,56
+56014,Berné,56,2022,unite urbaine,014,56014,"47.98484498753087, -3.3737605248831297",hors unité urbaine,Berné,56
+56015,Berric,56,2022,unite urbaine,015,56015,"47.638527302064674, -2.527352829019154",hors unité urbaine,Berric,56
+56017,Bignan,56,2022,unite urbaine,017,56017,"47.877122515436476, -2.759587553447427",hors unité urbaine,Bignan,56
+56018,Billiers,56,2022,unite urbaine,018,56018,"47.523495299753975, -2.4793785331757707",hors unité urbaine,Billiers,56
+56019,Billio,56,2022,unite urbaine,019,56019,"47.86779970104002, -2.6475665327598996",hors unité urbaine,Billio,56
+56020,Bohal,56,2022,unite urbaine,020,56020,"47.78470297156639, -2.447012827401232",hors unité urbaine,Bohal,56
+56021,Brandérion,56,2022,unite urbaine,021,56021,"47.79237710744664, -3.193268893574574",hors unité urbaine,Brandérion,56
+56022,Brandivy,56,2022,unite urbaine,022,56022,"47.78422522872202, -2.9222245354579512",hors unité urbaine,Brandivy,56
+56023,Brech,56,2022,unite urbaine,023,56023,"47.7093568711551, -3.024141482094121",unité urbaine,Brech,56
+56024,Bréhan,56,2022,unite urbaine,024,56024,"48.07014991861146, -2.686851223634123",hors unité urbaine,Bréhan,56
+56025,Brignac,56,2022,unite urbaine,025,56025,"48.11217874734769, -2.3952111619921985",hors unité urbaine,Brignac,56
+56026,Bubry,56,2022,unite urbaine,026,56026,"47.968839593497606, -3.1761796997718155",hors unité urbaine,Bubry,56
+56027,Buléon,56,2022,unite urbaine,027,56027,"47.92017876155765, -2.6750440248335976",hors unité urbaine,Buléon,56
+56028,Caden,56,2022,unite urbaine,028,56028,"47.64046604982291, -2.299402551103518",hors unité urbaine,Caden,56
+56029,Calan,56,2022,unite urbaine,029,56029,"47.88040283037715, -3.3121448653432695",hors unité urbaine,Calan,56
+56030,Camoël,56,2022,unite urbaine,030,56030,"47.47762243008124, -2.3986933068284566",hors unité urbaine,Camoël,56
+56031,Camors,56,2022,unite urbaine,031,56031,"47.83003729377215, -3.0000619064794636",unité urbaine,Camors,56
+56032,Campénéac,56,2022,unite urbaine,032,56032,"47.96262010750973, -2.277924981820969",hors unité urbaine,Campénéac,56
+56033,Carentoir,56,2022,unite urbaine,033,56033,"47.82336434613855, -2.131028165665454",hors unité urbaine,Carentoir,56
+56034,Carnac,56,2022,unite urbaine,034,56034,"47.608567559914185, -3.069971633151609",unité urbaine,Carnac,56
+56035,Caro,56,2022,unite urbaine,035,56035,"47.86214163500526, -2.327688546632125",hors unité urbaine,Caro,56
+56036,Caudan,56,2022,unite urbaine,036,56036,"47.813267553874056, -3.3414118818498872",unité urbaine,Caudan,56
+56039,La Chapelle-Neuve,56,2022,unite urbaine,039,56039,"47.85579450250145, -2.93397995834822",hors unité urbaine,La Chapelle-Neuve,56
+56040,Cléguer,56,2022,unite urbaine,040,56040,"47.865270438266364, -3.365176418549055",hors unité urbaine,Cléguer,56
+56041,Cléguérec,56,2022,unite urbaine,041,56041,"48.12810110417873, -3.063656345891149",hors unité urbaine,Cléguérec,56
+56042,Colpo,56,2022,unite urbaine,042,56042,"47.816598647213304, -2.8065809645915505",hors unité urbaine,Colpo,56
+56043,Concoret,56,2022,unite urbaine,043,56043,"48.06556930321227, -2.209424770654686",hors unité urbaine,Concoret,56
+56044,Cournon,56,2022,unite urbaine,044,56044,"47.749466214087526, -2.098235754697233",hors unité urbaine,Cournon,56
+56045,Le Cours,56,2022,unite urbaine,045,56045,"47.74912688373098, -2.508143692028013",hors unité urbaine,Le Cours,56
+56046,Crach,56,2022,unite urbaine,046,56046,"47.63042053669387, -3.000327876103034",unité urbaine,Crach,56
+56047,Crédin,56,2022,unite urbaine,047,56047,"48.0389554147166, -2.764997915237353",hors unité urbaine,Crédin,56
+56048,Le Croisty,56,2022,unite urbaine,048,56048,"48.06146968440684, -3.3732071947699174",hors unité urbaine,Le Croisty,56
+56050,La Croix-Helléan,56,2022,unite urbaine,050,56050,"47.963765107231076, -2.5110350364629657",hors unité urbaine,La Croix-Helléan,56
+56051,Cruguel,56,2022,unite urbaine,051,56051,"47.87807650448863, -2.5906219647644937",hors unité urbaine,Cruguel,56
+56052,Damgan,56,2022,unite urbaine,052,56052,"47.52236418503238, -2.5857712165115228",hors unité urbaine,Damgan,56
+56053,Elven,56,2022,unite urbaine,053,56053,"47.732777450676636, -2.592960093624691",unité urbaine,Elven,56
+56054,Erdeven,56,2022,unite urbaine,054,56054,"47.63706473892732, -3.1561586506590404",unité urbaine,Erdeven,56
+56055,Étel,56,2022,unite urbaine,055,56055,"47.65668268418407, -3.198361132823938",unité urbaine,Étel,56
+56056,Évriguet,56,2022,unite urbaine,056,56056,"48.08348673581315, -2.4049653661568677",hors unité urbaine,Évriguet,56
+56057,Le Faouët,56,2022,unite urbaine,057,56057,"48.0487271042869, -3.5087308396441728",unité urbaine,Le Faouët,56
+56058,Férel,56,2022,unite urbaine,058,56058,"47.48718108731061, -2.339652977867133",hors unité urbaine,Férel,56
+56060,Les Fougerêts,56,2022,unite urbaine,060,56060,"47.74821053948151, -2.1974327734250623",hors unité urbaine,Les Fougerêts,56
+56061,La Gacilly,56,2022,unite urbaine,061,56061,"47.76382907371059, -2.1402367718551187",unité urbaine,La Gacilly,56
+56062,Gâvres,56,2022,unite urbaine,062,56062,"47.69512810888961, -3.3343564625520403",hors unité urbaine,Gâvres,56
+56063,Gestel,56,2022,unite urbaine,063,56063,"47.80832208073061, -3.4376384926427623",hors unité urbaine,Gestel,56
+56065,Gourhel,56,2022,unite urbaine,065,56065,"47.93926228225459, -2.359144092500855",unité urbaine,Gourhel,56
+56066,Gourin,56,2022,unite urbaine,066,56066,"48.13658848473797, -3.604143385699294",unité urbaine,Gourin,56
+56067,Grand-Champ,56,2022,unite urbaine,067,56067,"47.760816765921426, -2.8478131152783255",unité urbaine,Grand-Champ,56
+56068,La Grée-Saint-Laurent,56,2022,unite urbaine,068,56068,"48.00158379181695, -2.503986676988169",hors unité urbaine,La Grée-Saint-Laurent,56
+56069,Groix,56,2022,unite urbaine,069,56069,"47.63722433884246, -3.4644761751791946",hors unité urbaine,Groix,56
+56070,Guégon,56,2022,unite urbaine,070,56070,"47.92550391651555, -2.586229208258498",hors unité urbaine,Guégon,56
+56071,Guéhenno,56,2022,unite urbaine,071,56071,"47.89187231728197, -2.6517329622327597",hors unité urbaine,Guéhenno,56
+56072,Gueltas,56,2022,unite urbaine,072,56072,"48.091605297488854, -2.8104604382610545",hors unité urbaine,Gueltas,56
+56073,Guémené-sur-Scorff,56,2022,unite urbaine,073,56073,"48.06611191464081, -3.2051833697041263",hors unité urbaine,Guémené-sur-Scorff,56
+56074,Guénin,56,2022,unite urbaine,074,56074,"47.9055067349007, -2.966481981411289",hors unité urbaine,Guénin,56
+56075,Guer,56,2022,unite urbaine,075,56075,"47.907834204843375, -2.1291416938091445",unité urbaine,Guer,56
+56076,Guern,56,2022,unite urbaine,076,56076,"48.034724331990546, -3.1023116562130837",hors unité urbaine,Guern,56
+56077,Le Guerno,56,2022,unite urbaine,077,56077,"47.590968492306395, -2.399740715698938",hors unité urbaine,Le Guerno,56
+56078,Guidel,56,2022,unite urbaine,078,56078,"47.79441862166735, -3.492426016296095",unité urbaine,Guidel,56
+56079,Guillac,56,2022,unite urbaine,079,56079,"47.9238917257409, -2.479240366753593",hors unité urbaine,Guillac,56
+56080,Guilliers,56,2022,unite urbaine,080,56080,"48.05194555764297, -2.415106938500265",hors unité urbaine,Guilliers,56
+56081,Guiscriff,56,2022,unite urbaine,081,56081,"48.04277072023759, -3.623328046984369",hors unité urbaine,Guiscriff,56
+56082,Helléan,56,2022,unite urbaine,082,56082,"47.96792156977051, -2.4806362850750405",hors unité urbaine,Helléan,56
+56083,Hennebont,56,2022,unite urbaine,083,56083,"47.80760381235834, -3.270365675295573",unité urbaine,Hennebont,56
+56084,Le Hézo,56,2022,unite urbaine,084,56084,"47.58078600008399, -2.6908809432970564",hors unité urbaine,Le Hézo,56
+56085,Hœdic,56,2022,unite urbaine,085,56085,"47.339889888662, -2.8753678365989876",hors unité urbaine,Hœdic,56
+56086,Île-d'Houat,56,2022,unite urbaine,086,56086,"47.39001573199813, -2.968397218082545",hors unité urbaine,Île-d'Houat,56
+56087,Île-aux-Moines,56,2022,unite urbaine,087,56087,"47.58626575053529, -2.848731093417323",hors unité urbaine,Île-aux-Moines,56
+56088,Île-d'Arz,56,2022,unite urbaine,088,56088,"47.588661514891264, -2.7965288698670854",hors unité urbaine,Île-d'Arz,56
+56089,Inguiniel,56,2022,unite urbaine,089,56089,"47.955662011875916, -3.260336736016351",hors unité urbaine,Inguiniel,56
+56090,Inzinzac-Lochrist,56,2022,unite urbaine,090,56090,"47.8563819806875, -3.251954953861339",unité urbaine,Inzinzac-Lochrist,56
+56091,Josselin,56,2022,unite urbaine,091,56091,"47.95410919481656, -2.5478970675285364",unité urbaine,Josselin,56
+56092,Kerfourn,56,2022,unite urbaine,092,56092,"48.043261307904494, -2.837351794298286",hors unité urbaine,Kerfourn,56
+56093,Kergrist,56,2022,unite urbaine,093,56093,"48.14732576756959, -2.928687121513674",hors unité urbaine,Kergrist,56
+56094,Kervignac,56,2022,unite urbaine,094,56094,"47.7687876170804, -3.247912232421105",unité urbaine,Kervignac,56
+56096,Landaul,56,2022,unite urbaine,096,56096,"47.741506224975524, -3.09943906356771",hors unité urbaine,Landaul,56
+56097,Landévant,56,2022,unite urbaine,097,56097,"47.77169699263944, -3.1133302895040242",unité urbaine,Landévant,56
+56098,Lanester,56,2022,unite urbaine,098,56098,"47.7687942559813, -3.3274296933541865",unité urbaine,Lanester,56
+56099,Langoëlan,56,2022,unite urbaine,099,56099,"48.12100982810686, -3.2332287847259904",hors unité urbaine,Langoëlan,56
+56100,Langonnet,56,2022,unite urbaine,100,56100,"48.13184756976042, -3.4812112681866423",hors unité urbaine,Langonnet,56
+56101,Languidic,56,2022,unite urbaine,101,56101,"47.836985082808795, -3.147861392142627",unité urbaine,Languidic,56
+56102,Forges de Lanouée,56,2022,unite urbaine,102,56102,"48.01069083646693, -2.58067942078514",hors unité urbaine,Forges de Lanouée,56
+56103,Lantillac,56,2022,unite urbaine,103,56103,"47.95147005376643, -2.6604105984155715",hors unité urbaine,Lantillac,56
+56104,Lanvaudan,56,2022,unite urbaine,104,56104,"47.89284339354431, -3.2442626359122846",hors unité urbaine,Lanvaudan,56
+56105,Lanvénégen,56,2022,unite urbaine,105,56105,"48.00429981344519, -3.531712885772973",hors unité urbaine,Lanvénégen,56
+56106,Larmor-Baden,56,2022,unite urbaine,106,56106,"47.591963819727845, -2.8997921187499434",hors unité urbaine,Larmor-Baden,56
+56107,Larmor-Plage,56,2022,unite urbaine,107,56107,"47.71595596230368, -3.3916413086225505",unité urbaine,Larmor-Plage,56
+56108,Larré,56,2022,unite urbaine,108,56108,"47.715958984835254, -2.4943653145031535",hors unité urbaine,Larré,56
+56109,Lauzach,56,2022,unite urbaine,109,56109,"47.61141704615586, -2.5561443830825548",hors unité urbaine,Lauzach,56
+56110,Lignol,56,2022,unite urbaine,110,56110,"48.02730310341024, -3.271658418321309",hors unité urbaine,Lignol,56
+56111,Limerzel,56,2022,unite urbaine,111,56111,"47.63605693441387, -2.3619745054268098",hors unité urbaine,Limerzel,56
+56112,Lizio,56,2022,unite urbaine,112,56112,"47.86442252308834, -2.5202256465911703",hors unité urbaine,Lizio,56
+56113,Locmalo,56,2022,unite urbaine,113,56113,"48.06247593368657, -3.183175609307315",hors unité urbaine,Locmalo,56
+56114,Locmaria,56,2022,unite urbaine,114,56114,"47.302152147803476, -3.1053033023452077",hors unité urbaine,Locmaria,56
+56115,Locmaria-Grand-Champ,56,2022,unite urbaine,115,56115,"47.75997742353317, -2.7901783803660187",unité urbaine,Locmaria-Grand-Champ,56
+56116,Locmariaquer,56,2022,unite urbaine,116,56116,"47.57760641034743, -2.96277594354625",hors unité urbaine,Locmariaquer,56
+56117,Locminé,56,2022,unite urbaine,117,56117,"47.88013020822618, -2.8375421312081484",unité urbaine,Locminé,56
+56118,Locmiquélic,56,2022,unite urbaine,118,56118,"47.73092945694419, -3.3290430969236855",unité urbaine,Locmiquélic,56
+56119,Locoal-Mendon,56,2022,unite urbaine,119,56119,"47.70203137705327, -3.109563225112103",hors unité urbaine,Locoal-Mendon,56
+56120,Locqueltas,56,2022,unite urbaine,120,56120,"47.7639395290285, -2.758140173118313",unité urbaine,Locqueltas,56
+56121,Lorient,56,2022,unite urbaine,121,56121,"47.75071301573847, -3.378920874280433",unité urbaine,Lorient,56
+56122,Loyat,56,2022,unite urbaine,122,56122,"47.99237994979548, -2.384305871875876",hors unité urbaine,Loyat,56
+56123,Malansac,56,2022,unite urbaine,123,56123,"47.68638203395812, -2.2995056184155915",hors unité urbaine,Malansac,56
+56124,Malestroit,56,2022,unite urbaine,124,56124,"47.807348242044924, -2.387004052642215",unité urbaine,Malestroit,56
+56125,Malguénac,56,2022,unite urbaine,125,56125,"48.06903632791677, -3.056520701038632",hors unité urbaine,Malguénac,56
+56126,Marzan,56,2022,unite urbaine,126,56126,"47.54139289293356, -2.353511613999427",hors unité urbaine,Marzan,56
+56127,Mauron,56,2022,unite urbaine,127,56127,"48.082675254589866, -2.30488412850214",hors unité urbaine,Mauron,56
+56128,Melrand,56,2022,unite urbaine,128,56128,"47.97503090372453, -3.10013987749034",hors unité urbaine,Melrand,56
+56129,Ménéac,56,2022,unite urbaine,129,56129,"48.13156104630813, -2.4540749255275682",hors unité urbaine,Ménéac,56
+56130,Merlevenez,56,2022,unite urbaine,130,56130,"47.73269560672051, -3.244214485919445",unité urbaine,Merlevenez,56
+56131,Meslan,56,2022,unite urbaine,131,56131,"47.98778763662948, -3.4477994165346497",hors unité urbaine,Meslan,56
+56132,Meucon,56,2022,unite urbaine,132,56132,"47.72395754978962, -2.7738628523179605",unité urbaine,Meucon,56
+56133,Missiriac,56,2022,unite urbaine,133,56133,"47.82385668631683, -2.3559008773995678",unité urbaine,Missiriac,56
+56134,Mohon,56,2022,unite urbaine,134,56134,"48.063249622293256, -2.494915427060074",hors unité urbaine,Mohon,56
+56135,Molac,56,2022,unite urbaine,135,56135,"47.73603611480543, -2.439303500902203",hors unité urbaine,Molac,56
+56136,Monteneuf,56,2022,unite urbaine,136,56136,"47.87844284994598, -2.192895885410667",hors unité urbaine,Monteneuf,56
+56137,Monterblanc,56,2022,unite urbaine,137,56137,"47.731426817139905, -2.696314927332246",unité urbaine,Monterblanc,56
+56139,Montertelot,56,2022,unite urbaine,139,56139,"47.88592081355021, -2.4124209411925968",hors unité urbaine,Montertelot,56
+56140,Moréac,56,2022,unite urbaine,140,56140,"47.933038254681584, -2.8038520891016443",unité urbaine,Moréac,56
+56141,Moustoir-Ac,56,2022,unite urbaine,141,56141,"47.84297671726186, -2.8587339480952627",hors unité urbaine,Moustoir-Ac,56
+56143,Muzillac,56,2022,unite urbaine,143,56143,"47.55502560521471, -2.473644827437379",unité urbaine,Muzillac,56
+56144,Évellys,56,2022,unite urbaine,144,56144,"47.97481706510322, -2.870053724032582",hors unité urbaine,Évellys,56
+56145,Néant-sur-Yvel,56,2022,unite urbaine,145,56145,"48.02247756565863, -2.3330554081813353",hors unité urbaine,Néant-sur-Yvel,56
+56146,Neulliac,56,2022,unite urbaine,146,56146,"48.121784769799156, -2.971978412562673",hors unité urbaine,Neulliac,56
+56147,Nivillac,56,2022,unite urbaine,147,56147,"47.540561725281044, -2.2494579097292977",hors unité urbaine,Nivillac,56
+56148,Nostang,56,2022,unite urbaine,148,56148,"47.75496671311497, -3.1747730872341604",hors unité urbaine,Nostang,56
+56149,Noyal-Muzillac,56,2022,unite urbaine,149,56149,"47.59959682314105, -2.4595156343536195",hors unité urbaine,Noyal-Muzillac,56
+56151,Noyal-Pontivy,56,2022,unite urbaine,151,56151,"48.06146225598306, -2.891153502428296",unité urbaine,Noyal-Pontivy,56
+56152,Le Palais,56,2022,unite urbaine,152,56152,"47.34273429458029, -3.1709176899174105",unité urbaine,Le Palais,56
+56153,Péaule,56,2022,unite urbaine,153,56153,"47.582875033215466, -2.335521462533551",hors unité urbaine,Péaule,56
+56154,Peillac,56,2022,unite urbaine,154,56154,"47.715286918207674, -2.2188404770082175",hors unité urbaine,Peillac,56
+56155,Pénestin,56,2022,unite urbaine,155,56155,"47.47302973813386, -2.4654232649936008",hors unité urbaine,Pénestin,56
+56156,Persquen,56,2022,unite urbaine,156,56156,"48.01498840220642, -3.218833441714973",hors unité urbaine,Persquen,56
+56157,Plaudren,56,2022,unite urbaine,157,56157,"47.77932742805689, -2.6952158629356067",hors unité urbaine,Plaudren,56
+56158,Plescop,56,2022,unite urbaine,158,56158,"47.69760462200203, -2.8311407548243483",unité urbaine,Plescop,56
+56159,Pleucadeuc,56,2022,unite urbaine,159,56159,"47.769324442120215, -2.3861728024162794",hors unité urbaine,Pleucadeuc,56
+56160,Pleugriffet,56,2022,unite urbaine,160,56160,"47.994157163906294, -2.6912653630555945",hors unité urbaine,Pleugriffet,56
+56161,Ploemel,56,2022,unite urbaine,161,56161,"47.65952820825363, -3.0715583479256647",hors unité urbaine,Ploemel,56
+56162,Ploemeur,56,2022,unite urbaine,162,56162,"47.73253803650636, -3.4422692007023734",unité urbaine,Ploemeur,56
+56164,Ploeren,56,2022,unite urbaine,164,56164,"47.66179074347632, -2.8428614555066916",unité urbaine,Ploeren,56
+56165,Ploërmel,56,2022,unite urbaine,165,56165,"47.91735560263944, -2.3799161293791484",unité urbaine,Ploërmel,56
+56166,Plouay,56,2022,unite urbaine,166,56166,"47.92704989201864, -3.3372754863379543",unité urbaine,Plouay,56
+56167,Plougoumelen,56,2022,unite urbaine,167,56167,"47.6611588818021, -2.897916011970352",hors unité urbaine,Plougoumelen,56
+56168,Plouharnel,56,2022,unite urbaine,168,56168,"47.60051542304944, -3.122225916191673",unité urbaine,Plouharnel,56
+56169,Plouhinec,56,2022,unite urbaine,169,56169,"47.692458873457866, -3.2332746007830924",unité urbaine,Plouhinec,56
+56170,Plouray,56,2022,unite urbaine,170,56170,"48.13429048210244, -3.375672186839369",hors unité urbaine,Plouray,56
+56171,Pluherlin,56,2022,unite urbaine,171,56171,"47.715073629164884, -2.3702129797872344",hors unité urbaine,Pluherlin,56
+56172,Plumelec,56,2022,unite urbaine,172,56172,"47.8257861710007, -2.623531946315434",hors unité urbaine,Plumelec,56
+56173,Pluméliau-Bieuzy,56,2022,unite urbaine,173,56173,"47.97277877122732, -2.9925339103473383",hors unité urbaine,Pluméliau-Bieuzy,56
+56174,Plumelin,56,2022,unite urbaine,174,56174,"47.88231904648952, -2.8874564475062847",hors unité urbaine,Plumelin,56
+56175,Plumergat,56,2022,unite urbaine,175,56175,"47.72780536638552, -2.922868931598799",hors unité urbaine,Plumergat,56
+56176,Pluneret,56,2022,unite urbaine,176,56176,"47.67843128549341, -2.9458249937630443",unité urbaine,Pluneret,56
+56177,Pluvigner,56,2022,unite urbaine,177,56177,"47.782651014104715, -3.0158710069031223",unité urbaine,Pluvigner,56
+56178,Pontivy,56,2022,unite urbaine,178,56178,"48.07319555613593, -2.9706396858952147",unité urbaine,Pontivy,56
+56179,Pont-Scorff,56,2022,unite urbaine,179,56179,"47.83935112378915, -3.4196205208909642",unité urbaine,Pont-Scorff,56
+56180,Porcaro,56,2022,unite urbaine,180,56180,"47.92000293061984, -2.1935565041961227",hors unité urbaine,Porcaro,56
+56181,Port-Louis,56,2022,unite urbaine,181,56181,"47.70963263626797, -3.3496637660344617",unité urbaine,Port-Louis,56
+56182,Priziac,56,2022,unite urbaine,182,56182,"48.055586046532774, -3.4350791454637206",hors unité urbaine,Priziac,56
+56184,Questembert,56,2022,unite urbaine,184,56184,"47.6639367378623, -2.436508004592603",unité urbaine,Questembert,56
+56185,Quéven,56,2022,unite urbaine,185,56185,"47.78433306952461, -3.4185261587714644",unité urbaine,Quéven,56
+56186,Quiberon,56,2022,unite urbaine,186,56186,"47.487978044724514, -3.1227277511609017",unité urbaine,Quiberon,56
+56188,Quistinic,56,2022,unite urbaine,188,56188,"47.90925220707338, -3.1273939660534067",hors unité urbaine,Quistinic,56
+56189,Radenac,56,2022,unite urbaine,189,56189,"47.94912282979411, -2.713192038984608",hors unité urbaine,Radenac,56
+56190,Réguiny,56,2022,unite urbaine,190,56190,"47.98629313245643, -2.7712503114044647",hors unité urbaine,Réguiny,56
+56191,Réminiac,56,2022,unite urbaine,191,56191,"47.863584950824354, -2.2526792850730404",hors unité urbaine,Réminiac,56
+56193,Riantec,56,2022,unite urbaine,193,56193,"47.718520831112926, -3.3029664259261584",unité urbaine,Riantec,56
+56194,Rieux,56,2022,unite urbaine,194,56194,"47.605817801029794, -2.1256966107187445",unité urbaine,Rieux,56
+56195,La Roche-Bernard,56,2022,unite urbaine,195,56195,"47.51954435198978, -2.302657976962117",hors unité urbaine,La Roche-Bernard,56
+56196,Rochefort-en-Terre,56,2022,unite urbaine,196,56196,"47.69896173883659, -2.3444262448221584",hors unité urbaine,Rochefort-en-Terre,56
+56197,Val d'Oust,56,2022,unite urbaine,197,56197,"47.87082503330259, -2.431661683383462",hors unité urbaine,Val d'Oust,56
+56198,Rohan,56,2022,unite urbaine,198,56198,"48.089531484982594, -2.7427742858124313",hors unité urbaine,Rohan,56
+56199,Roudouallec,56,2022,unite urbaine,199,56199,"48.120009748785726, -3.69433663738008",hors unité urbaine,Roudouallec,56
+56200,Ruffiac,56,2022,unite urbaine,200,56200,"47.81404592636183, -2.28506411244851",hors unité urbaine,Ruffiac,56
+56201,Le Saint,56,2022,unite urbaine,201,56201,"48.096865616297585, -3.5650191528080257",hors unité urbaine,Le Saint,56
+56202,Saint-Abraham,56,2022,unite urbaine,202,56202,"47.848118139996586, -2.406372089690897",hors unité urbaine,Saint-Abraham,56
+56203,Saint-Aignan,56,2022,unite urbaine,203,56203,"48.182188742531224, -3.0490203761273755",hors unité urbaine,Saint-Aignan,56
+56204,Saint-Allouestre,56,2022,unite urbaine,204,56204,"47.90835139995338, -2.7361819755634085",hors unité urbaine,Saint-Allouestre,56
+56205,Saint-Armel,56,2022,unite urbaine,205,56205,"47.5644859115809, -2.713019387361542",hors unité urbaine,Saint-Armel,56
+56206,Saint-Avé,56,2022,unite urbaine,206,56206,"47.69872611383357, -2.7417675727903945",unité urbaine,Saint-Avé,56
+56207,Saint-Barthélemy,56,2022,unite urbaine,207,56207,"47.92686711039739, -3.040579741344012",hors unité urbaine,Saint-Barthélemy,56
+56208,Saint-Brieuc-de-Mauron,56,2022,unite urbaine,208,56208,"48.089978473134174, -2.3612059051410808",hors unité urbaine,Saint-Brieuc-de-Mauron,56
+56209,Sainte-Brigitte,56,2022,unite urbaine,209,56209,"48.17704211733387, -3.11040760057991",hors unité urbaine,Sainte-Brigitte,56
+56210,Saint-Caradec-Trégomel,56,2022,unite urbaine,210,56210,"48.03246052496496, -3.3514178135578465",hors unité urbaine,Saint-Caradec-Trégomel,56
+56211,Saint-Congard,56,2022,unite urbaine,211,56211,"47.76792734216202, -2.3282670781220824",hors unité urbaine,Saint-Congard,56
+56212,Saint-Dolay,56,2022,unite urbaine,212,56212,"47.54718567907094, -2.172189889309245",hors unité urbaine,Saint-Dolay,56
+56213,Saint-Gérand-Croixanvec,56,2022,unite urbaine,213,56213,"48.11550189239316, -2.881379650397045",hors unité urbaine,Saint-Gérand-Croixanvec,56
+56214,Saint-Gildas-de-Rhuys,56,2022,unite urbaine,214,56214,"47.51237206896615, -2.832417952135486",hors unité urbaine,Saint-Gildas-de-Rhuys,56
+56215,Saint-Gonnery,56,2022,unite urbaine,215,56215,"48.12582534886036, -2.821060725817409",hors unité urbaine,Saint-Gonnery,56
+56216,Saint-Gorgon,56,2022,unite urbaine,216,56216,"47.64212422964367, -2.2382263007064176",hors unité urbaine,Saint-Gorgon,56
+56218,Saint-Gravé,56,2022,unite urbaine,218,56218,"47.72280045999807, -2.2885565269173167",hors unité urbaine,Saint-Gravé,56
+56219,Saint-Guyomard,56,2022,unite urbaine,219,56219,"47.77943318180255, -2.5022988615517403",hors unité urbaine,Saint-Guyomard,56
+56220,Sainte-Hélène,56,2022,unite urbaine,220,56220,"47.71738999967653, -3.185303378732014",hors unité urbaine,Sainte-Hélène,56
+56221,Saint-Jacut-les-Pins,56,2022,unite urbaine,221,56221,"47.67785647886445, -2.2123393138420626",hors unité urbaine,Saint-Jacut-les-Pins,56
+56222,Saint-Jean-Brévelay,56,2022,unite urbaine,222,56222,"47.83129040634996, -2.7272304215734207",hors unité urbaine,Saint-Jean-Brévelay,56
+56223,Saint-Jean-la-Poterie,56,2022,unite urbaine,223,56223,"47.645452943796954, -2.122800967544879",unité urbaine,Saint-Jean-la-Poterie,56
+56224,Saint-Laurent-sur-Oust,56,2022,unite urbaine,224,56224,"47.7917830325563, -2.3139351145584106",hors unité urbaine,Saint-Laurent-sur-Oust,56
+56225,Saint-Léry,56,2022,unite urbaine,225,56225,"48.091182728513246, -2.2637386009878937",hors unité urbaine,Saint-Léry,56
+56226,Saint-Malo-de-Beignon,56,2022,unite urbaine,226,56226,"47.956135427939635, -2.144737144343607",hors unité urbaine,Saint-Malo-de-Beignon,56
+56227,Saint-Malo-des-Trois-Fontaines,56,2022,unite urbaine,227,56227,"48.01696195648654, -2.469013825423617",hors unité urbaine,Saint-Malo-des-Trois-Fontaines,56
+56228,Saint-Marcel,56,2022,unite urbaine,228,56228,"47.81159208007341, -2.41689887015053",unité urbaine,Saint-Marcel,56
+56229,Saint-Martin-sur-Oust,56,2022,unite urbaine,229,56229,"47.7627344360266, -2.2645262790949556",hors unité urbaine,Saint-Martin-sur-Oust,56
+56230,Saint-Nicolas-du-Tertre,56,2022,unite urbaine,230,56230,"47.79613523293631, -2.2178276833593005",hors unité urbaine,Saint-Nicolas-du-Tertre,56
+56231,Saint-Nolff,56,2022,unite urbaine,231,56231,"47.69863422641511, -2.6659511688309054",unité urbaine,Saint-Nolff,56
+56232,Saint-Perreux,56,2022,unite urbaine,232,56232,"47.67251015156635, -2.1227143066151406",hors unité urbaine,Saint-Perreux,56
+56233,Saint-Philibert,56,2022,unite urbaine,233,56233,"47.58787837716465, -3.00079923142119",unité urbaine,Saint-Philibert,56
+56234,Saint-Pierre-Quiberon,56,2022,unite urbaine,234,56234,"47.522657330469094, -3.138489953257468",unité urbaine,Saint-Pierre-Quiberon,56
+56236,Saint-Servant,56,2022,unite urbaine,236,56236,"47.89919590241829, -2.512034836689277",hors unité urbaine,Saint-Servant,56
+56237,Saint-Thuriau,56,2022,unite urbaine,237,56237,"48.017179258310115, -2.943536065989815",hors unité urbaine,Saint-Thuriau,56
+56238,Saint-Tugdual,56,2022,unite urbaine,238,56238,"48.09613599460711, -3.366977478725556",hors unité urbaine,Saint-Tugdual,56
+56239,Saint-Vincent-sur-Oust,56,2022,unite urbaine,239,56239,"47.70238787094818, -2.148390402029292",hors unité urbaine,Saint-Vincent-sur-Oust,56
+56242,Séglien,56,2022,unite urbaine,242,56242,"48.102464594065424, -3.1517318372524654",hors unité urbaine,Séglien,56
+56243,Séné,56,2022,unite urbaine,243,56243,"47.622136914307184, -2.7256573133532584",unité urbaine,Séné,56
+56244,Sérent,56,2022,unite urbaine,244,56244,"47.82485754860198, -2.497398685678352",hors unité urbaine,Sérent,56
+56245,Silfiac,56,2022,unite urbaine,245,56245,"48.14488091620087, -3.1729596926629817",hors unité urbaine,Silfiac,56
+56246,Le Sourn,56,2022,unite urbaine,246,56246,"48.03838434382862, -2.9948429016233993",unité urbaine,Le Sourn,56
+56247,Sulniac,56,2022,unite urbaine,247,56247,"47.660295516744036, -2.5622061105128604",unité urbaine,Sulniac,56
+56248,Surzur,56,2022,unite urbaine,248,56248,"47.56910676178286, -2.6271913749077926",unité urbaine,Surzur,56
+56249,Taupont,56,2022,unite urbaine,249,56249,"47.96263948003823, -2.44267556831762",hors unité urbaine,Taupont,56
+56250,Théhillac,56,2022,unite urbaine,250,56250,"47.55195904997736, -2.1184466920730185",hors unité urbaine,Théhillac,56
+56251,Theix-Noyalo,56,2022,unite urbaine,251,56251,"47.631757745510725, -2.6517849171435186",unité urbaine,Theix-Noyalo,56
+56252,Le Tour-du-Parc,56,2022,unite urbaine,252,56252,"47.529412175679084, -2.654117150672027",hors unité urbaine,Le Tour-du-Parc,56
+56253,Tréal,56,2022,unite urbaine,253,56253,"47.83286125385111, -2.22917842879293",hors unité urbaine,Tréal,56
+56254,Trédion,56,2022,unite urbaine,254,56254,"47.782988933049744, -2.5839695865792764",hors unité urbaine,Trédion,56
+56255,Treffléan,56,2022,unite urbaine,255,56255,"47.67825662063206, -2.622103777514945",hors unité urbaine,Treffléan,56
+56256,Tréhorenteuc,56,2022,unite urbaine,256,56256,"48.004176681832305, -2.2953209096691434",hors unité urbaine,Tréhorenteuc,56
+56257,La Trinité-Porhoët,56,2022,unite urbaine,257,56257,"48.09858152323974, -2.524163218752909",hors unité urbaine,La Trinité-Porhoët,56
+56258,La Trinité-sur-Mer,56,2022,unite urbaine,258,56258,"47.589989907153516, -3.0363233554844227",unité urbaine,La Trinité-sur-Mer,56
+56259,La Trinité-Surzur,56,2022,unite urbaine,259,56259,"47.60498011656292, -2.592064461097568",hors unité urbaine,La Trinité-Surzur,56
+56260,Vannes,56,2022,unite urbaine,260,56260,"47.659813652734925, -2.7570920082373913",unité urbaine,Vannes,56
+56261,La Vraie-Croix,56,2022,unite urbaine,261,56261,"47.6899829190201, -2.5189793517965025",hors unité urbaine,La Vraie-Croix,56
+56262,Le Bono,56,2022,unite urbaine,262,56262,"47.636953131156666, -2.939218023145027",unité urbaine,Le Bono,56
+56263,Sainte-Anne-d'Auray,56,2022,unite urbaine,263,56263,"47.70040779589602, -2.9528589698396592",unité urbaine,Sainte-Anne-d'Auray,56
+56264,Kernascléden,56,2022,unite urbaine,264,56264,"48.00845467578489, -3.3290863875385863",hors unité urbaine,Kernascléden,56

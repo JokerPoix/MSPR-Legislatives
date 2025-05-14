@@ -1,6 +1,7 @@
 package legislativeMSPR.Utils;
 
 import legislativeMSPR.MySqlWriter;
+
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SaveMode;
@@ -15,16 +16,28 @@ import static org.apache.spark.sql.functions.to_json;
 import static org.apache.spark.sql.functions.expr;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Deque;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.List;
-import java.util.stream.Collectors;
+
 
 /**
  * Charge et écrit en base MySQL les tables de référence Communes et Départements
@@ -439,4 +452,89 @@ public class MySQLConverter {
             throw new RuntimeException("Erreur création table " + tableName, e);
         }
     }
+    
+    /**
+     * Exporte Donnees_commune en un CSV par année et par type,
+     * et renomme automatiquement "part-*.csv" en "{type}.csv".
+     */
+    public static void exportDonneesCommuneByYearAndType(
+            SparkSession spark,
+            MySqlWriter writer,
+            String outputBaseDir
+    ) throws IOException {
+        // 1) Charger toute la table
+        Dataset<Row> df = spark.read()
+            .format("jdbc")
+            .option("url",     writer.getJdbcUrl())
+            .option("dbtable", "Donnees_commune")
+            .option("user",    writer.getUser())
+            .option("password",writer.getPassword())
+            .load();
+
+        // 2) Lister tous les couples (annee, type)
+        List<Row> combos = df.select("annee", "type").distinct().collectAsList();
+
+        for (Row r : combos) {
+            String annee = r.getString(0);
+            String type  = r.getString(1);
+
+         // 3) Filtrer la tranche
+            Dataset<Row> slice = df
+                .filter(col("annee").equalTo(annee)
+                    .and(col("type").equalTo(type)));
+
+            // 4) Chemins
+            String dirAnnee   = outputBaseDir + "/" + annee;
+            String tempDir    = dirAnnee + "/" + type;
+            String finalCsv   = dirAnnee + "/" + type + ".csv";
+            new File(tempDir).mkdirs();
+
+            // 5a) Flatten JSON → colonnes individuelles
+            Dataset<Row> flat = DynamicJsonFlattener
+                .flattenMapColumn(slice, "data", "");
+
+            // 5b) Écriture en un seul part-*.csv
+            flat.coalesce(1)
+                .write()
+                .mode(SaveMode.Overwrite)
+                .option("header", "true")
+                .csv(tempDir);
+
+            // 6) Renommer et nettoyer
+            renamePartFile(tempDir, finalCsv);
+            deleteRecursively(Paths.get(tempDir));
+        }
+    }
+
+    /**
+     * Dans folderPath, repère le fichier "part-*.csv" et le déplace
+     * vers targetCsvPath (en le renommant).
+     */
+    private static void renamePartFile(String folderPath, String targetCsvPath) throws IOException {
+        Path folder = Paths.get(folderPath);
+        try (DirectoryStream<Path> ds = Files.newDirectoryStream(folder, "part-*.csv")) {
+            for (Path part : ds) {
+                Files.move(
+                    part,
+                    Paths.get(targetCsvPath),
+                    StandardCopyOption.REPLACE_EXISTING
+                );
+                break; // on ne gère qu'un seul fichier
+            }
+        }
+    }
+
+    /** Supprime un dossier et tout son contenu */
+    private static void deleteRecursively(Path path) throws IOException {
+        if (!Files.exists(path)) return;
+        Files.walk(path)
+             .sorted(Comparator.reverseOrder())
+             .forEach(p -> {
+                 try { Files.delete(p); }
+                 catch(IOException e) {
+                     throw new UncheckedIOException(e);
+                 }
+             });
+    }
+
 }
