@@ -1,184 +1,105 @@
 package legislativeMSPR.Utils;
 
 import legislativeMSPR.MySqlWriter;
-
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SaveMode;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.Column;
 
-import static org.apache.spark.sql.functions.struct;
-import static org.apache.spark.sql.functions.map;
-import static org.apache.spark.sql.functions.col;
-import static org.apache.spark.sql.functions.lit;
-import static org.apache.spark.sql.functions.to_json;
-import static org.apache.spark.sql.functions.expr;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.UncheckedIOException;
-
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Deque;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Deque;
+import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
+import static org.apache.spark.sql.functions.*;
 
 /**
- * Charge et écrit en base MySQL les tables de référence Communes et Départements
+ * Version refactorisée de MySQLConverter :
+ * - Parcours générique des CSV
+ * - Pivot, enrichissement, jointure, écriture
+ * - Commentaires en français
  */
 public class MySQLConverter {
-	
-	// TODO Refacto en une fonction pour faire 3 fonctions une pour les communes dans l'ensemble une autre pour les données niveau département etc
+
     /**
-     * Charge le fichier CSV des communes et départements et écrit deux tables MySQL:
-     * - Departement(code_dep INT, nom_dep VARCHAR)
-     * - Commune(code_com VARCHAR, nom_com VARCHAR, geo_point VARCHAR, code_dep INT)
-     *
-     * @param spark     SparkSession actif
-     * @param writer    MySqlWriter configuré
-     * @param geoCsv   Chemin vers "communes‑france.csv"
+     * Charge les tables de référence Communes et Départements.
      */
-    public static void loadAndWriteCommunesDepartement(SparkSession spark, MySqlWriter writer, File geoCsv) {
-        // 1) Lecture du fichier CSV
+    public static void loadAndWriteCommunesDepartement(SparkSession spark,
+                                                       MySqlWriter writer,
+                                                       File geoCsv) {
+        // Lecture du CSV
         Dataset<Row> geo = DataIngestionUtils.loadAsDataset(spark, geoCsv);
 
-        // 2) Construction de la table Departement (distinct)
+        // Dimension Département
         Dataset<Row> departements = geo
             .withColumn("code_dep", col("Code département").cast("int"))
             .withColumn("nom_dep", col("Libellé département"))
-            .select("code_dep", "nom_dep")
-            .distinct();
+            .select("code_dep", "nom_dep").distinct();
 
-        // 3) Construction de la table Commune
+        // Dimension Commune
         Dataset<Row> communes = geo
-            .withColumn("code_com", col("CODGEO").cast("int").cast("string"))
+            .withColumn("code_com", col("CODGEO").cast("string"))
             .withColumn("nom_com", col("Libellé Commune"))
             .withColumn("geo_point", col("Geo Point"))
             .withColumn("code_dep", col("Code département").cast("int"))
             .select("code_com", "nom_com", "geo_point", "code_dep");
 
-        // 4) Écriture en base MySQL
+        // Écriture
         writer.writeTable(departements, "Departement");
         writer.writeTable(communes,     "Commune");
     }
-    
+
     /**
-     * Parcourt récursivement le dossier outputs,
-     * traite les CSV par-commune.csv et par-departement.csv,
-     * et charge les données de faits dans Donnees_commune.
+     * Méthode générique pour traiter des CSV d'outputs.
      */
-    public static void processOutputCSVs(SparkSession spark,
-                                         MySqlWriter writer,
-                                         String outputsDir) {
-        // 1) Démarrage du traitement
-        File base = new File(outputsDir);
+    private static void processCSVs(SparkSession spark,
+                                    MySqlWriter writer,
+                                    String outputsDir,
+                                    Predicate<File> fileFilter,
+                                    BiFunction<Dataset<Row>, File, Dataset<Row>> enhancer) {
         Deque<File> stack = new ArrayDeque<>();
-        stack.push(base);
+        stack.push(new File(outputsDir));
 
         while (!stack.isEmpty()) {
             File dir = stack.pop();
-            File[] files = dir.listFiles();
-            if (files == null) {
-                continue;
-            }
+            File[] children = dir.listFiles();
+            if (children == null) continue;
+            for (File f : children) {
+                if (f.isDirectory()) { stack.push(f); continue; }
+                if (!f.getName().toLowerCase().endsWith(".csv") || !fileFilter.test(f)) continue;
 
-            for (File f : files) {
-                if (f.isDirectory()) {
-                    stack.push(f);
+                Dataset<Row> df = DataIngestionUtils.loadAsDataset(spark, f);
+                Dataset<Row> enriched = enhancer.apply(df, f);
+
+                // Si l'enrichissement n'a pas apporté 'annee' ou 'type', on saute ce fichier
+                if (!Arrays.asList(enriched.columns()).contains("annee") ||
+                    !Arrays.asList(enriched.columns()).contains("type")) {
                     continue;
                 }
 
-                String fname = f.getName().toLowerCase();
-                if (!fname.endsWith(".csv")) {
-                    continue;
-                }
+                Dataset<Row> dimCommune = loadDimensionCommune(spark, writer);
+                Dataset<Row> joined = joinWithDimension(enriched, dimCommune);
+                Dataset<Row> withJson = generateJsonColumn(joined);
 
-                File parent = f.getParentFile();
-                String yearDir = parent.getName();
-                if (!yearDir.matches("\\d{4}")) {
-                    continue;
-                }
-
-                boolean isCommune = fname.contains("par-commune.csv");
-                boolean isDept    = fname.contains("par-departement.csv");
-                if (!isCommune && !isDept) {
-                    continue;
-                }
-
-                // 2) Lecture du CSV et ajout des colonnes 'type' et 'annee'
-                Dataset<Row> df = DataIngestionUtils
-                    .loadAsDataset(spark, f)
-                    .withColumn("type", lit(
-                        f.getName()
-                         .replaceAll("(?i)par-commune\\.csv$", "")
-                         .replaceAll("(?i)par-departement\\.csv$", "")
-                         .replace('-', ' ')
-                    ))
-                    .withColumn("annee", lit(yearDir));
-                String factTable = "Donnees_commune";
-
-                // 3) Chargement de la dimension 'Commune'
-                Dataset<Row> dimCommune = spark
-                    .read()
-                    .format("jdbc")
-                    .option("url",     writer.getJdbcUrl())
-                    .option("dbtable", "Commune")
-                    .option("user",    writer.getUser())
-                    .option("password",writer.getPassword())
-                    .load();
-
-                // 4) Jointure sur CODGEO ou Code département
-                Dataset<Row> joined;
-                if (isCommune) {
-                    joined = df.join(
-                        dimCommune,
-                        df.col("CODGEO").equalTo(dimCommune.col("code_com")),
-                        "inner"
-                    );
-                } else {
-                    joined = df.join(
-                        dimCommune,
-                        df.col("Code département").equalTo(dimCommune.col("code_dep")),
-                        "inner"
-                    );
-                }
-
-                // 5) Génération du champ 'data' JSON pour toutes les autres colonnes
-                List<String> exclude = Arrays.asList(
-                		"CODGEO", "LIBGEO", "Code département", "annee", "type"
-                );
-                String[] jsonCols = Arrays.stream(joined.columns())
-                    .filter(c -> !exclude.contains(c))
-                    .toArray(String[]::new);
-                Dataset<Row> enriched = joined.withColumn(
-                    "data",
-                    to_json(
-                        struct(
-                            Arrays.stream(jsonCols)
-                                  .map(name -> col(name))
-                                  .toArray(Column[]::new)
-                        )
-                    )
-                );
-
-                // 6) Construction de finalDf en sélectionnant dims, méta et JSON
-                Dataset<Row> finalDf = enriched.select(
+                Dataset<Row> finalDf = withJson.select(
                     col("code_com").alias("CODGEO"),
                     col("nom_com").alias("LIBGEO"),
                     col("code_dep").alias("Code département"),
@@ -188,353 +109,190 @@ public class MySQLConverter {
                 );
 
                 ensureFactTable(writer, finalDf, "Donnees_commune");
-
-
-                // 8) Insertion en mode Append
-                finalDf
-                    .write()
-                    .mode(SaveMode.Append)
-                    .jdbc(
-                        writer.getJdbcUrl(),
-                        factTable,
-                        writer.getConnectionProps()
-                    );
-                System.out.println(
-                    "[MySQLConverter] Append sur " + factTable +
-                    ", lignes : " + finalDf.count()
-                );
-            }
-        }
-        
-    }
-    public static void processRegionsCSVsOnCommunes(
-            SparkSession spark,
-            MySqlWriter writer,
-            String outputsDir) {
-        File base = new File(outputsDir);
-        Deque<File> stack = new ArrayDeque<>();
-        stack.push(base);
-
-        while (!stack.isEmpty()) {
-            File dir = stack.pop();
-            File[] files = dir.listFiles();
-            if (files == null) continue;
-
-            for (File file : files) {
-                if (file.isDirectory()) {
-                    stack.push(file);
-                    continue;
-                }
-                if (!file.getName().toLowerCase().endsWith("par-region.csv")) {
-                    continue;
-                }
-
-                // 1) Lecture brute du CSV
-                Dataset<Row> df = DataIngestionUtils.loadAsDataset(spark, file);
-
-                // 2) Détection des colonnes métriques
-                List<String> metricCols = Arrays.stream(df.columns())
-                    .filter(c -> c.contains("%") || c.toLowerCase().contains("pour mille"))
-                    .collect(Collectors.toList());
-                if (metricCols.isEmpty()) {
-                    continue;
-                }
-
-                // 3) Extraction des années
-                List<String> yearCols = Arrays.stream(df.columns())
-                    .filter(c -> c.matches(".*\\d{4}$"))
-                    .collect(Collectors.toList());
-                if (yearCols.isEmpty()) {
-                    continue;
-                }
-
-                // 4) Injection de la colonne "type" (nom du fichier sans suffixe)
-                String typeVal = file.getName()
-                    .replaceAll("(?i)par-region\\.csv$", "")
-                    .replace('-', ' ')
-                    .trim();
-                Dataset<Row> withType = df.withColumn("type", lit(typeVal));
-
-                // 5) Unpivot (type, annee, valeur)
-                String stackExpr = "stack(" + yearCols.size() + ", " +
-                    yearCols.stream()
-                        .map(c -> {
-                            String year = c.substring(c.length() - 4);
-                            String metric = c.replaceAll("\\s*\\d{4}$", "");
-                            return "'" + metric + "', '" + year + "', `" + c + "`";
-                        })
-                        .collect(Collectors.joining(", ")) +
-                    ") as (typeMetric, annee, valeur)";
-
-                Dataset<Row> pivoted = withType.select( col("Code région"),col("indicateur"),expr(stackExpr));
-
-
-                // 6) Charger la dimension Commune
-                Dataset<Row> dimCommune = spark.read()
-                    .format("jdbc")
-                    .option("url",    writer.getJdbcUrl())
-                    .option("dbtable","Commune")
-                    .option("user",   writer.getUser())
-                    .option("password",writer.getPassword())
-                    .load();
-
-                // 7) Réplication sur toutes les communes (cross-join)
-                Dataset<Row> joined = pivoted.crossJoin(dimCommune);
-
-             // 8) Générer JSON incluant l’indicateur + la métrique
-                Dataset<Row> withJson = joined.withColumn(
-                    "data",
-                    to_json(
-                        map(
-                            lit("indicateur"), col("indicateur"),  // "indicateur":"Cambriolages…"
-                            col("typeMetric"),  col("valeur")     // "criminalite":"4.5…"  (typeVal = nom du CSV)
-                        )
-                    )
-                );
-
-
-                // 9) Sélection finale
-                Dataset<Row> finalDf = withJson.select(
-                    dimCommune.col("code_com").alias("CODGEO"),
-                    dimCommune.col("nom_com").alias("LIBGEO"),
-                    dimCommune.col("code_dep").alias("Code département"),
-                    col("annee"),
-                    lit(typeVal).alias("type"),
-                    col("data")
-                );
-
-                // 10) Créer la table si besoin
-                ensureFactTable(writer, finalDf, "Donnees_commune");
-
-                // 11) Écriture en append
                 finalDf.write()
                        .mode(SaveMode.Append)
-                       .jdbc(
-                           writer.getJdbcUrl(),
-                           "Donnees_commune",
-                           writer.getConnectionProps()
-                       );
-                System.out.println("[MySQLConverter] Append régions→communes, lignes : " + finalDf.count());
+                       .jdbc(writer.getJdbcUrl(), "Donnees_commune", writer.getConnectionProps());
+
+                System.out.println("[MySQLConverter] Appended " + finalDf.count() + " rows from " + f.getPath());
             }
         }
     }
 
     /**
-     * Traite uniquement les fichiers "par-departement.csv" contenant des métriques (% ou "pour mille"),
-     * pivote les colonnes année en lignes, et répète les données pour chaque commune.
+     * CSV par-commune et par-departement.
      */
-    public static void processDepartementsCSVsOnCommunes(
-            SparkSession spark,
-            MySqlWriter writer,
-            String outputsDir) {
-        File base = new File(outputsDir);
-        Deque<File> stack = new ArrayDeque<>();
-        stack.push(base);
+    public static void processOutputCSVs(SparkSession spark,
+                                         MySqlWriter writer,
+                                         String outputsDir) {
+        Predicate<File> filter = f -> {
+            String name = f.getName().toLowerCase();
+            String year = f.getParentFile().getName();
+            return year.matches("\\d{4}") && (name.contains("par-commune.csv") || name.contains("par-departement.csv"));
+        };
+        BiFunction<Dataset<Row>, File, Dataset<Row>> enhancer = (df, f) -> df
+            .withColumn("type", lit(f.getName().replaceAll("(?i)par-commune\\.csv$", "").replaceAll("(?i)par-departement\\.csv$", "").replace('-', ' ')))
+            .withColumn("annee", lit(f.getParentFile().getName()));
+        processCSVs(spark, writer, outputsDir, filter, enhancer);
+    }
 
-        while (!stack.isEmpty()) {
-            File dir = stack.pop();
-            File[] files = dir.listFiles();
-            if (files == null) continue;
+    /**
+     * CSV par-region : pivot, cross-join.
+     */
+    public static void processRegionsCSVsOnCommunes(SparkSession spark,
+                                                    MySqlWriter writer,
+                                                    String outputsDir) {
+        Predicate<File> filter = f -> f.getName().toLowerCase().endsWith("par-region.csv");
+        BiFunction<Dataset<Row>, File, Dataset<Row>> enhancer = (df, f) -> {
+            List<String> metrics = Arrays.stream(df.columns())
+                .filter(c -> c.contains("%") || c.toLowerCase().contains("pour mille"))
+                .collect(Collectors.toList());
+            List<String> years = Arrays.stream(df.columns())
+                .filter(c -> c.matches(".*\\d{4}$"))
+                .collect(Collectors.toList());
+            if (metrics.isEmpty() || years.isEmpty()) return df.limit(0);
 
-            for (File file : files) {
-                if (file.isDirectory()) {
-                    stack.push(file);
-                    continue;
-                }
-                if (!file.getName().toLowerCase().endsWith("par-departement.csv")) continue;
+            String typeVal = f.getName().replaceAll("(?i)par-region\\.csv$", "").replace('-', ' ').trim();
+            String stackExpr = buildStackExpression(years, true);
 
-                // 1) Lire brut
-                Dataset<Row> df = DataIngestionUtils.loadAsDataset(spark, file);
+            return df.select(
+                col("Code région"),
+                col("indicateur"),
+                expr(stackExpr)
+            ).withColumn("type", lit(typeVal))
+             .withColumn("annee", col("annee"));
+        };
+        processCSVs(spark, writer, outputsDir, filter, enhancer);
+    }
 
-                // 2) Détection des métriques
-                List<String> metricCols = Arrays.stream(df.columns())
-                        .filter(c -> c.contains("%") || c.toLowerCase().contains("pour mille"))
-                        .collect(Collectors.toList());
-                if (metricCols.isEmpty()) continue;
+    /**
+     * CSV par-departement métriques : pivot, replicate.
+     */
+    public static void processDepartementsCSVsOnCommunes(SparkSession spark,
+                                                         MySqlWriter writer,
+                                                         String outputsDir) {
+        Predicate<File> filter = f -> f.getName().toLowerCase().endsWith("par-departement.csv");
+        BiFunction<Dataset<Row>, File, Dataset<Row>> enhancer = (df, f) -> {
+            List<String> years = Arrays.stream(df.columns())
+                .filter(c -> c.matches(".*\\d{4}$"))
+                .collect(Collectors.toList());
+            if (years.isEmpty()) return df.limit(0);
 
-                // 3) Extraction années
-                List<String> yearCols = Arrays.stream(df.columns())
-                		.filter(c -> c.matches(".*\\d{4}$"))
-                        .collect(Collectors.toList());
-                if (yearCols.isEmpty()) continue;
+            String typeVal = f.getName().replaceAll("(?i)par-departement\\.csv$", "").replace('-', ' ').trim();
+            String stackExpr = buildStackExpression(years, false);
 
-                // 4) Unpivot (type, annee, valeur)
-                String stackExpr = "stack(" + yearCols.size() + ", " +
-                        yearCols.stream()
-                                .map(c -> {
-                                    String year = c.substring(c.length() - 4);
-                                    String typeName = c.replaceAll("\\s*\\d{4}$", "");
-                                    return "'" + typeName + "', '" + year + "', `" + c + "`";
-                                })
-                                .collect(Collectors.joining(", ")) +
-                        ") as (type, annee, valeur)";
-                Dataset<Row> pivoted = df.select(
-                        col("Code département"),
-                        expr(stackExpr)
-                );
+            return df.select(
+                col("Code département"),
+                expr(stackExpr)
+            ).withColumn("type", lit(typeVal))
+             .withColumn("annee", col("annee"));
+        };
+        processCSVs(spark, writer, outputsDir, filter, enhancer);
+    }
 
-                // 5) Joindre dimension Commune
-                Dataset<Row> dimCommune = spark.read()
-                        .format("jdbc")
-                        .option("url",    writer.getJdbcUrl())
-                        .option("dbtable","Commune")
-                        .option("user",   writer.getUser())
-                        .option("password",writer.getPassword())
-                        .load();
-                Dataset<Row> joined = pivoted.join(
-                        dimCommune,
-                        pivoted.col("Code département").equalTo(dimCommune.col("code_dep")),
-                        "inner"
-                );
-
-                // 6) Générer JSON sur valeur (clé = libellé du type)
-                Dataset<Row> withJson = joined.withColumn(
-                        "data",
-                        to_json(
-                            map(
-                                col("type"),
-                                col("valeur")
-                            )
-                        )
-                    );
-                // 7) Sélection finale
-                Dataset<Row> finalDf = withJson.select(
-                        dimCommune.col("code_com").alias("CODGEO"),
-                        dimCommune.col("nom_com").alias("LIBGEO"),
-                        dimCommune.col("code_dep").alias("Code département"),
-                        col("annee"),
-                        col("type"),
-                        col("data")
-                );
-
-                ensureFactTable(writer, finalDf, "Donnees_commune");
-
-                // 8) Append
-                finalDf.write()
-                        .mode(SaveMode.Append)
-                        .jdbc(
-                                writer.getJdbcUrl(),
-                                "Donnees_commune",
-                                writer.getConnectionProps()
-                        );
-                System.out.println("[MySQLConverter] Append metrics pour communes, lignes : " + finalDf.count());
-            }
+    /**
+     * Exporte Donnees_commune par année et type.
+     */
+    public static void exportDonneesCommuneByYearAndType(SparkSession spark,
+                                                          MySqlWriter writer,
+                                                          String outputBaseDir) throws IOException {
+        Dataset<Row> df = spark.read().format("jdbc")
+            .option("url", writer.getJdbcUrl())
+            .option("dbtable", "Donnees_commune")
+            .option("user", writer.getUser())
+            .option("password", writer.getPassword())
+            .load();
+        List<Row> combos = df.select("annee","type").distinct().collectAsList();
+        for (Row r : combos) {
+            String annee = r.getString(0);
+            String type  = r.getString(1);
+            Dataset<Row> slice = df.filter(col("annee").equalTo(annee).and(col("type").equalTo(type)));
+            String dir = outputBaseDir + "/" + annee;
+            String tmp = dir + "/" + type;
+            String out = dir + "/" + type + ".csv";
+            new File(tmp).mkdirs();
+            Dataset<Row> flat = DynamicJsonFlattener.flattenMapColumn(slice, "data", "");
+            flat.coalesce(1).write().mode(SaveMode.Overwrite).option("header","true").csv(tmp);
+            renamePartFile(tmp, out);
+            deleteRecursively(Paths.get(tmp));
         }
     }
 
+    private static void renamePartFile(String folder,
+                                       String target) throws IOException {
+        try (DirectoryStream<Path> ds = Files.newDirectoryStream(Paths.get(folder), "part-*.csv")) {
+            for (Path p : ds) { Files.move(p, Paths.get(target), StandardCopyOption.REPLACE_EXISTING); break; }
+        }
+    }
 
+    private static void deleteRecursively(Path path) throws IOException {
+        if (!Files.exists(path)) return;
+        Files.walk(path).sorted(Comparator.reverseOrder()).forEach(p -> { try { Files.delete(p);} catch(IOException e){throw new UncheckedIOException(e);} });
+    }
+
+    private static Dataset<Row> loadDimensionCommune(SparkSession spark, MySqlWriter writer) {
+        return spark.read().format("jdbc")
+            .option("url", writer.getJdbcUrl())
+            .option("dbtable", "Commune")
+            .option("user", writer.getUser())
+            .option("password", writer.getPassword())
+            .load();
+    }
 
     /**
-     * Crée la table fact si elle n'existe pas en initialisant le schéma.
+     * Joint les données enrichies avec la dimension Commune.
+     * Cas Commune: jointure sur CODGEO;
+     * Cas Département: jointure sur Code département->code_dep;
+     * Cas Région: réplique (cross join) sur toutes les communes.
      */
-    private static void ensureFactTable(
-            MySqlWriter writer,
-            Dataset<Row> df,
-            String tableName) {
-        try (Connection conn = DriverManager.getConnection(
-                       writer.getJdbcUrl(),
-                       writer.getUser(),
-                       writer.getPassword())) {
+    private static Dataset<Row> joinWithDimension(Dataset<Row> enriched,
+                                                  Dataset<Row> dimCommune) {
+        List<String> cols = Arrays.asList(enriched.columns());
+        if (cols.contains("CODGEO")) {
+            // Fichier par-commune
+            return enriched.join(
+                dimCommune,
+                enriched.col("CODGEO").equalTo(dimCommune.col("code_com")),
+                "inner"
+            );
+        } else if (cols.contains("Code département")) {
+            // Fichier par-département
+            return enriched.join(
+                dimCommune,
+                enriched.col("Code département").equalTo(dimCommune.col("code_dep")),
+                "inner"
+            );
+        } else if (cols.contains("Code région")) {
+            // Fichier par-region: réplication sur toutes les communes
+            return enriched.crossJoin(dimCommune);
+        } else {
+            // Aucun clé de dimension détectée
+            throw new IllegalArgumentException("Clé de dimension introuvable dans enrichissement: " + cols);
+        }
+    }
+
+    private static Dataset<Row> generateJsonColumn(Dataset<Row> joined) {
+        List<String> exclude = Arrays.asList("CODGEO","LIBGEO","Code département","annee","type","Code région","indicateur");
+        String[] cols = Arrays.stream(joined.columns()).filter(c->!exclude.contains(c)).toArray(String[]::new);
+        return joined.withColumn("data", to_json(struct(Arrays.stream(cols).map(colName->col(colName)).toArray(Column[]::new))));
+    }
+
+    private static String buildStackExpression(List<String> yearCols, boolean includeIndi) {
+        String expr = yearCols.stream().map(c -> {
+            String year = c.substring(c.length()-4);
+            String metric = c.replaceAll("\\s*\\d{4}$", "");
+            return "'"+metric+"','"+year+"',`"+c+"`";
+        }).collect(Collectors.joining(", "));
+        return "stack("+yearCols.size()+", "+expr+") as (typeMetric, annee, valeur)";
+    }
+
+    private static void ensureFactTable(MySqlWriter writer, Dataset<Row> df, String tableName) {
+        try (Connection conn = DriverManager.getConnection(writer.getJdbcUrl(), writer.getUser(), writer.getPassword())){
             DatabaseMetaData meta = conn.getMetaData();
-            try (ResultSet rs = meta.getTables(null, null, tableName, null)) {
-                if (!rs.next()) {
-                    df.limit(0)
-                      .write()
-                      .mode(SaveMode.Overwrite)
-                      .jdbc(
-                              writer.getJdbcUrl(),
-                              tableName,
-                              writer.getConnectionProps()
-                      );
-                }
+            try(ResultSet rs=meta.getTables(null,null,tableName,null)){
+                if(!rs.next()) df.limit(0).write().mode(SaveMode.Overwrite).jdbc(writer.getJdbcUrl(),tableName, writer.getConnectionProps());
             }
         } catch (SQLException e) {
             throw new RuntimeException("Erreur création table " + tableName, e);
         }
     }
-    
-    /**
-     * Exporte Donnees_commune en un CSV par année et par type,
-     * et renomme automatiquement "part-*.csv" en "{type}.csv".
-     */
-    public static void exportDonneesCommuneByYearAndType(
-            SparkSession spark,
-            MySqlWriter writer,
-            String outputBaseDir
-    ) throws IOException {
-        // 1) Charger toute la table
-        Dataset<Row> df = spark.read()
-            .format("jdbc")
-            .option("url",     writer.getJdbcUrl())
-            .option("dbtable", "Donnees_commune")
-            .option("user",    writer.getUser())
-            .option("password",writer.getPassword())
-            .load();
-
-        // 2) Lister tous les couples (annee, type)
-        List<Row> combos = df.select("annee", "type").distinct().collectAsList();
-
-        for (Row r : combos) {
-            String annee = r.getString(0);
-            String type  = r.getString(1);
-
-         // 3) Filtrer la tranche
-            Dataset<Row> slice = df
-                .filter(col("annee").equalTo(annee)
-                    .and(col("type").equalTo(type)));
-
-            // 4) Chemins
-            String dirAnnee   = outputBaseDir + "/" + annee;
-            String tempDir    = dirAnnee + "/" + type;
-            String finalCsv   = dirAnnee + "/" + type + ".csv";
-            new File(tempDir).mkdirs();
-
-            // 5a) Flatten JSON → colonnes individuelles
-            Dataset<Row> flat = DynamicJsonFlattener
-                .flattenMapColumn(slice, "data", "");
-
-            // 5b) Écriture en un seul part-*.csv
-            flat.coalesce(1)
-                .write()
-                .mode(SaveMode.Overwrite)
-                .option("header", "true")
-                .csv(tempDir);
-
-            // 6) Renommer et nettoyer
-            renamePartFile(tempDir, finalCsv);
-            deleteRecursively(Paths.get(tempDir));
-        }
-    }
-
-    /**
-     * Dans folderPath, repère le fichier "part-*.csv" et le déplace
-     * vers targetCsvPath (en le renommant).
-     */
-    private static void renamePartFile(String folderPath, String targetCsvPath) throws IOException {
-        Path folder = Paths.get(folderPath);
-        try (DirectoryStream<Path> ds = Files.newDirectoryStream(folder, "part-*.csv")) {
-            for (Path part : ds) {
-                Files.move(
-                    part,
-                    Paths.get(targetCsvPath),
-                    StandardCopyOption.REPLACE_EXISTING
-                );
-                break; // on ne gère qu'un seul fichier
-            }
-        }
-    }
-
-    /** Supprime un dossier et tout son contenu */
-    private static void deleteRecursively(Path path) throws IOException {
-        if (!Files.exists(path)) return;
-        Files.walk(path)
-             .sorted(Comparator.reverseOrder())
-             .forEach(p -> {
-                 try { Files.delete(p); }
-                 catch(IOException e) {
-                     throw new UncheckedIOException(e);
-                 }
-             });
-    }
-
 }
